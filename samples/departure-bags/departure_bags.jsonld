@@ -1,0 +1,282 @@
+{
+    "@context": {
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "vcard": "http://www.w3.org/2006/vcard/ns#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "csvw": "http://www.w3.org/ns/csvw#",
+      "dcterms": "http://purl.org/dc/terms/",
+      "adms": "http://www.w3.org/ns/adms#",
+      "dcatap": "http://data.europa.eu/r5r/",
+      "pv": "https://piveau.eu/ns/voc#",
+      "pistis": "https://www.pistis-project.eu/ns/voc#"
+    },
+    "@graph": [
+      {
+        "@id": "_:g0",
+        "@type": "vcard:Individual",
+        "vcard:fn": "John Doe",
+        "vcard:hasAddress": {
+          "@id": "_:g1"
+        },
+        "vcard:hasEmail": {
+          "@id": "mailto:john@doe.de"
+        }
+      },
+      {
+        "@id": "_:g1",
+        "vcard:country_name": "Germany",
+        "vcard:locality": "Berlin",
+        "vcard:postal_code": "12345",
+        "vcard:street_address": "John Doe Str."
+      },
+      {
+        "@id": "_:g10",
+        "csvw:datatype": "xsd:dateTime",
+        "csvw:format": "MM/dd/yyyy HH:mm:ss",
+        "csvw:name": "SOBT",
+        "csvw:title": "Scheduled Off-Block Time"
+      },
+      {
+        "@id": "_:g11",
+        "csvw:datatype": "xsd:dateTime",
+        "csvw:format": "MM/dd/yyyy HH:mm:ss",
+        "csvw:name": "ATOT",
+        "csvw:title": "Actual Take-Off Time"
+      },
+      {
+        "@id": "_:g12",
+        "csvw:datatype": "xsd:dateTime",
+        "csvw:format": "MM/dd/yyyy HH:mm:ss",
+        "csvw:name": "Last_Bag_Checkin",
+        "csvw:title": "Last Bag Check-in"
+      },
+      {
+        "@id": "_:g13",
+        "csvw:datatype": "xsd:dateTime",
+        "csvw:format": "MM/dd/yyyy HH:mm:ss",
+        "csvw:name": "First_Bag_Chute",
+        "csvw:title": "First Bag Chute"
+      },
+      {
+        "@id": "_:g14",
+        "csvw:datatype": "xsd:dateTime",
+        "csvw:format": "MM/dd/yyyy HH:mm:ss",
+        "csvw:name": "Last_Bag_Chute",
+        "csvw:title": "Last Bag Chute"
+      },
+      {
+        "@id": "_:g15",
+        "csvw:datatype": "xsd:dateTime",
+        "csvw:format": "MM/dd/yyyy HH:mm:ss",
+        "csvw:name": "First_Bag_A/C",
+        "csvw:title": "First Bag to Aircraft"
+      },
+      {
+        "@id": "_:g16",
+        "csvw:datatype": "xsd:dateTime",
+        "csvw:format": "MM/dd/yyyy HH:mm:ss",
+        "csvw:name": "Last_Bag_A/C",
+        "csvw:title": "Last Bag to Aircraft"
+      },
+      {
+        "@id": "_:g17",
+        "csvw:datatype": "xsd:string",
+        "csvw:name": "Hall",
+        "csvw:title": "Hall"
+      },
+      {
+        "@id": "_:g18",
+        "csvw:datatype": "xsd:integer",
+        "csvw:name": "Total_Checked_Bags",
+        "csvw:title": "Total Checked Bags"
+      },
+      {
+        "@id": "_:g19",
+        "csvw:datatype": "xsd:integer",
+        "csvw:name": "Sorted_Bags",
+        "csvw:title": "Sorted Bags"
+      },
+      {
+        "@id": "_:g2",
+        "@type": "pv:CSVSchema",
+        "csvw:tableSchema": {
+          "@id": "_:g3"
+        }
+      },
+      {
+        "@id": "_:g20",
+        "csvw:datatype": "xsd:integer",
+        "csvw:name": "Loaded_Bags",
+        "csvw:title": "Loaded Bags"
+      },
+      {
+        "@id": "_:g21",
+        "csvw:datatype": "xsd:integer",
+        "csvw:name": "OOG_Bags",
+        "csvw:title": "Out Of Gauge Bags"
+      },
+      {
+        "@id": "_:g22",
+        "csvw:datatype": "xsd:integer",
+        "csvw:name": "Transfer_Bags",
+        "csvw:title": "Transfer Bags"
+      },
+      {
+        "@id": "_:g3",
+        "@type": "csvw:Schema",
+        "csvw:column": [
+          {
+            "@id": "_:g4"
+          },
+          {
+            "@id": "_:g5"
+          },
+          {
+            "@id": "_:g6"
+          },
+          {
+            "@id": "_:g7"
+          },
+          {
+            "@id": "_:g8"
+          },
+          {
+            "@id": "_:g9"
+          },
+          {
+            "@id": "_:g10"
+          },
+          {
+            "@id": "_:g11"
+          },
+          {
+            "@id": "_:g12"
+          },
+          {
+            "@id": "_:g13"
+          },
+          {
+            "@id": "_:g14"
+          },
+          {
+            "@id": "_:g15"
+          },
+          {
+            "@id": "_:g16"
+          },
+          {
+            "@id": "_:g17"
+          },
+          {
+            "@id": "_:g18"
+          },
+          {
+            "@id": "_:g19"
+          },
+          {
+            "@id": "_:g20"
+          },
+          {
+            "@id": "_:g21"
+          },
+          {
+            "@id": "_:g22"
+          }
+        ]
+      },
+      {
+        "@id": "_:g4",
+        "csvw:datatype": "xsd:dateTime",
+        "csvw:format": "MM/dd/yyyy HH:mm:ss",
+        "csvw:name": "Time_Stamp",
+        "csvw:title": "Time Stamp"
+      },
+      {
+        "@id": "_:g5",
+        "csvw:datatype": "xsd:string",
+        "csvw:name": "Flight_Number",
+        "csvw:title": "Flight Number"
+      },
+      {
+        "@id": "_:g6",
+        "csvw:datatype": "xsd:date",
+        "csvw:format": "MM/dd/yyyy",
+        "csvw:name": "Flight_Date",
+        "csvw:title": "Flight Date"
+      },
+      {
+        "@id": "_:g7",
+        "csvw:datatype": "xsd:string",
+        "csvw:name": "Destination_Airport",
+        "csvw:title": "Destination Airport"
+      },
+      {
+        "@id": "_:g8",
+        "csvw:datatype": "xsd:string",
+        "csvw:name": "Stand",
+        "csvw:title": "Stand"
+      },
+      {
+        "@id": "_:g9",
+        "csvw:datatype": "xsd:string",
+        "csvw:name": "A/C_Type",
+        "csvw:title": "A/C Type"
+      },
+      {
+        "@id": "https://www.pistis-project.eu/set/data/departure-bag",
+        "@type": "dcat:Dataset",
+        "dcterms:description": {
+          "@language": "en",
+          "@value": "This is a dataset that includes information about departure bags"
+        },
+        "dcterms:issued": {
+          "@type": "xsd:dateTime",
+          "@value": "2024-01-14T00:00:00"
+        },
+        "dcterms:language": {
+          "@id": "http://publications.europa.eu/resource/authority/language/ENG"
+        },
+        "dcterms:title": {
+          "@language": "en",
+          "@value": "A Dataset about Departure Bags"
+        },
+        "dcat:contactPoint": {
+          "@id": "_:g0"
+        },
+        "dcat:distribution": {
+          "@id": "https://www.pistis-project.eu/set/distribution/1"
+        }
+      },
+      {
+        "@id": "https://www.pistis-project.eu/set/distribution/1",
+        "@type": "dcat:Distribution",
+        "dcterms:format": {
+          "@id": "http://publications.europa.eu/resource/authority/file-type/CSV"
+        },
+        "dcterms:issued": {
+          "@type": "xsd:dateTime",
+          "@value": "2024-01-14T00:00:00"
+        },
+        "dcterms:license": {
+          "@id": "http://publications.europa.eu/resource/authoritddy/licence/CC_BY_4_0"
+        },
+        "dcterms:type": {
+          "@id": "https://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"
+        },
+        "dcat:accessURL": {
+          "@id": "https://connector.pistis-factory-1.de"
+        },
+        "dcat:byteSize": {
+          "@type": "xsd:decimal",
+          "@value": "433"
+        },
+        "pv:schema": {
+          "@id": "_:g2"
+        }
+      }
+    ]
+  }
