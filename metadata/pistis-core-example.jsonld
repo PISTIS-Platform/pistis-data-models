@@ -1,0 +1,76 @@
+{
+    "@context": {
+        "dct": "http://purl.org/dc/terms/",
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "odrl": "https://www.w3.org/TR/odrl-vocab/#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "ex": "http://example.org/data/",
+        "pistis": "https://www.pistis-project.eu/ns/voc#",
+        "filetypes": "http://publications.europa.eu/resource/authority/file-type/"
+    },
+    "@graph": [
+        {
+            "@id": "ex:ExoplanetDiscoveriesDataset",
+            "@type": "dcat:Dataset",
+            "dct:title": "Exoplanet Discoveries Dataset",
+            "dct:description": "A comprehensive dataset of exoplanets discovered in the last decade, including details such as planet name, discovery method, orbital characteristics, and physical properties.",
+            "dct:identifier": "123e4567-e89b-12d3-a456-426614174000",
+            "dct:issued": {
+                "@value": "2024-01-01T00:00:00Z",
+                "@type": "xsd:dateTime"
+            },
+            "dct:modified": {
+                "@value": "2024-03-01T00:00:00Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcat:keyword": [
+                "Exoplanet",
+                "Astronomy",
+                "Space",
+                "Orbital Characteristics",
+                "Physical Properties"
+            ],
+            "dct:publisher": {
+                "@id": "ex:DataNebula"
+            },
+            "dcat:distribution": {
+                "@id": "ex:ExoplanetDiscoveriesDistribution"
+            }
+        },
+        {
+            "@id": "ex:DataNebula",
+            "@type": "foaf:Agent",
+            "foaf:name": "DataNebula"
+        },
+        {
+            "@id": "ex:ExoplanetDiscoveriesDistribution",
+            "@type": "dcat:Distribution",
+            "dct:title": "Exoplanet Discoveries Raw Data",
+            "pistis:rawDataURL": {
+                "@id": "https://www.pistis-factory-1/factory/raw/123e4567-e89b-12d3-a456-426614174000"
+            },
+            "pistis:tabularDataURL": {
+                "@id": "https://www.pistis-factory-1/factory/tabular/123e4567-e89b-12d3-a456-426614174000"
+            },
+            "dct:format": {
+                "@id": "filetypes:CSV"
+            },
+            "odrl:hasPolicy": {
+                "@id": "ex:UsagePolicy"
+            }
+        },
+        {
+            "@id": "ex:UsagePolicy",
+            "@type": "odrl:Policy",
+            "odrl:permission": {
+                "@id": "ex:ResearchUse"
+            }
+        },
+        {
+            "@id": "ex:ResearchUse",
+            "@type": "odrl:Permission",
+            "odrl:action": "Use for Research"
+        }
+    ]
+}
