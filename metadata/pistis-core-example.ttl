@@ -1,0 +1,39 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix odrl: <https://www.w3.org/TR/odrl-vocab/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/data/> .
+@prefix pistis: <https://www.pistis-project.eu/ns/voc#> .
+@prefix filetypes: <http://publications.europa.eu/resource/authority/file-type/> .
+
+ex:ExoplanetDiscoveriesDataset
+    a dcat:Dataset ;
+    dct:title "Exoplanet Discoveries Dataset" ;
+    dct:description "A comprehensive dataset of exoplanets discovered in the last decade, including details such as planet name, discovery method, orbital characteristics, and physical properties." ;
+    dct:identifier "123e4567-e89b-12d3-a456-426614174000" ;
+    dct:issued "2024-01-01T00:00:00Z"^^xsd:dateTime ;
+    dct:modified "2024-03-01T00:00:00Z"^^xsd:dateTime ;
+    dcat:keyword "Exoplanet", "Astronomy", "Space", "Orbital Characteristics", "Physical Properties" ;
+    dct:publisher ex:DataNebula ;
+    dcat:distribution ex:ExoplanetDiscoveriesDistribution .
+
+ex:DataNebula
+    a foaf:Agent ;
+    foaf:name "DataNebula" .
+
+ex:ExoplanetDiscoveriesDistribution
+    a dcat:Distribution ;
+    dct:title "Exoplanet Discoveries Raw Data" ;
+    pistis:rawDataURL <https://www.pistis-factory-1/factory/raw/123e4567-e89b-12d3-a456-426614174000> ;
+    pistis:tabularDataURL <https://www.pistis-factory-1/factory/tabular/123e4567-e89b-12d3-a456-426614174000> ;
+    dct:format filetypes:CSV ;
+    odrl:hasPolicy ex:UsagePolicy .
+
+ex:UsagePolicy
+    a odrl:Policy ;
+    odrl:permission ex:ResearchUse .
+
+ex:ResearchUse
+    a odrl:Permission ;
+    odrl:action "Use for Research" .

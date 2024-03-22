@@ -1,0 +1,179 @@
+@prefix pistis: <https://www.pistis-project.eu/ns/voc#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix odrl:   <https://www.w3.org/TR/odrl-vocab/#> .
+
+pistis:CoreShape
+    dct:title "The core metadata scheme of the PISTIS platform" ;
+    foaf:homepage <https://www.pistis-project.eu/> ;
+    dct:conformsTo <https://www.w3.org/TR/shacl> ;
+    owl:versionInfo "0.0.1" .
+
+pistis:Dataset_Shape
+    a sh:NodeShape ;
+    sh:name "Dataset"@en ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "Title"; 
+        sh:description "The title of the dataset" ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:title ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "Description"; 
+        sh:description "The description of the dataset" ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:description ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "Identifier"; 
+        sh:description "A unique identifier of the Dataset as a valid UUID" ;
+        sh:pattern "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$" ;
+        sh:datatype xsd:string ; 
+        sh:path dct:identifier ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "Distribution"; 
+        sh:description "An object containing information about the actual data" ;
+        sh:path dcat:distribution ;
+        sh:node pistis:Distribution_Shape ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:name "Keyword"; 
+        sh:description "A keyword to describe the data" ;
+        sh:path dcat:keyword ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "Release Date"; 
+        sh:description "The date of formal issuance of the Dataset" ;
+        sh:path dct:issued ;
+        sh:severity sh:Violation ;
+        sh:datatype xsd:dateTime ;
+    ] ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "Modification Date"; 
+        sh:description "The most recent date on which the Dataset was changed or modified" ;
+        sh:path dct:modified ;
+        sh:severity sh:Violation ;
+        sh:datatype xsd:dateTime ;
+    ] ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "Publisher"; 
+        sh:description "An entity (organisation) responsible for making the Dataset available" ;
+        sh:path dct:publisher ;
+        sh:severity sh:Violation ;
+        sh:node pistis:Agent_Shape ;
+    ] .
+
+pistis:Distribution_Shape
+    a sh:NodeShape ;
+    sh:name "Distribution"@en ;
+    sh:property [
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:name "Title"; 
+        sh:description "The title of the actual data" ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:title ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "Raw Data"; 
+        sh:description "The raw data in the Factory Storage" ;
+        sh:nodeKind sh:IRI ;
+        sh:path pistis:rawDataURL ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:name "Tabular Data"; 
+        sh:description "The tabular data in the Factory Storage" ;
+        sh:nodeKind sh:IRI ;
+        sh:path pistis:tabularDataURL ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "Format"; 
+        sh:description "Format of the original file expresed with this vocabulary: http://publications.europa.eu/resource/authority/file-type" ;
+        sh:nodeKind sh:IRI ;
+        sh:path dct:format ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:maxCount 1 ;
+        sh:name "PISTIS Usage Policy"; 
+        sh:description "The policy expressing the rights associated with the distribution if using the ODRL vocabulary" ;
+        sh:nodeKind sh:BlankNodeOrIRI ;
+        sh:path odrl:hasPolicy ;
+        sh:node pistis:Policy_Shape ;
+        sh:severity sh:Violation ;
+    ] .
+
+pistis:Agent_Shape
+    a sh:NodeShape ;
+    sh:name "Agent"@en ;
+    sh:targetClass foaf:Agent ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "Name"; 
+        sh:description "The name of the agent" ;
+        sh:nodeKind sh:Literal ;
+        sh:path foaf:name ;
+        sh:severity sh:Violation
+    ] .
+  
+pistis:Policy_Shape
+    a sh:NodeShape ;
+    sh:name "PISTIS Usage Policy"@en ;
+    sh:targetClass odrl:Policy ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:name "Permission"; 
+        sh:description "Permission for the Dataset" ;
+        sh:nodeKind sh:BlankNodeOrIRI ;
+        sh:path odrl:permission ;
+        sh:node pistis:Permission_Shape ;
+        sh:severity sh:Violation
+    ] .
+
+pistis:Permission_Shape
+      a sh:NodeShape ;
+    sh:name "PISTIS Permission"@en ;
+    sh:targetClass odrl:Permission ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "Action"; 
+        sh:description "A description of the action allowed to perform with the Dataset" ;
+        sh:nodeKind sh:Literal ;
+        sh:path odrl:action ;
+        sh:severity sh:Violation
+    ] .
