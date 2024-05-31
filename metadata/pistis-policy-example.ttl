@@ -1,0 +1,33 @@
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/data/> .
+@prefix pistis: <https://www.pistis-project.eu/ns/voc#> .
+
+ex:UsagePolicy1
+    a odrl:Policy ;
+    odrl:target ex:ExoplanetDiscoveriesDataset ;
+    odrl:assigner "pistisUserId" ;
+    odrl:assignee "pistisUserId" ;
+    odrl:permission [
+        odrl:action pistis:resell ;
+        odrl:contraint [
+            odrl:leftOperand pistis:resellQuantity ;
+            odrl:operator "lteq" ;
+            odrl:rightOperand "10"^^xsd:integer ;
+        ] ;
+    ] ;
+    odrl:prohibition [
+        odrl:action pistis:modify ;
+    ] .
+
+ex:UsagePolicy2
+    a odrl:Policy ;
+    odrl:target ex:ExoplanetDiscoveriesDataset2 ;
+    odrl:assigner "pistisUserId" ;
+    odrl:assignee "pistisUserId" ;
+    odrl:prohibition [
+        odrl:action pistis:resell ;
+    ] ;
+    odrl:permission [
+        odrl:action pistis:modify ;
+    ] .
