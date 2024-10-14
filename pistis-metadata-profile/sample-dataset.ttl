@@ -1,68 +1,71 @@
-@prefix dcat:                <http://www.w3.org/ns/dcat#> .
-@prefix dct:                 <http://purl.org/dc/terms/> .
-@prefix xsd:                 <http://www.w3.org/2001/XMLSchema#> .
-@prefix odrl:                <http://www.w3.org/ns/odrl/2/> .
-@prefix vcard:               <http://www.w3.org/2006/vcard/ns#> .
-@prefix foaf:                <http://xmlns.com/foaf/0.1/> .
-@prefix skos:                <http://www.w3.org/2004/02/skos/core#> .
-@prefix pst:                 <https://www.pistis-project.eu/ns/voc#> .
-@prefix ex:                  <http://example.org/data/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pst: <https://www.pistis-project.eu/ns/voc#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <https://piveau.io/set/data/test-dataset>
-    a                   dcat:Dataset ;
-    pst:offer           true ; # Set to true if the dataset is offered in the marketplace
-    dct:title           "Title of the Data Asset"@en ;
-    dct:description     "Description of the Data Asset"@en ;
-    dcat:keyword        "Engagement"@en, "Volunteerism"@en, "Stakeholders"@en, "Universities"@en, "Trends"@en   ;
-    dct:language        <http://publications.europa.eu/resource/authority/language/ENG> ;
-    dcat:theme          <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
-    dct:issued          "2023-05-25T00:00:00"^^xsd:dateTime ;
-    dct:modified        "2023-05-25T00:00:00"^^xsd:dateTime ;
-    pst:monetization    [
-                            a                   pst:MonetizationMethod ;
-                            pst:type            "one-off" ;
-                            pst:free            false ;
-                            pst:price           "10"^^xsd:decimal ;
-                            dct:license         [
-                                                    dct:identifier "pistis-license" ;
-                                                    dct:title "PISTIS License" ;
-                                                    skos:prefLabel "PISTIS License" ;
-                                                    skos:exactMatch <https://www.pistis-project.eu/pistis-licence>
-                                                ] ;
-                            pst:limit           [
-                                                    a                   pst:DownloadLimit ;
-                                                    pst:downloads       "5"^^xsd:positiveInteger ;
-                                                    pst:frequency       "day" ;
-                                                ] ;
-                            pst:isExclusive     false ;
-                            pst:spatialAvailability "Europe" ;
-                            pst:transferable    "non-transferable" ;
-                            pst:termDate        "2025-06-09T00:00:00"^^xsd:dateTime ;
-                            pst:extraTerms      "Extra terms and conditions of the license" ;
-                            pst:additionalRenewalTerms  "Additional terms for contract renewal" ;
-                            pst:nonRenewalDays      "5"^^xsd:positiveInteger ;
-                            pst:contractBreachDays      "2"^^xsd:positiveInteger ;
-                            pst:personalData    [
-                                                        a                   pst:PersonalDataTerms ;
-                                                        pst:containsPersonalData   true ;
-                                                        pst:PersonalDataTerms       "Terms of processing personal data"
-                                                ] ;
-    pst:accessPolicies      "Not defined yet" ;
-    dct:publisher       [ a     foaf:Organization ;                         # This equals the organization that publishes the data
-                                pst:organizationId "FOKUS" ;
-                                foaf:mbox <mailto:email@publisher.eu> ;
-                                foaf:name "Publisher Limited" ; ] ;
-        
-
-                        ] ;
-
-    dcat:distribution   <https://piveau.io/set/distribution/1> .
-
-
+    a dcat:Dataset ;
+    dct:description "Description of the Data Asset"@en ;
+    dcat:distribution <https://piveau.io/set/distribution/1> ;
+    dcat:keyword "Engagement"@en ;
+    dcat:keyword "Stakeholders"@en ;
+    dcat:keyword "Trends"@en ;
+    dcat:keyword "Universities"@en ;
+    dcat:keyword "Volunteerism"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
+    dct:issued "2023-05-25T00:00:00"^^xsd:dateTime ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
+    dct:modified "2023-05-25T00:00:00"^^xsd:dateTime ;
+    dct:title "Title of the Data Asset"@en ;
+    pst:monetization [
+        a pst:MonetizationMethod ;
+        dct:license [
+            dct:identifier "pistis-license" ;
+            dct:title "PISTIS License" ;
+            skos:exactMatch <https://www.pistis-project.eu/pistis-licence> ;
+            skos:prefLabel "PISTIS License" ;
+        ] ;
+        dct:publisher [
+            a foaf:Organization ;
+            foaf:mbox <mailto:email@publisher.eu> ;
+            foaf:name "Publisher Limited" ;
+            pst:organizationId "FOKUS" ;
+        ] ;
+        pst:accessPolicies "Not defined yet" ;
+        pst:additionalRenewalTerms "Additional terms for contract renewal" ;
+        pst:contractBreachDays "2"^^xsd:positiveInteger ;
+        pst:extraTerms "Extra terms and conditions of the license" ;
+        pst:free false ;
+        pst:isExclusive false ;
+        pst:limit [
+            a pst:DownloadLimit ;
+            pst:downloads "5"^^xsd:positiveInteger ;
+            pst:frequency "day" ;
+        ] ;
+        pst:nonRenewalDays "5"^^xsd:positiveInteger ;
+        pst:personalData [
+            a pst:PersonalDataTerms ;
+            pst:PersonalDataTerms "Terms of processing personal data" ;
+            pst:containsPersonalData true ;
+        ] ;
+        pst:price 10 ;
+        pst:spatialAvailability "Europe" ;
+        pst:termDate "2025-06-09T00:00:00"^^xsd:dateTime ;
+        pst:transferable "non-transferable" ;
+        pst:type "one-off" ;
+    ] ;
+    pst:offer [
+        a pst:Offer ;
+        pst:originalID "cf78ba4b-101b-4db5-94e4-0dca86aa2744" ;
+    ] .
 
 <https://piveau.io/set/distribution/1>
-    a              dcat:Distribution ;
-    dct:title      "Name of the actual File" ;
-    dct:format     <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-    dcat:byteSize  "1288490189"^^xsd:decimal ;
-    dcat:accessURL <http://factory-storage/test-document_company2> .
+    a dcat:Distribution ;
+    dcat:accessURL <http://factory-storage/test-document_company2> ;
+    dcat:byteSize 1288490189 ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:title "Name of the actual File" .
+
+
