@@ -2,7 +2,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix pst: <https://www.pistis-project.eu/ns/voc#> .
+@prefix pistis: <https://www.pistis-project.eu/ns/voc#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <https://piveau.io/set/data/test-dataset>
@@ -19,8 +19,8 @@
     dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
     dct:modified "2023-05-25T00:00:00"^^xsd:dateTime ;
     dct:title "Title of the Data Asset"@en ;
-    pst:monetization [
-        a pst:MonetizationMethod ;
+    pistis:monetization [
+        a pistis:MonetizationMethod ;
         dct:license [
             dct:identifier "pistis-license" ;
             dct:title "PISTIS License" ;
@@ -31,34 +31,34 @@
             a foaf:Organization ;
             foaf:mbox <mailto:email@publisher.eu> ;
             foaf:name "Publisher Limited" ;
-            pst:organizationId "FOKUS" ;
+            pistis:organizationId "FOKUS" ;
         ] ;
-        pst:accessPolicies "Not defined yet" ;
-        pst:additionalRenewalTerms "Additional terms for contract renewal" ;
-        pst:contractBreachDays "2"^^xsd:positiveInteger ;
-        pst:extraTerms "Extra terms and conditions of the license" ;
-        pst:free false ;
-        pst:isExclusive false ;
-        pst:limit [
-            a pst:DownloadLimit ;
-            pst:downloads "5"^^xsd:positiveInteger ;
-            pst:frequency "day" ;
+        pistis:accessPolicies "Not defined yet" ;
+        pistis:additionalRenewalTerms "Additional terms for contract renewal" ;
+        pistis:contractBreachDays "2"^^xsd:positiveInteger ;
+        pistis:extraTerms "Extra terms and conditions of the license" ;
+        pistis:free false ;
+        pistis:isExclusive false ;
+        pistis:limit [
+            a pistis:DownloadLimit ;
+            pistis:downloads "5"^^xsd:positiveInteger ;
+            pistis:frequency "day" ;
         ] ;
-        pst:nonRenewalDays "5"^^xsd:positiveInteger ;
-        pst:personalData [
-            a pst:PersonalDataTerms ;
-            pst:PersonalDataTerms "Terms of processing personal data" ;
-            pst:containsPersonalData true ;
+        pistis:nonRenewalDays "5"^^xsd:positiveInteger ;
+        pistis:personalData [
+            a pistis:PersonalDataTerms ;
+            pistis:PersonalDataTerms "Terms of processing personal data" ;
+            pistis:containsPersonalData true ;
         ] ;
-        pst:price 10 ;
-        pst:spatialAvailability "Europe" ;
-        pst:termDate "2025-06-09T00:00:00"^^xsd:dateTime ;
-        pst:transferable "non-transferable" ;
-        pst:type "one-off" ;
+        pistis:price 10 ;
+        pistis:spatialAvailability "Europe" ;
+        pistis:termDate "2025-06-09T00:00:00"^^xsd:dateTime ;
+        pistis:transferable "non-transferable" ;
+        pistis:type "one-off" ;
     ] ;
-    pst:offer [
-        a pst:Offer ;
-        pst:originalID "cf78ba4b-101b-4db5-94e4-0dca86aa2744" ;
+    pistis:offer [
+        a pistis:Offer ;
+        pistis:originalID "cf78ba4b-101b-4db5-94e4-0dca86aa2744" ;
     ] .
 
 <https://piveau.io/set/distribution/1>
