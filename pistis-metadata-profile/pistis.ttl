@@ -1,6 +1,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix pistis: <https://www.pistis-project.eu/ns/voc#> .
+@prefix pst: <https://www.pistis-project.eu/ns/voc#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcatap: <http://data.europa.eu/r5r/> .
@@ -133,16 +133,16 @@ dcatap:Dataset_Shape
       ] ;
     sh:property [
           pv:mappingClass "Nested" ;
-          pv:mappingLink pistis:MonetizationMethod_Shape ;
+          pv:mappingLink pst:MonetizationMethod_Shape ;
           pv:mappingName "monetization" ;
-          sh:path pistis:monetization ;
+          sh:path pst:monetization ;
           sh:severity sh:Violation ;
       ] ;
     sh:property [
           pv:mappingClass "Nested" ;
-          pv:mappingLink pistis:Offer_Shape ;
+          pv:mappingLink pst:Offer_Shape ;
           pv:mappingName "offer" ;
-          sh:path pistis:offer ;
+          sh:path pst:offer ;
           sh:severity sh:Violation ;
       ] ;
     sh:targetClass dcat:Dataset .
@@ -200,7 +200,7 @@ dcatap:Distribution_Shape
       ] ;
     sh:targetClass dcat:Distribution .
 
-pistis:MonetizationMethod_Shape
+pst:MonetizationMethod_Shape
     a sh:NodeShape ;
     sh:property [
           pv:mappingClass "License" ;
@@ -219,88 +219,88 @@ pistis:MonetizationMethod_Shape
           pv:mappingClass "StandardText" ;
           pv:mappingName "access_policies" ;
           sh:maxCount 1 ;
-          sh:path pistis:accessPolicies ;
+          sh:path pst:accessPolicies ;
       ] ;
     sh:property [
           pv:mappingClass "StandardText" ;
           pv:mappingName "additional_renewal_terms" ;
           sh:maxCount 1 ;
-          sh:path pistis:additionalRenewalTerms ;
+          sh:path pst:additionalRenewalTerms ;
       ] ;
     sh:property [
           pv:mappingClass "Integer" ;
           pv:mappingName "contract_breach_days" ;
           sh:maxCount 1 ;
-          sh:path pistis:contractBreachDays ;
+          sh:path pst:contractBreachDays ;
       ] ;
     sh:property [
           pv:mappingClass "StandardText" ;
           pv:mappingName "extra_terms" ;
           sh:maxCount 1 ;
-          sh:path pistis:extraTerms ;
+          sh:path pst:extraTerms ;
       ] ;
     sh:property [
           pv:mappingClass "Boolean" ;
           pv:mappingName "free" ;
           sh:maxCount 1 ;
-          sh:path pistis:free ;
+          sh:path pst:free ;
       ] ;
     sh:property [
           pv:mappingClass "Boolean" ;
           pv:mappingName "is_exclusive" ;
           sh:maxCount 1 ;
-          sh:path pistis:isExclusive ;
+          sh:path pst:isExclusive ;
       ] ;
     sh:property [
           pv:mappingClass "Nested" ;
-          pv:mappingLink pistis:DownloadLimit_Shape ;
+          pv:mappingLink pst:DownloadLimit_Shape ;
           pv:mappingName "downloads" ;
-          sh:path pistis:limit ;
+          sh:path pst:limit ;
       ] ;
     sh:property [
           pv:mappingClass "Integer" ;
           pv:mappingName "non_renewal_days" ;
           sh:maxCount 1 ;
-          sh:path pistis:nonRenewalDays ;
+          sh:path pst:nonRenewalDays ;
       ] ;
     sh:property [
           pv:mappingClass "Nested" ;
-          pv:mappingLink pistis:PersonalDataTerms_Shape ;
+          pv:mappingLink pst:PersonalDataTerms_Shape ;
           pv:mappingName "personal_data_terms" ;
-          sh:path pistis:personalData ;
+          sh:path pst:personalData ;
       ] ;
     sh:property [
           pv:mappingClass "Integer" ;
           pv:mappingName "price" ;
           sh:maxCount 1 ;
-          sh:path pistis:price ;
+          sh:path pst:price ;
       ] ;
     sh:property [
           pv:mappingClass "StandardText" ;
           pv:mappingName "spatial_availability" ;
           sh:maxCount 1 ;
-          sh:path pistis:spatialAvailability ;
+          sh:path pst:spatialAvailability ;
       ] ;
     # termData
     sh:property [
           pv:mappingClass "DateTime" ;
           pv:mappingName "termDate" ;
           sh:maxCount 1 ;
-          sh:path pistis:termDate ;
+          sh:path pst:termDate ;
       ] ;
     sh:property [
           pv:mappingClass "StandardText" ;
           pv:mappingName "transferable" ;
           sh:maxCount 1 ;
-          sh:path pistis:transferable ;
+          sh:path pst:transferable ;
       ] ;
     sh:property [
           pv:mappingClass "StandardText" ;
           pv:mappingName "type" ;
           sh:maxCount 1 ;
-          sh:path pistis:type ;
+          sh:path pst:type ;
       ] ;
-    sh:targetClass pistis:MonetizationMethod .
+    sh:targetClass pst:MonetizationMethod .
 
 dcatap:Agent_Shape
     a sh:NodeShape ;
@@ -333,141 +333,141 @@ dcatap:Agent_Shape
           pv:mappingClass "StandardText" ;
           pv:mappingName "organization_id" ;
           sh:maxCount 1 ;
-          sh:path pistis:organizationId ;
+          sh:path pst:organizationId ;
       ] ;
     sh:targetClass foaf:Agent .
 
-pistis:DownloadLimit_Shape
+pst:DownloadLimit_Shape
     a sh:NodeShape ;
     sh:property [
           pv:mappingClass "Integer" ;
           pv:mappingName "downloads" ;
           sh:maxCount 1 ;
-          sh:path pistis:downloads ;
+          sh:path pst:downloads ;
       ] ;
     sh:property [
           pv:mappingClass "StandardText" ;
           pv:mappingName "frequency" ;
           sh:maxCount 1 ;
-          sh:path pistis:frequency ;
+          sh:path pst:frequency ;
       ] ;
-    sh:targetClass pistis:DownloadLimit .
+    sh:targetClass pst:DownloadLimit .
 
-pistis:PersonalDataTerms_Shape
+pst:PersonalDataTerms_Shape
     a sh:NodeShape ;
     sh:property [
           pv:mappingClass "StandardText" ;
           pv:mappingName "personal_data_terms" ;
           sh:maxCount 1 ;
-          sh:path pistis:personalDataTerms ;
+          sh:path pst:personalDataTerms ;
       ] ;
     sh:property [
           pv:mappingClass "Boolean" ;
           pv:mappingName "contains_personal_data" ;
           sh:maxCount 1 ;
-          sh:path pistis:containsPersonalData ;
+          sh:path pst:containsPersonalData ;
       ] ;
-    sh:targetClass pistis:PersonalDataTerms .
+    sh:targetClass pst:PersonalDataTerms .
 
-pistis:Offer_Shape
+pst:Offer_Shape
     a sh:NodeShape ;
     sh:property [
           pv:mappingClass "StandardText" ; # Should be UUID
           pv:mappingName "original_ID" ;
           sh:maxCount 1 ;
-          sh:path pistis:originalID ;
+          sh:path pst:originalID ;
       ] ;
-    sh:targetClass pistis:OfferShape .
+    sh:targetClass pst:OfferShape .
 #-------------------------------------------------------------------------
 # New Property Definitions under the pistis Namespace
 #-------------------------------------------------------------------------
 
 # Dataset properties
-pistis:organizationId a rdf:Property ;
+pst:organizationId a rdf:Property ;
                       rdfs:label "User Organization ID"@en ;
                       rdfs:comment "User's organization ID"@en ;
                       rdfs:domain dcat:Dataset ;
                       rdfs:range xsd:string .
 
-pistis:isExclusive a rdf:Property ;
+pst:isExclusive a rdf:Property ;
                    rdfs:label "Is Exclusive"@en ;
                    rdfs:comment "Indicates if the dataset is exclusive"@en ;
                    rdfs:domain dcat:Dataset ;
                    rdfs:range xsd:boolean .
 
-pistis:free a rdf:Property ;
+pst:free a rdf:Property ;
             rdfs:label "Free"@en ;
             rdfs:comment "Indicates if the dataset is free"@en ;
             rdfs:domain dcat:Dataset ;
             rdfs:range xsd:boolean .
 
-pistis:transferable a rdf:Property ;
+pst:transferable a rdf:Property ;
                     rdfs:label "Transferable"@en ;
                     rdfs:comment "Transferability of the dataset (transferable, non-transferable, sub-licensable)"@en ;
                     rdfs:domain dcat:Dataset ;
                     rdfs:range xsd:string .
 
-pistis:accessPolicies a rdf:Property ;
+pst:accessPolicies a rdf:Property ;
                       rdfs:label "Access Policies"@en ;
                       rdfs:comment "Access policies for the dataset"@en ;
                       rdfs:domain dcat:Dataset ;
                       rdfs:range odrl:Set .
 
-pistis:additionalRenewalTerms a rdf:Property ;
+pst:additionalRenewalTerms a rdf:Property ;
                               rdfs:label "Additional Renewal Terms"@en ;
                               rdfs:comment "Additional terms for contract renewal"@en ;
                               rdfs:domain dcat:Dataset ;
                               rdfs:range xsd:string .
 
-pistis:contractBreachDays a rdf:Property ;
+pst:contractBreachDays a rdf:Property ;
                           rdfs:label "Contract Breach Days"@en ;
                           rdfs:comment "Maximum days for curing contract breach"@en ;
                           rdfs:domain dcat:Dataset ;
                           rdfs:range xsd:integer .
 
-pistis:extraTerms a rdf:Property ;
+pst:extraTerms a rdf:Property ;
                   rdfs:label "Extra Terms"@en ;
                   rdfs:comment "Any extra terms added by the user"@en ;
                   rdfs:domain dcat:Dataset ;
                   rdfs:range xsd:string .
 
-pistis:originalID a rdf:Property ;
+pst:originalID a rdf:Property ;
                   rdfs:label "Original ID"@en ;
                   rdfs:comment "The offer original ID"@en ;
                   rdfs:domain dcat:Dataset ;
                   rdfs:range xsd:string . # Should be UUID
 
-pistis:nonRenewalDays a rdf:Property ;
+pst:nonRenewalDays a rdf:Property ;
                       rdfs:label "Non-Renewal Days"@en ;
                       rdfs:comment "Notice period for non-renewal of contract"@en ;
                       rdfs:domain dcat:Dataset ;
                       rdfs:range xsd:integer .
 
-pistis:personalDataTerms a rdf:Property ;
+pst:personalDataTerms a rdf:Property ;
                          rdfs:label "Personal Data Terms"@en ;
                          rdfs:comment "Protection of personal data terms"@en ;
                          rdfs:domain dcat:Dataset ;
                          rdfs:range xsd:string .
 
-pistis:price a rdf:Property ;
+pst:price a rdf:Property ;
              rdfs:label "Dataset Price"@en ;
              rdfs:comment "The price at which the user sells the dataset"@en ;
              rdfs:domain dcat:Dataset ;
              rdfs:range xsd:decimal .
 
-pistis:type a rdf:Property ;
+pst:type a rdf:Property ;
             rdfs:label "Monetization Type"@en ;
             rdfs:comment "Monetization Type such as one-off, subscription, etc."@en ;
             rdfs:domain dcat:Dataset ;
             rdfs:range xsd:string .
 
-pistis:termDate a rdf:Property ;
+pst:termDate a rdf:Property ;
                 rdfs:label "Term Date"@en ;
                 rdfs:comment "Perpetual or duration of the term"@en ;
                 rdfs:domain dcat:Dataset ;
                 rdfs:range xsd:date .
 
-pistis:insightsResult a rdf:Property ;
+pst:insightsResult a rdf:Property ;
                       rdfs:label "Insights Result"@en ;
                       rdfs:comment "Results of insights generator"@en ;
                       rdfs:domain dcat:Dataset ;
