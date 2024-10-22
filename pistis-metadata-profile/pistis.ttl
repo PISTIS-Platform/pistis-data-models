@@ -209,11 +209,10 @@ pistis:MonetizationMethod_Shape
           sh:path dct:license ;
       ] ;
     sh:property [
-          pv:mappingClass "Agent" ;
+          pv:mappingClass "Nested" ;
           pv:mappingLink dcatap:Agent_Shape ;
           pv:mappingName "publisher" ;
           sh:maxCount 1 ;
-          sh:minCount 1 ;
           sh:path dct:publisher ;
       ] ;
     sh:property [
@@ -307,7 +306,6 @@ dcatap:Agent_Shape
     a sh:NodeShape ;
     sh:name "Agent"@en ;
     sh:property [
-          sh:minCount 1 ;
           sh:maxCount 1 ;
           sh:nodeKind sh:Literal ;
           sh:path foaf:name ;
@@ -326,13 +324,6 @@ dcatap:Agent_Shape
           sh:severity sh:Violation ;
           pv:mappingClass "StandardDisabled" ;
           pv:mappingName "email"
-      ],[
-          sh:maxCount 1 ;
-          sh:path vcard:hasAddress ;
-          sh:severity sh:Violation ;
-          pv:mappingClass "Nested" ;
-          pv:mappingName "address" ;
-          pv:mappingLink dcatap:Vcard_Address_Shape
       ], [
           sh:maxCount 1 ;
           sh:path dct:type ;
@@ -475,3 +466,9 @@ pistis:termDate a rdf:Property ;
                 rdfs:comment "Perpetual or duration of the term"@en ;
                 rdfs:domain dcat:Dataset ;
                 rdfs:range xsd:date .
+
+pistis:insightsResult a rdf:Property ;
+                      rdfs:label "Insights Result"@en ;
+                      rdfs:comment "Results of insights generator"@en ;
+                      rdfs:domain dcat:Dataset ;
+                      rdfs:range xsd:string .
