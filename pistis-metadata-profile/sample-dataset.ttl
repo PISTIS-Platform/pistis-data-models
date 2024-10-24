@@ -47,7 +47,7 @@
         pst:nonRenewalDays "5"^^xsd:positiveInteger ;
         pst:personalData [
             a pst:PersonalDataTerms ;
-            pst:PersonalDataTerms "Terms of processing personal data" ;
+            pst:personalDataTerms "Terms of processing personal data" ;
             pst:containsPersonalData true ;
         ] ;
         pst:price 10 ;
@@ -59,7 +59,8 @@
     pst:offer [
         a pst:Offer ;
         pst:originalID "cf78ba4b-101b-4db5-94e4-0dca86aa2744" ;
-    ] .
+    ] ;
+    pst:insightsResult "https://www.yourresulthere.com" .
 
 <https://piveau.io/set/distribution/1>
     a dcat:Distribution ;
@@ -67,5 +68,3 @@
     dcat:byteSize 1288490189 ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
     dct:title "Name of the actual File" .
-
-
