@@ -1,0 +1,73 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pst: <https://www.pistis-project.eu/ns/voc#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://piveau.io/set/data/test-dataset>
+    a dcat:Dataset ;
+    dct:description "Description of the Data Asset"@en ;
+    dcat:distribution <https://piveau.io/set/distribution/1> ;
+    dcat:keyword "Engagement"@en ;
+    dcat:keyword "Stakeholders"@en ;
+    dcat:keyword "Trends"@en ;
+    dcat:keyword "Universities"@en ;
+    dcat:keyword "Volunteerism"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
+    dct:issued "2023-05-25T00:00:00"^^xsd:dateTime ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
+    dct:modified "2023-05-25T00:00:00"^^xsd:dateTime ;
+    dct:title "Title of the Data Asset"@en ;
+    pst:monetization [
+        a pst:MonetizationMethod ;
+        dct:license [
+            dct:identifier "pistis-license" ;
+            dct:title "PISTIS License" ;
+            skos:exactMatch <https://www.pistis-project.eu/pistis-licence> ;
+            skos:prefLabel "PISTIS License" ;
+        ] ;
+        dct:publisher [
+            a foaf:Organization ;
+            foaf:mbox <mailto:email@publisher.eu> ;
+            foaf:name "Publisher Limited" ;
+            pst:organizationId "factory-uuid" ;
+        ] ;
+        pst:accessPolicies "Not defined yet" ;
+        pst:additionalRenewalTerms "Additional terms for contract renewal" ;
+        pst:contractBreachDays "2"^^xsd:positiveInteger ;
+        pst:extraTerms "Extra terms and conditions of the license" ;
+        pst:contractTerms "encoded-text-loremipsumodormetconsectetueradipiscingelitMusnisierospharetraaceratConubianullamhimenaeocuraesemperquisqueprimisscelerisqueacRhoncusvitaeurnafelisattishabitantaceuismodvivamusEratmassaparturisollicitudinllamcorper duisurnamaximumagnisfaucibus" ;
+        pst:free false ;
+        pst:isExclusive false ;
+        pst:limit [
+            a pst:DownloadLimit ;
+            pst:downloads "7"^^xsd:positiveInteger ;
+            pst:frequency "days" ;
+        ] ;
+        pst:nonRenewalDays "7"^^xsd:positiveInteger ;
+        pst:personalData [
+            a pst:PersonalDataTerms ;
+            pst:personalDataTerms "Terms of processing personal data" ;
+            pst:containsPersonalData true ;
+        ] ;
+        pst:price 7 ;
+        pst:spatialAvailability "Europe" ;
+        pst:termDate "2025-06-09T00:00:00"^^xsd:dateTime ;
+        pst:transferable "non-transferable" ;
+        pst:type "one-off" ;
+        pst:numResell "10"^^xsd:positiveInteger ;
+        pst:numShare "5"^^xsd:positiveInteger ;
+    ] ;
+    pst:offer [
+        a pst:Offer ;
+        pst:originalID "cf78ba4b-101b-4db5-94e4-0dca86aa2744" ;
+    ] ;
+    pst:insightsResult "https://www.yourresulthere.com" .
+
+<https://piveau.io/set/distribution/1>
+    a dcat:Distribution ;
+    dcat:accessURL <http://factory-storage/test-document_company2> ;
+    dcat:byteSize 1288490189 ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:title "Name of the actual File" .
