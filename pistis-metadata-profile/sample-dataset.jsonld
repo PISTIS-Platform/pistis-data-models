@@ -1,0 +1,287 @@
+[
+  {
+    "@id": "https://piveau.io/set/data/test-dataset",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Dataset"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Description of the Data Asset"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2023-05-25T00:00:00"
+      }
+    ],
+    "http://purl.org/dc/terms/language": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/language/ENG"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2023-05-25T00:00:00"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Title of the Data Asset"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#distribution": [
+      {
+        "@id": "https://piveau.io/set/distribution/1"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#keyword": [
+      {
+        "@language": "en",
+        "@value": "Engagement"
+      },
+      {
+        "@language": "en",
+        "@value": "Volunteerism"
+      },
+      {
+        "@language": "en",
+        "@value": "Universities"
+      },
+      {
+        "@language": "en",
+        "@value": "Trends"
+      },
+      {
+        "@language": "en",
+        "@value": "Stakeholders"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#theme": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme/EDUC"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#insightsResult": [
+      {
+        "@value": "https://www.yourresulthere.com"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#monetization": [
+      {
+        "@id": "_:ub2bL21C22"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#offer": [
+      {
+        "@id": "_:ub2bL58C15"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub2bL47C26",
+    "@type": [
+      "https://www.pistis-project.eu/ns/voc#PersonalDataTerms"
+    ],
+    "https://www.pistis-project.eu/ns/voc#containsPersonalData": [
+      {
+        "@value": true
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#personalDataTerms": [
+      {
+        "@value": "Terms of processing personal data"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub2bL21C22",
+    "@type": [
+      "https://www.pistis-project.eu/ns/voc#MonetizationMethod"
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "_:ub2bL23C21"
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@id": "_:ub2bL29C23"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#accessPolicies": [
+      {
+        "@value": "Not defined yet"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#additionalRenewalTerms": [
+      {
+        "@value": "Additional terms for contract renewal"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#contractBreachDays": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#positiveInteger",
+        "@value": "2"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#extraTerms": [
+      {
+        "@value": "Extra terms and conditions of the license"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#free": [
+      {
+        "@value": false
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#isExclusive": [
+      {
+        "@value": false
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#limit": [
+      {
+        "@id": "_:ub2bL41C19"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#nonRenewalDays": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#positiveInteger",
+        "@value": "5"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#personalData": [
+      {
+        "@id": "_:ub2bL47C26"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#price": [
+      {
+        "@value": 10
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#spatialAvailability": [
+      {
+        "@value": "Europe"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#termDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2025-06-09T00:00:00"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#transferable": [
+      {
+        "@value": "non-transferable"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#type": [
+      {
+        "@value": "one-off"
+      }
+    ]
+  },
+  {
+    "@id": "https://piveau.io/set/distribution/1",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/file-type/CSV"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Name of the actual File"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#accessURL": [
+      {
+        "@id": "http://factory-storage/test-document_company2"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#byteSize": [
+      {
+        "@value": 1288490189
+      }
+    ]
+  },
+  {
+    "@id": "_:ub2bL29C23",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Organization"
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+        "@id": "mailto:email@publisher.eu"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Publisher Limited"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#organizationId": [
+      {
+        "@value": "FOKUS"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub2bL23C21",
+    "http://purl.org/dc/terms/identifier": [
+      {
+        "@value": "pistis-license"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "PISTIS License"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#exactMatch": [
+      {
+        "@id": "https://www.pistis-project.eu/pistis-licence"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@value": "PISTIS License"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub2bL41C19",
+    "@type": [
+      "https://www.pistis-project.eu/ns/voc#DownloadLimit"
+    ],
+    "https://www.pistis-project.eu/ns/voc#downloads": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#positiveInteger",
+        "@value": "5"
+      }
+    ],
+    "https://www.pistis-project.eu/ns/voc#frequency": [
+      {
+        "@value": "day"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub2bL58C15",
+    "@type": [
+      "https://www.pistis-project.eu/ns/voc#Offer"
+    ],
+    "https://www.pistis-project.eu/ns/voc#originalID": [
+      {
+        "@value": "cf78ba4b-101b-4db5-94e4-0dca86aa2744"
+      }
+    ]
+  }
+]
