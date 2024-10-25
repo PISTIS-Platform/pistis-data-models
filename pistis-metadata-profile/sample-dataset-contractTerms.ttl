@@ -58,6 +58,7 @@
         pst:type "one-off" ;
         pst:numResell "10"^^xsd:positiveInteger ;
         pst:numShare "5"^^xsd:positiveInteger ;
+        pst:sellerId "sellerId-goes-here" ;
     ] ;
     pst:offer [
         a pst:Offer ;

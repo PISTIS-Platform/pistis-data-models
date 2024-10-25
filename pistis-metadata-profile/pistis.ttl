@@ -239,6 +239,12 @@ pst:numShare a rdf:Property ;
              rdfs:domain dcat:Dataset ;
              rdfs:range xsd:integer .
 
+pst:sellerId a rdf:Property ;
+            rdfs:label "Seller ID"@en ;
+            rdfs:comment "The ID of a seller"@en ;
+            rdfs:domain dcat:Dataset ;
+            rdfs:range xsd:string .
+
 # Distribution property
 pst:distributionIds a rdf:Property ;
                     rdfs:label "Distribution IDs"@en ;
@@ -1707,6 +1713,11 @@ pst:MonetizationMethod_Shape
           pv:mappingName "num_share" ;
           sh:maxCount 1 ;
           sh:path pst:numShare
+      ], [
+        pv:mappingClass "StandardText" ;
+        pv:mappingName "seller_id" ;
+        sh:maxCount 1 ;
+        sh:path pst:sellerId
       ] ;
     sh:targetClass pst:MonetizationMethod .
 
