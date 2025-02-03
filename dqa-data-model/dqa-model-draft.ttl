@@ -1,0 +1,212 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pst: <http://example.org/pst#> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix iso: <http://www.iso.org/iso/term#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+
+:myDataset
+    a dcat:Dataset ;
+    dcterms:title "My dataset" ;
+    dcat:distribution :myDistribution ;
+    [Additional details]
+    .
+
+:myDistribution
+    a dcat:Distribution ;
+    dcat:downloadURL <URL> ;
+    pst:DataQualityAssessment :myDataQualityAssessment ;
+    [Additional details]
+    .
+
+:myDataQualityAssessment
+    a pst:dataQualityReport ;
+    prov:wasDerivedFrom :myDistribution ;
+    prov:wasAttributedTo [reference to data factory or user] ;
+    prov:generatedAtTime [some DateTime]^^xsd:dateTime ;
+    prov:wasGeneratedBy [reference to local factory DQA component] ;
+    dqv:hasQualityMeasurement :expectation1, :expectation2, :expectation3, :expectation4, :expectation5, :expectation6 ;
+    oa:Annotation [
+        a oa:Annotation ;
+        oa:hasTarget :myDQA ;
+        oa:motivatedBy oa:describing ;
+        oa:body [
+            @value "string json of GX expectation suite used and summary of DQ dimension scores" ;
+            @type "application/json"
+        ]
+    ] .
+    
+:expectation1
+    a dqv:QualityMeasurement ;
+    dqv:computedOn :myDistribution ;
+    dqv:isMeasurementOf :gxAccuracyMetric ;
+    dqv:value "0.85"^^xsd:double ;
+    oa:Annotation [
+        a oa:Annotation ;
+        oa:hasTarget :expectation1 ;
+        oa:motivatedBy oa:describing ;
+        oa:body [
+            @value "string Json of kwargs" ;
+            @type "application/json"
+        ]
+    ] .
+
+:expectation2
+    a dqv:QualityMeasurement ;
+    dqv:computedOn :myDistribution ;
+    dqv:isMeasurementOf :gxConsistencyMetric ;
+    dqv:value "0.95"^^xsd:double ;
+    oa:Annotation [
+        a oa:Annotation ;
+        oa:hasTarget :expectation2 ;
+        oa:motivatedBy oa:describing ;
+        oa:body [
+            @value "string Json of kwargs" ;
+            @type "application/json"
+        ]
+    ] .
+
+:expectation3
+    a dqv:QualityMeasurement ;
+    dqv:computedOn :myDistribution ;
+    dqv:isMeasurementOf :gxCompletenessMetric ;
+    dqv:value "0.75"^^xsd:double ;
+    oa:Annotation [
+        a oa:Annotation ;
+        oa:hasTarget :expectation3 ;
+        oa:motivatedBy oa:describing ;
+        oa:body [
+            @value "string Json of kwargs" ;
+            @type "application/json"
+        ]
+    ] .
+
+:expectation4
+    a dqv:QualityMeasurement ;
+    dqv:computedOn :myDistribution ;
+    dqv:isMeasurementOf :gxUniquenessMetric ;
+    dqv:value "0.65"^^xsd:double ;
+    oa:Annotation [
+        a oa:Annotation ;
+        oa:hasTarget :expectation4 ;
+        oa:motivatedBy oa:describing ;
+        oa:body [
+            @value "string Json of kwargs" ;
+            @type "application/json"
+        ]
+    ] .
+
+:expectation5
+    a dqv:QualityMeasurement ;
+    dqv:computedOn :myDistribution ;
+    dqv:isMeasurementOf :gxValidityMetric1 ;
+    dqv:value "1.0"^^xsd:double ;
+    oa:Annotation [
+        a oa:Annotation ;
+        oa:hasTarget :expectation5 ;
+        oa:motivatedBy oa:describing ;
+        oa:body [
+            @value "string Json of kwargs" ;
+            @type "application/json"
+        ]
+    ] .
+
+:expectation6
+    a dqv:QualityMeasurement ;
+    dqv:computedOn :myDistribution ;
+    dqv:isMeasurementOf :gxValidityMetric2 ;
+    dqv:value "0.90"^^xsd:double ;
+    oa:Annotation [
+        a oa:Annotation ;
+        oa:hasTarget :expectation6 ;
+        oa:motivatedBy oa:describing ;
+        oa:body [
+            @value "string Json of kwargs" ;
+            @type "application/json"
+        ]
+    ] .
+
+:gxAccuracyMetric
+    a dqv:Metric ;
+    skos:definition "text about accuracy expectation type."@en ;
+    skos:prefLabel "CamelCaseNameOfExpectation"@en ;
+    dqv:inDimension :accuracy
+    .
+
+:gxConsistencyMetric
+    a dqv:Metric ;
+    skos:definition "text about consistency expectation type."@en ;
+    skos:prefLabel "CamelCaseNameOfExpectation"@en ;
+    dqv:inDimension :consistency
+    .
+
+:gxCompletenessMetric
+    a dqv:Metric ;
+    skos:definition "text about completeness expectation type."@en ;
+    skos:prefLabel "CamelCaseNameOfExpectation"@en ;
+    dqv:inDimension :completeness
+    .
+
+:gxUniquenessMetric
+    a dqv:Metric ;
+    skos:definition "text about uniqueness expectation type."@en ;
+    skos:prefLabel "CamelCaseNameOfExpectation"@en ;
+    dqv:inDimension :uniqueness
+    .
+
+:gxValidityMetric1
+    a dqv:Metric ;
+    skos:definition "text about validity expectation type."@en ;
+    skos:prefLabel "CamelCaseNameOfExpectation"@en ;
+    dqv:inDimension :validity
+    .
+
+:gxValidityMetric2
+    a dqv:Metric ;
+    skos:definition "text about validity expectation type."@en ;
+    skos:prefLabel "CamelCaseNameOfExpectation"@en ;
+    dqv:inDimension :validity
+    .
+
+:accuracy
+    a dqv:Dimension ;
+    skos:prefLabel "Accuracy"@en ;
+    skos:definition "Definition of accuracy."@en ;
+    dqv:inCategory iso:inherentDataQuality
+    .
+
+:consistency
+    a dqv:Dimension ;
+    skos:prefLabel "Consistency"@en ;
+    skos:definition "Definition of consistency."@en ;
+    dqv:inCategory iso:inherentDataQuality
+    .
+
+:completeness
+    a dqv:Dimension ;
+    skos:prefLabel "Completeness"@en ;
+    skos:definition "Definition of completeness."@en ;
+    dqv:inCategory iso:inherentDataQuality
+    .
+
+:uniqueness
+    a dqv:Dimension ;
+    skos:prefLabel "Uniqueness"@en ;
+    skos:definition "Definition of uniqueness."@en ;
+    dqv:inCategory iso:inherentDataQuality
+    .
+
+:validity
+    a dqv:Dimension ;
+    skos:prefLabel "Validity"@en ;
+    skos:definition "Definition of validity."@en ;
+    dqv:inCategory iso:inherentDataQuality
+    .
+
+iso:inherentDataQuality
+    a dqv:Category ;
+    skos:prefLabel "Inherent Data Quality"@en
+    .
