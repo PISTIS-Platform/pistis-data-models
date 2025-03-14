@@ -1373,7 +1373,7 @@ dcatap:Distribution_Shape
           pv:mappingClass "AdmsSkos" ;
           pv:mappingName "status"
       ], [
-          sh:datatype xsd:decimal ;
+          sh:datatype xsd:nonNegativeInteger ;
           sh:maxCount 1 ;
           sh:path dcat:byteSize ;
           sh:severity sh:Violation ;
