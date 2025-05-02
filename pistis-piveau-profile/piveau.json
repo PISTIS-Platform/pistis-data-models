@@ -1,0 +1,43 @@
+{
+    "version": "1",
+    "id": "pistis",
+    "core": [
+        {
+            "id": "dataset",
+            "description": "A representation of a PISTIS dataset",
+            "path": "pistis.ttl",
+            "name": "dataset",
+            "shapeUri": "http://data.europa.eu/r5r/Dataset_Shape"
+        }
+    ],
+    "resources": [
+        {
+            "id": "data-quality",
+            "description": "A resource to manage Data Quality Metrics",
+            "path": "dataQuality.ttl",
+            "name": "data_quality_metrics",
+            "typeUri": "https://piveau.eu/ns/voc#DataQuality",
+            "shapeUri": "https://piveau.eu/ns/voc#DataQuality_Shape",
+            "searchSettings": {
+                "max_agg_size": 50,
+                "max_result_window": 10000,
+                "facets": [],
+                "searchParams": []
+            }
+        },
+        {
+            "id": "datatype-property",
+            "description": "A resource to manage the PISTIS Datatype Properties",
+            "path": "pistisDataModel.ttl",
+            "name": "datatype_property",
+            "typeUri": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+            "shapeUri": "https://piveau.eu/ns/voc#DatatypeProperty_Shape",
+            "searchSettings": {
+                "max_agg_size": 50,
+                "max_result_window": 10000,
+                "facets": [],
+                "searchParams": []
+            }
+        }
+    ]
+}
