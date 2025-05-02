@@ -1,0 +1,880 @@
+@prefix ATM: <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+@prefix NAS: <https://data.nasa.gov/ontologies/atmonto/NAS#> .
+@prefix PISTIS: <http://fokus.fraunhofer.de/PISTIS#> .
+@prefix PublicTransit: <http://ontology.eil.utoronto.ca/icity/PublicTransit/> .
+@prefix core: <https://saref.etsi.org/core/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eu-cm-ontology: <http://w3id.org/um/cbcm/eu-cm-ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix general: <https://data.nasa.gov/ontologies/atmonto/general#> .
+@prefix oeo: <http://openenergy-platform.org/ontology/oeo/> .
+@prefix ontology: <https://w3id.org/airm-o/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix saref4ener: <https://saref.etsi.org/saref4ener/> .
+@prefix schema1: <http://www.disit.org/km4city/schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+PISTIS: a owl:Ontology ;
+    owl:imports <http://ontology.eil.utoronto.ca/icity/UrbanSystem/1.2/>,
+        <http://openenergy-platform.org/ontology/oeo/releases/2.4.0/oeo.owl>,
+        <http://w3id.org/um/cbcm/eu-cm-ontology/1.2.2>,
+        <http://www.disit.org/km4city/schema>,
+        <https://data.nasa.gov/ontologies/atmontoCore>,
+        <https://saref.etsi.org/saref4ener/v1.1.2/>,
+        <https://w3id.org/airm-o/ontology/1.0> .
+
+PISTIS:Agent_1_For_Zone_1 a <http://ontology.eil.utoronto.ca/icity/LBCSv2/AgentForManagementServices>,
+        owl:NamedIndividual .
+
+PISTIS:AircraftType-iataIdentifier a owl:DatatypeProperty ;
+    rdfs:comment "IATA Aircraft code of scheduled flight." ;
+    rdfs:domain ontology:AircraftType ;
+    rdfs:range xsd:string .
+
+PISTIS:AircraftType-icaoIdentifier a owl:DatatypeProperty ;
+    rdfs:comment "ICAO Aircraft code of scheduled flight" ;
+    rdfs:domain ontology:AircraftType ;
+    rdfs:range xsd:string .
+
+PISTIS:ArrivalFlightNumberRangeEnd a owl:DatatypeProperty ;
+    rdfs:label "Arrival Flight Number Range End" ;
+    rdfs:comment "To specify a specific flight number or flight range for the arrival carrier. When an MCT is filed for one specific flight this will match the flight number specified in Arrival Flight Number Range Start. Flight numbers will be 4 digits and include leading zeros." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:ArrivalFlightNumberRangeStart a owl:DatatypeProperty ;
+    rdfs:label "Arrival Flight Number Range Start" ;
+    rdfs:comment "To specify a flight number or flight range for the arrival carrier.  Flight number will be 4 digits and include lead zeros." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:Athens a owl:NamedIndividual ;
+    ontology:State-iataCountryCode PISTIS:GR .
+
+PISTIS:Athens_Int_Terminal a owl:NamedIndividual,
+        NAS:Terminal ;
+    NAS:terminalID "Athens_Int_Terminal112" .
+
+PISTIS:Bid_1_For_Zone_1 a PISTIS:Bid,
+        owl:NamedIndividual .
+
+PISTIS:British_Airways_Flight_London_Athens a owl:NamedIndividual,
+        ATM:Flight ;
+    PISTIS:load_Factor "0.73"^^xsd:float ;
+    PISTIS:total_Capacity "30254"^^xsd:int ;
+    PISTIS:total_Passengers "22166"^^xsd:int ;
+    ATM:arrivalAirport PISTIS:Athens_Airport ;
+    ATM:departureAirport PISTIS:London ;
+    ATM:operatingCarrier PISTIS:British_Airways .
+
+PISTIS:COMM10_50 a owl:DatatypeProperty ;
+    rdfs:comment "under progress, no details are provided" .
+
+PISTIS:Contract_1_For_Zone_1 a oeo:OEO_00140109,
+        owl:NamedIndividual ;
+    PISTIS:Quantity 4 ;
+    PISTIS:hasCode 11111.0 ;
+    PISTIS:hasPrice 32 ;
+    PISTIS:timePeriod "2024-07-09T12:21:00"^^xsd:dateTime ;
+    eu-cm-ontology:transactionCompletionDate "2023-05-12T09:10:00"^^xsd:dateTime ;
+    schema1:type "Buying_Contract" ;
+    foaf:name "Job_Contract" ;
+    core:hasTimestamp "2002-05-30T09:00:00"^^xsd:dateTime .
+
+PISTIS:DepartureFlightNumberRangeEnd a owl:DatatypeProperty ;
+    rdfs:label "Departure Flight Number Range End" ;
+    rdfs:comment "End of range of outbound flight numbers where MCT applies" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:DepartureFlightNumberRangeStart a owl:DatatypeProperty ;
+    rdfs:label "Departure Flight Number Range Start" ;
+    rdfs:comment "Start of range of outbound flight numbers where MCT applies" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:Dubai_Athens_Flight a owl:NamedIndividual,
+        ATM:Flight ;
+    PISTIS:COMM10_50 "dummy value" ;
+    PISTIS:OAG_ID "c1f0044ff36a9f1ff991a2e7af3fd0dd20084c4955de2493fd185427547496ea" ;
+    PISTIS:SAD PISTIS:Aegean_Airlines ;
+    PISTIS:TSA_Regulations "S" ;
+    PISTIS:airCraft_Owner PISTIS:Aegean_Airlines ;
+    PISTIS:aircraft_Change 0.0 ;
+    PISTIS:aircraft_Type PISTIS:B777 ;
+    PISTIS:arrival_City PISTIS:Athens_City ;
+    PISTIS:arrival_Country PISTIS:Greece ;
+    PISTIS:business_Class_Seats 13 ;
+    PISTIS:codeShare_operated_flights "A3:214" ;
+    PISTIS:data_Filing_Date "2024-03-11"^^xsd:date ;
+    PISTIS:departure_City PISTIS:Athens_City ;
+    PISTIS:departure_Country PISTIS:Dubai ;
+    PISTIS:diversion_Airport PISTIS:Athens_Airport ;
+    PISTIS:economy_Class_Seats 40 ;
+    PISTIS:economy_Plus_Class_Seats 39 ;
+    PISTIS:fare_Classes "CDZAIRYBMHQVWOLKJESTUPGNXF" ;
+    PISTIS:first_Class_Seats 22 ;
+    PISTIS:flight_Approval_Type ontology:CodeApprovalType-APPROVED ;
+    PISTIS:flight_Restriction "XX" ;
+    PISTIS:freight_Classes "xxx_freight_class" ;
+    PISTIS:freight_Tonnage_Capacity "460000000.0"^^xsd:float ;
+    PISTIS:hasPlannedRoute "ATHRHO" ;
+    PISTIS:has_Aircraft_Type 321.0 ;
+    PISTIS:in_Flight_Service "Meals" ;
+    PISTIS:meals_Offered "M/M/M/M" ;
+    PISTIS:multi_Stop_Routing "DBCDGAT" ;
+    PISTIS:operating_Marketing "050" ;
+    PISTIS:premium_Economy_Class_Seats 60 ;
+    PISTIS:route_Segment_Leg "L" ;
+    PISTIS:scheduledArrivalDate "2001-01-01"^^xsd:date ;
+    PISTIS:scheduledArrivalDateTimeUTC "2024-07-07T02:46:15"^^xsd:dateTime ;
+    PISTIS:scheduledArrivalDateUTC "2001-01-01"^^xsd:date,
+        "2012-03-01"^^xsd:date ;
+    PISTIS:scheduledArrivalTimeUTC "09:12:00"^^xsd:time ;
+    PISTIS:scheduledDepartureDateTime_UTC "2002-02-28T10:00:00"^^xsd:dateTime ;
+    PISTIS:scheduledDepartureDateUTC "2001-01-01"^^xsd:date ;
+    PISTIS:scheduledDepartureTime_UTC "09:00:00"^^xsd:time ;
+    PISTIS:scheduled_Service_Code "J" ;
+    PISTIS:status_Key "d5d11ca75fc41a3b7a3289eb2a08bf5c336b6cc57e4e6b370cd872fa66d272c4" ;
+    PISTIS:status_Key_Message_ID "9740126c-33fe-4513-86f0-85d4c0a7b5eb" ;
+    PISTIS:total_Seats 206 ;
+    PISTIS:total_Stops 0 ;
+    schema1:distance 451 ;
+    ATM:actualArrivalDay <http://ontology.eil.utoronto.ca/icontact.owl#Monday> ;
+    ATM:actualArrivalTime "09:10:00"^^xsd:time ;
+    ATM:actualDepartureTime "09:02:00"^^xsd:time ;
+    ATM:arrivalAirport PISTIS:Rhodes_Airport ;
+    ATM:departureAirport PISTIS:Athens_Airport ;
+    ATM:operatingCarrier PISTIS:Emirates ;
+    ATM:plannedArrivalTime "2002-05-30T09:00:00"^^xsd:dateTime ;
+    ATM:plannedDepartureTime "2002-05-30T09:00:00"^^xsd:dateTime ;
+    ontology:AircraftIdentification-flightNumber 4903,
+        "4903" ;
+    ontology:Flight-aircraft PISTIS:Airbus_Jumbo ;
+    ontology:Flight-dateOfDeparture "2002-02-22"^^xsd:date ;
+    ontology:Flight-type PISTIS:Funnel_Flight ;
+    ontology:Route-internationalUse ontology:CodeRouteOriginType-INTERNATIONAL ;
+    ontology:TrajectorySegment-estimatedElapsedTime 100.0 .
+
+PISTIS:FOKUS_Event_Data a owl:NamedIndividual,
+        saref4ener:LoadControlEventData ;
+    core:hasTimestamp "2023-11-30T06:16:00"^^xsd:dateTime ;
+    saref4ener:hasDevice PISTIS:Lachar_Network ;
+    saref4ener:manufacturerNodeIdentification "[7 13]" ;
+    saref4ener:xsdDuration 2 ;
+    ontology:Timesheet-startTime "2023-12-28T06:16:20"^^xsd:dateTime .
+
+PISTIS:FRA a owl:NamedIndividual,
+        NAS:Airport .
+
+PISTIS:Fra a owl:NamedIndividual .
+
+PISTIS:Lufthansa-FRA-NY a owl:NamedIndividual,
+        ATM:Flight ;
+    ATM:actualDepartureTime "2023-11-30T06:16:00"^^xsd:dateTime ;
+    ATM:arrivalAirport PISTIS:BER ;
+    ATM:publishedDepartureTime "2023-11-30T06:10:00"^^xsd:dateTime ;
+    ontology:AircraftIdentification-flightNumber "A3140" ;
+    ontology:Flight-aircraft PISTIS:B777 ;
+    ontology:Flight-dateOfDeparture "30/11/2023" .
+
+PISTIS:NextRegion a owl:ObjectProperty ;
+    rdfs:label "Next Region" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range ontology:Airspace .
+
+PISTIS:Non_Operating_Ghost_Flight a owl:NamedIndividual,
+        ontology:CodeFlightType .
+
+PISTIS:OAG_ID a owl:DatatypeProperty ;
+    rdfs:comment "Unique OAG ID for schedule record." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:PreviousRegion a owl:ObjectProperty ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range ontology:Airspace .
+
+PISTIS:Quantity a owl:DatatypeProperty ;
+    rdfs:domain PISTIS:Bid,
+        eu-cm-ontology:CompanyTransaction ;
+    rdfs:range xsd:decimal .
+
+PISTIS:SAD a owl:ObjectProperty ;
+    rdfs:comment "Shared Airline Designator for a scheduled service - indicates the airline physically operating this service. The value is an object of the Air Carrier Class" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range NAS:AirCarrier .
+
+PISTIS:SAD_Name a owl:DatatypeProperty .
+
+PISTIS:SuppressionCountry a owl:ObjectProperty ;
+    rdfs:label "Suppression Country" ;
+    rdfs:comment "Indicates the supression country code with IATA coded value." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range ontology:CodeIATACountryCodeType .
+
+PISTIS:SuppressionIndicator a owl:DatatypeProperty ;
+    rdfs:label "Suppression Indicator" ;
+    rdfs:comment "Indicates whether connections should be suppressed or not." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:SuppressionState a owl:ObjectProperty ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range ontology:State .
+
+PISTIS:TSA_Regulations a owl:DatatypeProperty ;
+    rdfs:comment "Indicates whether TSA regulations apply. ''S' for TSA regulations or null." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:Transaction_1_For_Zone_1 a eu-cm-ontology:CompanyTransaction,
+        owl:NamedIndividual .
+
+PISTIS:Unit_1_For_Zone_1 a <http://ontology.eil.utoronto.ca/ISO21972/iso21972#Unit>,
+        owl:NamedIndividual .
+
+PISTIS:Zone_1 a <http://www.disit.org/saref4bldg-ext/Area>,
+        owl:NamedIndividual .
+
+PISTIS:actual_Business_Class_Seats a owl:DatatypeProperty ;
+    rdfs:comment "Business Class Seating Capacity on Flight Based On Actual Aircraft." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:int .
+
+PISTIS:actual_Economy_Class_Seats a owl:DatatypeProperty ;
+    rdfs:comment "Economy Class Seating Capacity on Flight Based on Actual Aircraft." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:int .
+
+PISTIS:actual_Economy_Plus_Class_Seats a owl:DatatypeProperty ;
+    rdfs:comment "Economy Pluss Class Seating Capacity on Flight Based on Actual Aircraft." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:int .
+
+PISTIS:actual_First_Class_Seats a owl:DatatypeProperty ;
+    rdfs:comment "First Class Seating Capacity on Flight Based on Actual Aircraft" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:int .
+
+PISTIS:actual_Flight_Instance_Key a owl:DatatypeProperty ;
+    rdfs:comment "OAG key to original operating schedule record populating status record." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:actual_Premium_Economy_Class_Seats a owl:DatatypeProperty ;
+    rdfs:comment "Premium Economy Class Seating Capacity on Flight Based on Actual Aircraft." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:int .
+
+PISTIS:actual_Total_Seats a owl:DatatypeProperty ;
+    rdfs:comment "Total Seating Capacity of Flight Based On Actual Aircraft." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:int .
+
+PISTIS:airCraft_Owner a owl:ObjectProperty ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range NAS:AirCarrier .
+
+PISTIS:aircraft_Change a owl:DatatypeProperty ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:boolean .
+
+PISTIS:aircraft_Type a owl:ObjectProperty ;
+    rdfs:comment "Specific or General Aircraft Type in scheduled service" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range <https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType> .
+
+PISTIS:alert_ID a owl:DatatypeProperty ;
+    rdfs:comment "Unique OAG ID for Alert 64 characters (string)." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:alert_Type a owl:DatatypeProperty ;
+    rdfs:comment "Indicates type of alert - in this case Always 'Flight Status Alert'" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:arrival_Actual_Ingate_Datetime_Local a owl:DatatypeProperty ;
+    rdfs:comment "Actual local scheduled ingate datetime." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:arrival_Actual_Ingate_Datetime_UTC a owl:DatatypeProperty ;
+    rdfs:comment "Actual UTC scheduled ingate datetime." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:arrival_Actual_Ingate_Timeliness a owl:DatatypeProperty ;
+    rdfs:comment "Status of estimated ingatetime such as Early', 'Ontime', 'Delayed', Null." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:arrival_Actual_Ingate_Variation a owl:DatatypeProperty ;
+    rdfs:comment "Variance between scheduled and actual arrival time in HH:NN:SS format." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:time .
+
+PISTIS:arrival_Actual_Onground_Datetime_Local a owl:DatatypeProperty ;
+    rdfs:comment "Actual Local onground DateTime of Scheduled Flight." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:arrival_Actual_Onground_Datetime_UTC a owl:DatatypeProperty ;
+    rdfs:comment "Actual UTC onground DateTime of Scheduled Flight." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:arrival_Baggage_Carousel a owl:DatatypeProperty ;
+    rdfs:comment "Baggage carousel for the luggage of arriving flight." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:arrival_City a owl:ObjectProperty ;
+    rdfs:comment "The city of arrival of a scheduled service. The value is an object/instance of the class City" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range <http://ontology.eil.utoronto.ca/ISO21972/iso21972#City> .
+
+PISTIS:arrival_Country a owl:ObjectProperty ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range ontology:State .
+
+PISTIS:arrival_Estimated_Ingate_Datetime_Local a owl:DatatypeProperty ;
+    rdfs:comment "Estimated local scheduled ingate datetime" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:arrival_Estimated_Ingate_Datetime_UTC a owl:DatatypeProperty ;
+    rdfs:comment "Estimated UTC scheduled ingate datetime." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:arrival_Estimated_Ingate_Timeliness a owl:DatatypeProperty ;
+    rdfs:comment "Status of estimated ingatetime." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:arrival_Estimated_Ingate_Variation a owl:DatatypeProperty ;
+    rdfs:comment "Estimated ingate Variation in time (HH:NN:SS) format." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:time .
+
+PISTIS:arrival_Estimated_Onground_Datetime_Local a owl:DatatypeProperty ;
+    rdfs:comment "Actual Local onground DateTime of Scheduled Flight" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:arrival_Estimated_Onground_Datetime_UTC a owl:DatatypeProperty ;
+    rdfs:comment "Actual UTC onground Date Time of Scheduled Flight." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:business_Class_Seats a owl:DatatypeProperty ;
+    rdfs:comment "Total number of business class seats offered on scheduled service" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:int .
+
+PISTIS:checkin_Counter a owl:DatatypeProperty ;
+    rdfs:domain NAS:Terminal ;
+    rdfs:range xsd:string .
+
+PISTIS:city_IATA_Code a owl:DatatypeProperty ;
+    rdfs:comment "Departure City for scheduled service identified by IATA Code. The value is valid IATA City Code." ;
+    rdfs:domain <http://ontology.eil.utoronto.ca/ISO21972/iso21972#City> ;
+    rdfs:range xsd:string .
+
+PISTIS:codeShare_operated_flights a owl:DatatypeProperty ;
+    rdfs:comment "Indicates for an operated schedule what the corresponding marketed (codeshare) flights are or for a marketed (codeshare) flight what the corresponding operated flight is." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:codeshare_Operating_Fligh_Schedule_Flight_Instance_Key a owl:DatatypeProperty ;
+    rdfs:comment "Key to OAG operating schedule record." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:data_Filing_Date a owl:DatatypeProperty ;
+    rdfs:comment "Date on which the row of data was uploaded to the database" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:date .
+
+PISTIS:departure_Actual_Offground_Datetime_Local a owl:DatatypeProperty ;
+    rdfs:comment "Actual Local OffGround DateTime Of Scheduled Flight in date Time format." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:departure_Actual_Offground_Datetime_UTC a owl:DatatypeProperty ;
+    rdfs:comment "Actual UTC OffGround DateTime Of Scheduled Fligh in dateTime format." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:departure_Actual_Outgate_Datetime_Local a owl:DatatypeProperty ;
+    rdfs:comment "Actual Local OutGate DateTime of Scheduled Flight in DateTime format." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:departure_Actual_Outgate_Timeliness a owl:DatatypeProperty ;
+    rdfs:comment "Status of actual outgatetime such as Early', 'Ontime', 'Delayed', Null." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:departure_Actual_Outgate_Variation a owl:DatatypeProperty ;
+    rdfs:comment "Variance between scheduled and estimate departure time in HH:NN:SS format." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:time .
+
+PISTIS:departure_Actual_Outgate__Datetime_UTC a owl:DatatypeProperty ;
+    rdfs:comment "Actual UTC OutGate DateTime of Scheduled Flight." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:departure_City a owl:ObjectProperty ;
+    rdfs:comment "The city of departure of a scheduled service. The value is an object/instance of the class City" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range <http://ontology.eil.utoronto.ca/ISO21972/iso21972#City> .
+
+PISTIS:departure_Country a owl:ObjectProperty ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range ontology:State .
+
+PISTIS:departure_Estimated_Offground_Datetime_Local a owl:DatatypeProperty ;
+    rdfs:comment "Estimated Local OffGround DateTime Of Scheduled Flight" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:departure_Estimated_Offground_Datetime_UTC a owl:DatatypeProperty ;
+    rdfs:comment "Estimated UTC OffGround DateTime Of Scheduled Flight." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:departure_Estimated_Outgate_Datetime_Local a owl:DatatypeProperty ;
+    rdfs:comment "Estimated Local OutGate DateTime of Scheduled Flight" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:departure_Estimated_Outgate_Datetime_UTC a owl:DatatypeProperty ;
+    rdfs:comment "Estimated UTC OutGate DateTime of Scheduled Flight." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:departure_Estimated_Outgate_Timeliness a owl:DatatypeProperty ;
+    rdfs:comment "Status of estimated outgatetime such as 'Early', 'Ontime', 'Delayed', Null" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:departure_Estimated_Outgate_Variation a owl:DatatypeProperty ;
+    rdfs:comment "Variance between scheduled and estimate departure time, in the HH:NN:SS format." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:time .
+
+PISTIS:diversion_Airport a owl:ObjectProperty ;
+    rdfs:comment "Diversion Airport." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range NAS:Airport .
+
+PISTIS:diversion_Country a owl:ObjectProperty ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range ontology:State .
+
+PISTIS:driverID a owl:DatatypeProperty ;
+    rdfs:range xsd:integer .
+
+PISTIS:economy_Class_Seats a owl:DatatypeProperty ;
+    rdfs:comment "Total number of economy class seats offered on scheduled service" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:int .
+
+PISTIS:economy_Plus_Class_Seats a owl:DatatypeProperty ;
+    rdfs:comment "Total number of premium economy plus class seats offered on scheduled service" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:int .
+
+PISTIS:eventDetails a owl:DatatypeProperty ;
+    rdfs:domain <https://saref.etsi.org/saref4city/Event> ;
+    rdfs:range xsd:string .
+
+PISTIS:event_t_vif a owl:NamedIndividual,
+        <https://saref.etsi.org/saref4city/Event> ;
+    PISTIS:driverID 1.0 ;
+    PISTIS:eventDetails "length: 45.1058, max_acc: 0.0191,end_speed: 25.36, start_speed: 11.8,altitude_diff: -1,mean_speed_change: 6.1636" ;
+    PISTIS:markerPosition "POINT (15.4623 47.059101)" ;
+    PublicTransit:hasTransitVehicleId 6.0 ;
+    dcterms:identifier "77391fa7-f0a8-4164-84e3-2f49673bca04" ;
+    general:altitude "356.0"^^xsd:float,
+        "357.0"^^xsd:float ;
+    general:endTime "2017-09-08T03:32:01.200000+00:00"^^xsd:dateTime ;
+    general:startTime "2017-09-08T03:31:59+00:00"^^xsd:dateTime ;
+    saref4ener:eventID "74925"^^xsd:unsignedInt ;
+    ontology:GeoEnabledEntity-position "POINT (15.4624 47.058998)" ;
+    ontology:SegmentLeg-duration "220000000000005" ;
+    ontology:ServiceAtGate-type "ACCELERATION" ;
+    ontology:TaxiRoute-startPosition "POINT (15.4623 47.059101)" ;
+    ontology:Timesheet-startTimeRelativeEvent 1109.2 .
+
+PISTIS:fare_Classes a owl:DatatypeProperty ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:first_Class_Seats a owl:DatatypeProperty ;
+    rdfs:comment "Total number of first class seats offered on scheduled service. the value is integer." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:int .
+
+PISTIS:flight_Approval_Type a owl:ObjectProperty ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range ontology:CodeApprovalType .
+
+PISTIS:flight_Designator_Suffix a owl:DatatypeProperty ;
+    rdfs:comment "Suffix that can be added to flight number to identify scheduled service. The value is character 'A' to 'Z'." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:flight_Operation_Type a owl:DatatypeProperty ;
+    rdfs:comment "Indicates, when populated, whether flight is a diversion or recovery flight. Possible values are \"Diversion\", \"Recovery\" Or Null." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:flight_Restriction a owl:DatatypeProperty ;
+    rdfs:comment "Restrictions applying to this scheduled service relating to traffic rights, stopovers, transfers. The values are IATA Restriction Code such as 'X'." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+PISTIS:flight_State a owl:DatatypeProperty ;
+    rdfs:comment "Current state of the flight such as 'Scheduled', 'OutGate', 'InAir', 'Landed', 'InGate', 'Cancelled', 'Diverted'." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:freight_Tonnage_Capacity a owl:DatatypeProperty ;
+    rdfs:comment "Tonnage capacity for freight on scheduled service" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:float ;
+    rdfs:subPropertyOf PISTIS:freight_Classes .
+
+PISTIS:hasCode a owl:DatatypeProperty ;
+    rdfs:domain PISTIS:Bid,
+        oeo:OEO_00140109,
+        eu-cm-ontology:CompanyTransaction ;
+    rdfs:range xsd:int .
+
+PISTIS:hasPlannedRoute a owl:DatatypeProperty ;
+    rdfs:comment "Complete routing of scheduled service. For stops = 0 simply concatenation of departure and arrival airport IATA codes, for stops > 0 the complete itinerary that this service forms a part of" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:hasPower a owl:DatatypeProperty .
+
+PISTIS:hasPrice a owl:DatatypeProperty ;
+    rdfs:domain PISTIS:Bid,
+        eu-cm-ontology:CompanyTransaction ;
+    rdfs:range xsd:int .
+
+PISTIS:has_Aircraft_Type a owl:DatatypeProperty ;
+    rdfs:comment "General or Specific Aircraft Type in scheduled service" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:in_Flight_Service a owl:DatatypeProperty ;
+    rdfs:comment "Indicates the in-flight services available in the scheduled service" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:is_Operating_Carrier a owl:DatatypeProperty ;
+    rdfs:comment "Flag to indicate that carrier is operating this flight, as opposed to a codeshare (marketed) flight." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:boolean .
+
+PISTIS:load_Factor a owl:DatatypeProperty ;
+    rdfs:domain ATM:Flight,
+        ATM:FlightSpec ;
+    rdfs:range xsd:float .
+
+PISTIS:markerPosition a owl:DatatypeProperty ;
+    rdfs:domain <https://saref.etsi.org/saref4city/Event> ;
+    rdfs:range xsd:string .
+
+PISTIS:marketing_Carrier a owl:ObjectProperty ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range NAS:AirCarrier .
+
+PISTIS:meals_Offered a owl:DatatypeProperty ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:multi_Stop_Routing a owl:DatatypeProperty ;
+    rdfs:comment "For multi-stop routing, a list of the intermediate airports. Each airport in intermediate listing must be Carrier Class: IATA_Code (String)" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:operating_Marketing a owl:DatatypeProperty ;
+    rdfs:comment "Schedule service is operated or marketed (i.e. codeshare). Operated is indicated by '010' or blank, marketed by '050'" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:premium_Economy_Class_Seats a owl:DatatypeProperty ;
+    rdfs:comment "Total number of premium economy class seats offered on scheduled service" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:int .
+
+PISTIS:route_Segment_Leg a owl:DatatypeProperty ;
+    rdfs:comment "On the complete routing, flag to indicate one leg/segment in the complete route. ''L' indicates longest leg." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:schedule_Flight_Instance_Key a owl:DatatypeProperty ;
+    rdfs:comment "OAG key to original schedule record populating status record." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:scheduledArrivalDate a owl:DatatypeProperty ;
+    rdfs:comment "Local Arrival Date of Scheduled Service. The value is recorded in DD/MM/YYYY format." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:date .
+
+PISTIS:scheduledArrivalDateTimeUTC a owl:DatatypeProperty ;
+    rdfs:comment "UTC Arrival DateTime for scheduled service. The value is represented by YYYY-MM-DD HH:NN:SS." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:scheduledArrivalDateUTC a owl:DatatypeProperty ;
+    rdfs:comment "Arrival Date of Scheduled Service in UTC. The value is in DD/MM/YYYY format." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:date .
+
+PISTIS:scheduledArrivalTimeUTC a owl:DatatypeProperty ;
+    rdfs:comment "UTC Arrival Time for scheduled service. The value epresented by HHNN." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:time .
+
+PISTIS:scheduledDepartureDateTime_Local a owl:DatatypeProperty ;
+    rdfs:comment "Local scheduled departure date time of scheduled flight." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:scheduledDepartureDateTime_UTC a owl:DatatypeProperty ;
+    rdfs:comment "UTC Departure DateTime for scheduled service. The value Represented by YYYY-MM-DD HH:NN:SS." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:scheduledDepartureDateUTC a owl:DatatypeProperty ;
+    rdfs:comment "Departure Date of Scheduled Service in UTC. The value is recorded as DD/MM/YYYY." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:date .
+
+PISTIS:scheduledDepartureTime_UTC a owl:DatatypeProperty ;
+    rdfs:comment "UTC Departure Time for scheduled service. The value is represented by HHNN." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:time .
+
+PISTIS:scheduled_Service_Code a owl:DatatypeProperty ;
+    rdfs:comment "Service code for scheduled service indicating type of service" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:status_Key a owl:DatatypeProperty ;
+    rdfs:comment "OAG Generated ID (64 characters) to Uniquely Identify Status Record" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:status_Key_Message_ID a owl:DatatypeProperty ;
+    rdfs:comment "ID that relates to status message received by OAG." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+PISTIS:status_Key_Message_Timestamp a owl:DatatypeProperty ;
+    rdfs:comment "Timestamp of status message." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:timePeriod a owl:DatatypeProperty ;
+    rdfs:domain PISTIS:Bid,
+        eu-cm-ontology:CompanyTransaction ;
+    rdfs:range xsd:dateTime .
+
+PISTIS:total_Capacity a owl:DatatypeProperty ;
+    rdfs:comment "Total number of seats offered on service by carrier" ;
+    rdfs:domain ATM:Flight,
+        ATM:FlightSpec ;
+    rdfs:range xsd:int .
+
+PISTIS:total_Passengers a owl:DatatypeProperty ;
+    rdfs:comment "Total number of passengers booked on service." ;
+    rdfs:domain ATM:Flight,
+        ATM:FlightSpec ;
+    rdfs:range xsd:int .
+
+PISTIS:total_Seats a owl:DatatypeProperty ;
+    rdfs:comment "Total seats offered on scheduled service" ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:int .
+
+PISTIS:total_Stops a owl:DatatypeProperty ;
+    rdfs:comment "Number of stops in scheduled service. The value is integer between 0 to 9." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:int .
+
+eu-cm-ontology:transactionCompletionDate a owl:DatatypeProperty .
+
+schema1:distance rdfs:comment "Total distance in statute miles from departure to arrival airport",
+        "Total distance in statute miles from departure to arrival airport." ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:int .
+
+ATM:actualArrivalTime rdfs:range xsd:time .
+
+ATM:operatingCarrier rdfs:domain ATM:Flight .
+
+saref4ener:manufacturerNodeIdentification rdfs:range xsd:string .
+
+ontology:Aircraft-aircraftType a owl:ObjectProperty .
+
+ontology:AircraftIdentification-flightNumber a owl:DatatypeProperty ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:string .
+
+ontology:AircraftType-aircraftstand a owl:ObjectProperty .
+
+ontology:AircraftType-iataIdentifier a owl:AnnotationProperty .
+
+ontology:AircraftType-icaoIdentifier a owl:AnnotationProperty .
+
+ontology:Flight-aircraft a owl:ObjectProperty .
+
+ontology:Flight-dateOfDeparture a owl:DatatypeProperty .
+
+ontology:Flight-type a owl:AnnotationProperty .
+
+ontology:GeoEnabledEntity-position a owl:DatatypeProperty .
+
+ontology:Route-internationalUse a owl:AnnotationProperty ;
+    rdfs:domain ATM:Flight .
+
+ontology:SSRCode-code a owl:DatatypeProperty ;
+    rdfs:domain PISTIS:Bid,
+        oeo:OEO_00140109,
+        eu-cm-ontology:CompanyTransaction .
+
+ontology:SegmentLeg-duration a owl:DatatypeProperty .
+
+ontology:ServiceAtGate-type a owl:DatatypeProperty .
+
+ontology:State-iataCountryCode a owl:AnnotationProperty .
+
+ontology:TaxiRoute-startPosition a owl:DatatypeProperty .
+
+ontology:Timesheet-startTime a owl:DatatypeProperty ;
+    rdfs:domain saref4ener:LoadControlEventData ;
+    rdfs:range xsd:dateTime .
+
+ontology:Timesheet-startTimeRelativeEvent a owl:DatatypeProperty .
+
+ontology:TrajectorySegment-estimatedElapsedTime a owl:DatatypeProperty ;
+    rdfs:domain ATM:Flight ;
+    rdfs:range xsd:int .
+
+PISTIS:AT7 a owl:NamedIndividual,
+        ontology:AircraftType ;
+    PISTIS:AircraftType-iataIdentifier "AT7_IATA_Code" ;
+    PISTIS:AircraftType-icaoIdentifier "AT7_ICAO_Code" ;
+    ontology:AircraftType-aircraftstand PISTIS:B64 .
+
+PISTIS:Airbus_Jumbo a owl:NamedIndividual,
+        ontology:AircraftType ;
+    PISTIS:AircraftType-iataIdentifier "777" ;
+    PISTIS:AircraftType-icaoIdentifier "A777" ;
+    ontology:AircraftType-iataIdentifier "32S" ;
+    ontology:AircraftType-icaoIdentifier "A3221" .
+
+PISTIS:B64 a owl:NamedIndividual,
+        ontology:AircraftStand .
+
+PISTIS:BER a owl:NamedIndividual,
+        NAS:Airport .
+
+PISTIS:British_Airways a owl:NamedIndividual,
+        NAS:AirCarrier ;
+    NAS:iataCarrierCode "BA" .
+
+PISTIS:DB a owl:NamedIndividual,
+        ontology:CodeIATACountryCodeType .
+
+PISTIS:Dubai a owl:NamedIndividual,
+        ontology:State ;
+    ontology:State-iataCountryCode PISTIS:DB .
+
+PISTIS:Emirates a owl:NamedIndividual,
+        NAS:AirCarrier ;
+    NAS:iataCarrierCode "EK" ;
+    NAS:icaoCarrierCode "UAE" .
+
+PISTIS:Funnel_Flight a owl:NamedIndividual,
+        ontology:CodeFlightType .
+
+PISTIS:Greece a owl:NamedIndividual,
+        ontology:State ;
+    ontology:State-iataCountryCode PISTIS:GR .
+
+PISTIS:Lachar_Network a owl:NamedIndividual,
+        core:Device .
+
+PISTIS:London a owl:NamedIndividual,
+        NAS:Airport ;
+    NAS:iataAirportCode "LHR" .
+
+PISTIS:Rhodes_Airport a owl:NamedIndividual,
+        NAS:Airport ;
+    NAS:iataAirportCode "RHO" ;
+    NAS:icaoAirportCode "LGRP" .
+
+PISTIS:freight_Classes a owl:DatatypeProperty ;
+    rdfs:comment "Freight classification of scheduled service. The value is Valid IATA Freight Classes." .
+
+<http://ontology.eil.utoronto.ca/icontact.owl#Monday> a NAS:NASday ;
+    NAS:dayOfMonth 22 .
+
+ontology:AircraftStand a owl:Class .
+
+ontology:CodeApprovalType a owl:Class .
+
+ontology:CodeApprovalType-APPROVED a owl:NamedIndividual .
+
+PISTIS:Aegean_Airlines a owl:NamedIndividual,
+        NAS:AirCarrier ;
+    NAS:airCarrierName "Aegean Airlines" ;
+    NAS:iataCarrierCode "A3" .
+
+PISTIS:Athens_City a <http://ontology.eil.utoronto.ca/ISO21972/iso21972#City>,
+        owl:NamedIndividual ;
+    PISTIS:city_IATA_Code "ATH" ;
+    ontology:State-iataCountryCode PISTIS:GR .
+
+PISTIS:B777 a owl:NamedIndividual,
+        <https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft> ;
+    ontology:Aircraft-aircraftType PISTIS:AT7 .
+
+ontology:Airspace a owl:Class .
+
+ontology:CodeFlightType a owl:Class .
+
+PISTIS:Athens_Airport a owl:NamedIndividual,
+        NAS:Airport ;
+    PISTIS:city_IATA_Code "ATH" ;
+    NAS:iataAirportCode "ATH" ;
+    NAS:icaoAirportCode "LGAV" .
+
+PISTIS:GR a owl:NamedIndividual,
+        ontology:CodeIATACountryCodeType .
+
+oeo:OEO_00140109 a owl:Class .
+
+ontology:CodeIATACountryCodeType a owl:Class .
+
+ontology:AircraftType a owl:Class .
+
+PISTIS:Bid a owl:Class .
+
+eu-cm-ontology:CompanyTransaction a owl:Class .
+
+ontology:State a owl:Class .
+

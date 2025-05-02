@@ -1,0 +1,30 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix pv: <https://piveau.eu/ns/voc#> .
+
+pv:DataQuality
+    a pv:PiveauProfile ;
+    pv:profileVersion "1" ;
+    dct:title "Data Quality metrics"@en ;
+    dct:description "A Model for Data Quality metrics"@en ;
+    foaf:maker [
+        foaf:mbox <mailto:torben.jastrow@fokus.fraunhofer.de> ;
+        foaf:name "Torben Jastrow" ;
+    ] ;
+    owl:versionInfo "0.0.1" .
+
+
+pv:DataQuality_Shape
+    a sh:NodeShape ;
+    sh:name "Data Quality Metrics"@en ;
+    sh:targetClass pv:DataQuality ;
+    sh:property [ # Mandatory property 
+        sh:maxCount 1 ;
+        sh:minCount 1 ;
+        pv:mappingClass "StandardText" ;
+        pv:mappingName "id" ;
+    ].
