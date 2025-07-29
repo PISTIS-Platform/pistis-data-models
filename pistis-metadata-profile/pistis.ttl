@@ -22,6 +22,7 @@
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix senias: <http://senias.de/ns/sis#> .
 @prefix stat: <http://data.europa.eu/s1n/> .
+@prefix dext: <https://data.europa.eu/ns/ext#> .
 
 pv:PISTIS
     a pv:PiveauProfile ;
@@ -179,6 +180,12 @@ pst:termDate a rdf:Property ;
              rdfs:domain dcat:Dataset ;
              rdfs:range xsd:date .
 
+pst:expirationDate a rdf:Property ;
+             rdfs:label "Expiration Date"@en ;
+             rdfs:comment "Expiration date of the contract"@en ;
+             rdfs:domain dcat:Dataset ;
+             rdfs:range xsd:date .
+
 pst:additionalRenewalTerms a rdf:Property ;
                            rdfs:label "Additional Renewal Terms"@en ;
                            rdfs:comment "Additional terms for contract renewal"@en ;
@@ -240,10 +247,10 @@ pst:numShare a rdf:Property ;
              rdfs:range xsd:integer .
 
 pst:sellerId a rdf:Property ;
-            rdfs:label "Seller ID"@en ;
-            rdfs:comment "The ID of a seller"@en ;
-            rdfs:domain dcat:Dataset ;
-            rdfs:range xsd:string .
+             rdfs:label "Seller ID"@en ;
+             rdfs:comment "The ID of a seller"@en ;
+             rdfs:domain dcat:Dataset ;
+             rdfs:range xsd:string .
 
 # Distribution property
 pst:distributionIds a rdf:Property ;
@@ -1173,6 +1180,10 @@ dcatap:Dataset_Shape
                           sh:maxCount 1 ;
                           pv:mappingClass "StandardText" ;
                           pv:mappingName "id"
+                      ], [
+                          sh:maxCount 1 ;
+                          pv:mappingClass "StandardKeyword" ;
+                          pv:mappingName "is_part_of"
                       ]
       ], [
           sh:maxCount 1 ;
@@ -1240,6 +1251,7 @@ dcatap:Dataset_Shape
           pv:mappingName "quality_meas"
       ], [
           sh:maxCount 1 ;
+          sh:path dext:metadataExtension ;
           pv:mappingClass "MetadataExtension" ;
           pv:mappingName "extended_metadata"
       ], [
@@ -1690,7 +1702,7 @@ pst:MonetizationMethod_Shape
           sh:path pst:spatialAvailability
       ], [
           pv:mappingClass "DateTime" ;
-          pv:mappingName "termDate" ;
+          pv:mappingName "term_date" ;
           sh:maxCount 1 ;
           sh:path pst:termDate
       ], [
@@ -1714,10 +1726,15 @@ pst:MonetizationMethod_Shape
           sh:maxCount 1 ;
           sh:path pst:numShare
       ], [
-        pv:mappingClass "StandardText" ;
-        pv:mappingName "seller_id" ;
-        sh:maxCount 1 ;
-        sh:path pst:sellerId
+          pv:mappingClass "StandardText" ;
+          pv:mappingName "seller_id" ;
+          sh:maxCount 1 ;
+          sh:path pst:sellerId
+      ], [
+          pv:mappingClass "DateTime" ;
+          pv:mappingName "expiration_date" ;
+          sh:maxCount 1 ;
+          sh:path pst:expirationDate
       ] ;
     sh:targetClass pst:MonetizationMethod .
 
