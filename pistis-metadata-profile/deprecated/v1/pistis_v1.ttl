@@ -252,42 +252,6 @@ pst:sellerId a rdf:Property ;
              rdfs:domain dcat:Dataset ;
              rdfs:range xsd:string .
 
-pst:isAnonymized a rdf:Property ;
-                rdfs:label "Is Anonymized"@en ;
-                rdfs:comment "Indicates if the dataset is anonymized"@en ;
-                rdfs:domain dcat:Dataset ;
-                rdfs:range xsd:boolean .
-
-pst:isTransformed a rdf:Property ;
-                rdfs:label "Is Transformed"@en ;
-                rdfs:comment "Indicates if the dataset is transformed"@en ;
-                rdfs:domain dcat:Dataset ;
-                rdfs:range xsd:boolean .
-
-pst:percentageOffer a rdf:Property ;
-                  rdfs:label "Percentage Offer"@en ;
-                  rdfs:comment "Percent ownership available for investment"@en ;
-                  rdfs:domain dcat:Dataset ;
-                  rdfs:range xsd:integer .
-
-pst:totalShares a rdf:Property ;
-                    rdfs:label "Total Shares"@en ;
-                    rdfs:comment "Total number of shares available for purchase"@en ;
-                    rdfs:domain dcat:Dataset ;
-                    rdfs:range xsd:integer .
-
-pst:maxShares a rdf:Property ;
-                rdfs:label "Max Shares"@en ;
-                rdfs:comment "maximum number of shares each entity can purchase"@en ;
-                rdfs:domain dcat:Dataset ;
-                rdfs:range xsd:integer .
-
-pst:status a rdf:Property ;
-              rdfs:label "Status"@en ;
-              rdfs:comment "Investment offer is available for investment"@en ;
-              rdfs:domain dcat:Dataset ;
-              rdfs:range xsd:boolean .
-
 # Distribution property
 pst:distributionIds a rdf:Property ;
                     rdfs:label "Distribution IDs"@en ;
@@ -1331,16 +1295,6 @@ dcatap:Dataset_Shape
           pv:mappingName "insights_result" ;
           sh:maxCount 1 ;
           sh:path pst:insightsResult
-      ], [
-          sh:maxCount 1 ;
-          pv:mappingClass "Boolean" ;
-          pv:mappingName "is_anonymized" ;
-          sh:path pst:isAnonymized
-      ], [
-          sh:maxCount 1 ;
-          pv:mappingClass "Boolean" ;
-          pv:mappingName "is_transformed" ;
-          sh:path pst:isTransformed
       ] ;
     sh:targetClass dcat:Dataset .
 
@@ -1676,68 +1630,6 @@ pv:Vocable_Shape
 pst:MonetizationMethod_Shape
     a sh:NodeShape ;
     sh:property [
-          pv:mappingClass "StandardText" ;
-          pv:mappingName "seller_id" ;
-          sh:maxCount 1 ;
-          sh:path pst:sellerId
-      ], [
-          pv:mappingClass "Nested" ;
-          pv:mappingLink pst:PurchaseOffer_Shape ;
-          pv:mappingName "purchase_offer" ;
-          sh:path pst:purchaseOffer
-      ], [
-          pv:mappingClass "Nested" ;
-          pv:mappingLink pst:InvestmentOffer_Shape ;
-          pv:mappingName "investment_offer" ;
-          sh:path pst:investmentOffer
-      ] ;
-    sh:targetClass pst:MonetizationMethod .
-
-pst:DownloadLimit_Shape
-    a sh:NodeShape ;
-    sh:property [
-          pv:mappingClass "Integer" ;
-          pv:mappingName "downloads" ;
-          sh:maxCount 1 ;
-          sh:path pst:downloads
-      ], [
-          pv:mappingClass "StandardText" ;
-          pv:mappingName "frequency" ;
-          sh:maxCount 1 ;
-          sh:path pst:frequency
-      ] ;
-    sh:targetClass pst:DownloadLimit .
-
-
-pst:PersonalDataTerms_Shape
-    a sh:NodeShape ;
-    sh:property [
-          pv:mappingClass "StandardText" ;
-          pv:mappingName "personal_data_terms" ;
-          sh:maxCount 1 ;
-          sh:path pst:personalDataTerms
-      ], [
-          pv:mappingClass "Boolean" ;
-          pv:mappingName "contains_personal_data" ;
-          sh:maxCount 1 ;
-          sh:path pst:containsPersonalData
-      ] ;
-    sh:targetClass pst:PersonalDataTerms .
-
-
-pst:Offer_Shape
-    a sh:NodeShape ;
-    sh:property [
-          pv:mappingClass "StandardText" ;
-          pv:mappingName "original_ID" ;
-          sh:maxCount 1 ;
-          sh:path pst:originalID ;
-      ] ;
-    sh:targetClass pst:OfferShape .
-
-pst:PurchaseOffer_Shape
-    a sh:NodeShape ;
-    sh:property  [
           pv:mappingClass "License" ;
           pv:mappingName "license" ;
           sh:maxCount 1 ;
@@ -1815,59 +1707,73 @@ pst:PurchaseOffer_Shape
           sh:path pst:termDate
       ], [
           pv:mappingClass "StandardText" ;
+          pv:mappingName "transferable" ;
+          sh:maxCount 1 ;
+          sh:path pst:transferable
+      ], [
+          pv:mappingClass "StandardText" ;
           pv:mappingName "type" ;
           sh:maxCount 1 ;
           sh:path pst:type
+      ], [
+          pv:mappingClass "Integer" ;
+          pv:mappingName "num_resell" ;
+          sh:maxCount 1 ;
+          sh:path pst:numResell
+      ], [
+          pv:mappingClass "Integer" ;
+          pv:mappingName "num_share" ;
+          sh:maxCount 1 ;
+          sh:path pst:numShare
+      ], [
+          pv:mappingClass "StandardText" ;
+          pv:mappingName "seller_id" ;
+          sh:maxCount 1 ;
+          sh:path pst:sellerId
       ], [
           pv:mappingClass "DateTime" ;
           pv:mappingName "expiration_date" ;
           sh:maxCount 1 ;
           sh:path pst:expirationDate
-      ], [
-          pv:mappingClass "StandardText" ;
-          pv:mappingName "transferable" ;
-          sh:maxCount 1 ;
-          sh:path pst:transferable
-      ], [
-        pv:mappingClass "Integer" ;
-        pv:mappingName "num_resell" ;
-        sh:maxCount 1 ;
-        sh:path pst:numResell
-      ], [
-        pv:mappingClass "Integer" ;
-        pv:mappingName "num_share" ;
-        sh:maxCount 1 ;
-        sh:path pst:numShare
       ] ;
-    sh:targetClass pst:PurchaseOffer .
+    sh:targetClass pst:MonetizationMethod .
 
-pst:InvestmentOffer_Shape
+pst:DownloadLimit_Shape
     a sh:NodeShape ;
     sh:property [
-        pv:mappingClass "DateTime" ;
-        pv:mappingName "term_date" ;
-        sh:maxCount 1 ;
-        sh:path pst:termDate
+          pv:mappingClass "Integer" ;
+          pv:mappingName "downloads" ;
+          sh:maxCount 1 ;
+          sh:path pst:downloads
       ], [
-        pv:mappingClass "Integer" ;
-        pv:mappingName "percentage_offer" ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:nonNegativeInteger ;
-        sh:path pst:percentageOffer
-      ], [
-        pv:mappingClass "Integer" ;
-        pv:mappingName "total_shares" ;
-        sh:maxCount 1 ;
-        sh:path pst:totalShares
-      ], [
-        pv:mappingClass "Integer" ;
-        pv:mappingName "max_shares" ;
-        sh:maxCount 1 ;
-        sh:path pst:maxShares
-      ], [
-        pv:mappingClass "Boolean" ;
-        pv:mappingName "status" ;
-        sh:maxCount 1 ;
-        sh:path pst:status
+          pv:mappingClass "StandardText" ;
+          pv:mappingName "frequency" ;
+          sh:maxCount 1 ;
+          sh:path pst:frequency
       ] ;
-    sh:targetClass pst:InvestmentOffer .
+    sh:targetClass pst:DownloadLimit .
+
+pst:PersonalDataTerms_Shape
+    a sh:NodeShape ;
+    sh:property [
+          pv:mappingClass "StandardText" ;
+          pv:mappingName "personal_data_terms" ;
+          sh:maxCount 1 ;
+          sh:path pst:personalDataTerms
+      ], [
+          pv:mappingClass "Boolean" ;
+          pv:mappingName "contains_personal_data" ;
+          sh:maxCount 1 ;
+          sh:path pst:containsPersonalData
+      ] ;
+    sh:targetClass pst:PersonalDataTerms .
+
+pst:Offer_Shape
+    a sh:NodeShape ;
+    sh:property [
+          pv:mappingClass "StandardText" ;
+          pv:mappingName "original_ID" ;
+          sh:maxCount 1 ;
+          sh:path pst:originalID ;
+      ] ;
+    sh:targetClass pst:OfferShape .
