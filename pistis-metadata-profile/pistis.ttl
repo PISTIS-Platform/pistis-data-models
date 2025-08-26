@@ -216,10 +216,9 @@ pst:subscriptionFrequency a rdf:Property ;
                           rdfs:domain dcat:Dataset ;
                           rdfs:range xsd:string .
 
-#TODO
 pst:updateFrequency a rdf:Property ;
                     rdfs:label "Update Frequency"@en ;
-                    rdfs:comment "TBD"@en ;
+                    rdfs:comment "The frequency at which the dataset will be updated (e.g. daily, weekly)"@en ;
                     rdfs:domain dcat:Dataset ;
                     rdfs:range xsd:string .
 
@@ -277,10 +276,9 @@ pst:percentageOffer a rdf:Property ;
                     rdfs:domain dcat:Dataset ;
                     rdfs:range xsd:integer .
 
-#TODO
 pst:availableShares a rdf:Property ;
                     rdfs:label "Available Shares"@en ;
-                    rdfs:comment "TBD"@en ;
+                    rdfs:comment "The number of shares still available to be bought"@en ;
                     rdfs:domain dcat:Dataset ;
                     rdfs:range xsd:integer .
 
@@ -296,10 +294,9 @@ pst:maxShares a rdf:Property ;
               rdfs:domain dcat:Dataset ;
               rdfs:range xsd:integer .
 
-#TODO
 pst:pricePerShare a rdf:Property ;
                   rdfs:label "Price per Share"@en ;
-                  rdfs:comment "TBD"@en ;
+                  rdfs:comment "The price at which the user sells each share to the dataset"@en ;
                   rdfs:domain dcat:Dataset ;
                   rdfs:range xsd:integer .
 
