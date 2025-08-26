@@ -26,7 +26,7 @@
 
 pv:PISTIS
     a pv:PiveauProfile ;
-    pv:profileVersion "2.0" ;
+    pv:profileVersion "1" ;
     dct:title "A DCAT-AP profile for PISTIS"@en ;
     dct:description "Based and inspired by DCAT-AP 2.1.1"@en ;
     owl:versionInfo "0.0.1" .
@@ -181,10 +181,10 @@ pst:termDate a rdf:Property ;
              rdfs:range xsd:date .
 
 pst:expirationDate a rdf:Property ;
-             rdfs:label "Expiration Date"@en ;
-             rdfs:comment "Expiration date of the contract"@en ;
-             rdfs:domain dcat:Dataset ;
-             rdfs:range xsd:date .
+                   rdfs:label "Expiration Date"@en ;
+                   rdfs:comment "Expiration date of the contract"@en ;
+                   rdfs:domain dcat:Dataset ;
+                   rdfs:range xsd:date .
 
 pst:additionalRenewalTerms a rdf:Property ;
                            rdfs:label "Additional Renewal Terms"@en ;
@@ -216,23 +216,30 @@ pst:subscriptionFrequency a rdf:Property ;
                           rdfs:domain dcat:Dataset ;
                           rdfs:range xsd:string .
 
+#TODO
+pst:updateFrequency a rdf:Property ;
+                    rdfs:label "Update Frequency"@en ;
+                    rdfs:comment "TBD"@en ;
+                    rdfs:domain dcat:Dataset ;
+                    rdfs:range xsd:string .
+
 pst:insightsResult a rdf:Property ;
                    rdfs:label "Insights Result"@en ;
                    rdfs:comment "Results of insights generator"@en ;
                    rdfs:domain dcat:Dataset ;
                    rdfs:range xsd:string .
 
-pst:originalID a rdf:Property ;
+pst:originalId a rdf:Property ;
                rdfs:label "Original ID"@en ;
                rdfs:comment "The offer original ID"@en ;
                rdfs:domain dcat:Dataset ;
                rdfs:range xsd:string .
 
-pst:free a rdf:Property ;
-         rdfs:label "Free"@en ;
-         rdfs:comment "Indicates if the dataset is free"@en ;
-         rdfs:domain dcat:Dataset ;
-         rdfs:range xsd:boolean .
+pst:isFree a rdf:Property ;
+           rdfs:label "Free"@en ;
+           rdfs:comment "Indicates if the dataset is free"@en ;
+           rdfs:domain dcat:Dataset ;
+           rdfs:range xsd:boolean .
 
 pst:numResell a rdf:Property ;
               rdfs:label "Number Resell"@en ;
@@ -240,11 +247,11 @@ pst:numResell a rdf:Property ;
               rdfs:domain dcat:Dataset ;
               rdfs:range xsd:integer .
 
-pst:numShare a rdf:Property ;
-             rdfs:label "Number Share"@en ;
-             rdfs:comment "Number of times buyer is authorized to share dataset"@en ;
-             rdfs:domain dcat:Dataset ;
-             rdfs:range xsd:integer .
+pst:numReshare a rdf:Property ;
+               rdfs:label "Number Share"@en ;
+               rdfs:comment "Number of times buyer is authorized to share dataset"@en ;
+               rdfs:domain dcat:Dataset ;
+               rdfs:range xsd:integer .
 
 pst:sellerId a rdf:Property ;
              rdfs:label "Seller ID"@en ;
@@ -253,40 +260,54 @@ pst:sellerId a rdf:Property ;
              rdfs:range xsd:string .
 
 pst:isAnonymized a rdf:Property ;
-                rdfs:label "Is Anonymized"@en ;
-                rdfs:comment "Indicates if the dataset is anonymized"@en ;
-                rdfs:domain dcat:Dataset ;
-                rdfs:range xsd:boolean .
+                 rdfs:label "Is Anonymized"@en ;
+                 rdfs:comment "Indicates if the dataset is anonymized"@en ;
+                 rdfs:domain dcat:Dataset ;
+                 rdfs:range xsd:boolean .
 
 pst:isTransformed a rdf:Property ;
-                rdfs:label "Is Transformed"@en ;
-                rdfs:comment "Indicates if the dataset is transformed"@en ;
-                rdfs:domain dcat:Dataset ;
-                rdfs:range xsd:boolean .
+                  rdfs:label "Is Transformed"@en ;
+                  rdfs:comment "Indicates if the dataset is transformed"@en ;
+                  rdfs:domain dcat:Dataset ;
+                  rdfs:range xsd:boolean .
 
 pst:percentageOffer a rdf:Property ;
-                  rdfs:label "Percentage Offer"@en ;
-                  rdfs:comment "Percent ownership available for investment"@en ;
-                  rdfs:domain dcat:Dataset ;
-                  rdfs:range xsd:integer .
-
-pst:totalShares a rdf:Property ;
-                    rdfs:label "Total Shares"@en ;
-                    rdfs:comment "Total number of shares available for purchase"@en ;
+                    rdfs:label "Percentage Offer"@en ;
+                    rdfs:comment "Percent ownership available for investment"@en ;
                     rdfs:domain dcat:Dataset ;
                     rdfs:range xsd:integer .
 
-pst:maxShares a rdf:Property ;
-                rdfs:label "Max Shares"@en ;
-                rdfs:comment "maximum number of shares each entity can purchase"@en ;
+#TODO
+pst:availableShares a rdf:Property ;
+                    rdfs:label "Available Shares"@en ;
+                    rdfs:comment "TBD"@en ;
+                    rdfs:domain dcat:Dataset ;
+                    rdfs:range xsd:integer .
+
+pst:totalShares a rdf:Property ;
+                rdfs:label "Total Shares"@en ;
+                rdfs:comment "Total number of shares available for purchase"@en ;
                 rdfs:domain dcat:Dataset ;
                 rdfs:range xsd:integer .
 
-pst:status a rdf:Property ;
-              rdfs:label "Status"@en ;
-              rdfs:comment "Investment offer is available for investment"@en ;
+pst:maxShares a rdf:Property ;
+              rdfs:label "Max Shares"@en ;
+              rdfs:comment "maximum number of shares each entity can purchase"@en ;
               rdfs:domain dcat:Dataset ;
-              rdfs:range xsd:boolean .
+              rdfs:range xsd:integer .
+
+#TODO
+pst:pricePerShare a rdf:Property ;
+                  rdfs:label "Price per Share"@en ;
+                  rdfs:comment "TBD"@en ;
+                  rdfs:domain dcat:Dataset ;
+                  rdfs:range xsd:integer .
+
+pst:isActive a rdf:Property ;
+             rdfs:label "Status"@en ;
+             rdfs:comment "Investment offer is available for investment"@en ;
+             rdfs:domain dcat:Dataset ;
+             rdfs:range xsd:boolean .
 
 # Distribution property
 pst:distributionIds a rdf:Property ;
@@ -1708,7 +1729,6 @@ pst:DownloadLimit_Shape
       ] ;
     sh:targetClass pst:DownloadLimit .
 
-
 pst:PersonalDataTerms_Shape
     a sh:NodeShape ;
     sh:property [
@@ -1724,16 +1744,15 @@ pst:PersonalDataTerms_Shape
       ] ;
     sh:targetClass pst:PersonalDataTerms .
 
-
 pst:Offer_Shape
     a sh:NodeShape ;
     sh:property [
           pv:mappingClass "StandardText" ;
-          pv:mappingName "original_ID" ;
+          pv:mappingName "original_Id" ;
           sh:maxCount 1 ;
-          sh:path pst:originalID ;
+          sh:path pst:originalId
       ] ;
-    sh:targetClass pst:OfferShape .
+    sh:targetClass pst:Offer .
 
 pst:PurchaseOffer_Shape
     a sh:NodeShape ;
@@ -1775,9 +1794,9 @@ pst:PurchaseOffer_Shape
           sh:path pst:contractTerms
       ], [
           pv:mappingClass "Boolean" ;
-          pv:mappingName "free" ;
+          pv:mappingName "is_free" ;
           sh:maxCount 1 ;
-          sh:path pst:free
+          sh:path pst:isFree
       ], [
           pv:mappingClass "Boolean" ;
           pv:mappingName "is_exclusive" ;
@@ -1829,45 +1848,65 @@ pst:PurchaseOffer_Shape
           sh:maxCount 1 ;
           sh:path pst:transferable
       ], [
-        pv:mappingClass "Integer" ;
-        pv:mappingName "num_resell" ;
-        sh:maxCount 1 ;
-        sh:path pst:numResell
+          pv:mappingClass "Integer" ;
+          pv:mappingName "num_resell" ;
+          sh:maxCount 1 ;
+          sh:path pst:numResell
       ], [
-        pv:mappingClass "Integer" ;
-        pv:mappingName "num_share" ;
-        sh:maxCount 1 ;
-        sh:path pst:numShare
+          pv:mappingClass "Integer" ;
+          pv:mappingName "num_reshare" ;
+          sh:maxCount 1 ;
+          sh:path pst:numReshare
+      ], [
+          pv:mappingClass "StandardText" ;
+          pv:mappingName "subscription_frequency" ;
+          sh:maxCount 1 ;
+          sh:path pst:subscriptionFrequency
+      ], [
+          pv:mappingClass "StandardText" ;
+          pv:mappingName "update_frequency" ;
+          sh:maxCount 1 ;
+          sh:path pst:updateFrequency
       ] ;
     sh:targetClass pst:PurchaseOffer .
 
 pst:InvestmentOffer_Shape
     a sh:NodeShape ;
     sh:property [
-        pv:mappingClass "DateTime" ;
-        pv:mappingName "term_date" ;
-        sh:maxCount 1 ;
-        sh:path pst:termDate
+          pv:mappingClass "DateTime" ;
+          pv:mappingName "term_date" ;
+          sh:maxCount 1 ;
+          sh:path pst:termDate
       ], [
-        pv:mappingClass "Integer" ;
-        pv:mappingName "percentage_offer" ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:nonNegativeInteger ;
-        sh:path pst:percentageOffer
+          pv:mappingClass "Integer" ;
+          pv:mappingName "percentage_offer" ;
+          sh:maxCount 1 ;
+          sh:datatype xsd:nonNegativeInteger ;
+          sh:path pst:percentageOffer
       ], [
-        pv:mappingClass "Integer" ;
-        pv:mappingName "total_shares" ;
-        sh:maxCount 1 ;
-        sh:path pst:totalShares
+          pv:mappingClass "Integer" ;
+          pv:mappingName "available_shares" ;
+          sh:maxCount 1 ;
+          sh:path pst:availableShares
       ], [
-        pv:mappingClass "Integer" ;
-        pv:mappingName "max_shares" ;
-        sh:maxCount 1 ;
-        sh:path pst:maxShares
+          pv:mappingClass "Integer" ;
+          pv:mappingName "total_shares" ;
+          sh:maxCount 1 ;
+          sh:path pst:totalShares
       ], [
-        pv:mappingClass "Boolean" ;
-        pv:mappingName "status" ;
-        sh:maxCount 1 ;
-        sh:path pst:status
+          pv:mappingClass "Integer" ;
+          pv:mappingName "max_shares" ;
+          sh:maxCount 1 ;
+          sh:path pst:maxShares
+      ], [
+          pv:mappingClass "Integer" ;
+          pv:mappingName "price_per_share" ;
+          sh:maxCount 1 ;
+          sh:path pst:pricePerShare
+      ], [
+          pv:mappingClass "Boolean" ;
+          pv:mappingName "is_active" ;
+          sh:maxCount 1 ;
+          sh:path pst:isActive
       ] ;
     sh:targetClass pst:InvestmentOffer .
