@@ -26,7 +26,7 @@
 
 pv:PISTIS
     a pv:PiveauProfile ;
-    pv:profileVersion "1" ;
+    pv:profileVersion "2.0" ;
     dct:title "A DCAT-AP profile for PISTIS"@en ;
     dct:description "Based and inspired by DCAT-AP 2.1.1"@en ;
     owl:versionInfo "0.0.1" .
@@ -305,6 +305,12 @@ pst:isActive a rdf:Property ;
              rdfs:comment "Investment offer is available for investment"@en ;
              rdfs:domain dcat:Dataset ;
              rdfs:range xsd:boolean .
+
+pst:nftId a rdf:Property ;
+          rdfs:label "NFT ID" ;
+          rdfs:comment "The ID of an NFT" ;
+          rdfs:domain dcat:Dataset ;
+          rdfs:range xsd:string .
 
 # Distribution property
 pst:distributionIds a rdf:Property ;
@@ -1349,16 +1355,6 @@ dcatap:Dataset_Shape
           pv:mappingName "insights_result" ;
           sh:maxCount 1 ;
           sh:path pst:insightsResult
-      ], [
-          sh:maxCount 1 ;
-          pv:mappingClass "Boolean" ;
-          pv:mappingName "is_anonymized" ;
-          sh:path pst:isAnonymized
-      ], [
-          sh:maxCount 1 ;
-          pv:mappingClass "Boolean" ;
-          pv:mappingName "is_transformed" ;
-          sh:path pst:isTransformed
       ] ;
     sh:targetClass dcat:Dataset .
 
@@ -1556,7 +1552,17 @@ dcatap:Distribution_Shape
           sh:nodeKind sh:BlankNodeOrIRI;
           pv:mappingClass "StandardResourceKeyword" ;
           pv:mappingName "applicable_legislation"
-      ];
+      ], [
+          sh:maxCount 1 ;
+          pv:mappingClass "Boolean" ;
+          pv:mappingName "is_anonymized" ;
+          sh:path pst:isAnonymized
+      ], [
+          sh:maxCount 1 ;
+          pv:mappingClass "Boolean" ;
+          pv:mappingName "is_transformed" ;
+          sh:path pst:isTransformed
+      ] ;
     sh:targetClass dcat:Distribution .
 
 dcatap:Identifier_Shape
@@ -1864,6 +1870,11 @@ pst:PurchaseOffer_Shape
           pv:mappingName "update_frequency" ;
           sh:maxCount 1 ;
           sh:path pst:updateFrequency
+      ], [
+          pv:mappingClass "StandardText" ;
+          pv:mappingName "nft_id" ;
+          sh:maxCount 1 ;
+          sh:path pst:nftId
       ] ;
     sh:targetClass pst:PurchaseOffer .
 
