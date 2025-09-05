@@ -26,7 +26,7 @@
 
 pv:PISTIS
     a pv:PiveauProfile ;
-    pv:profileVersion "2.0" ;
+    pv:profileVersion "1.1" ;
     dct:title "A DCAT-AP profile for PISTIS"@en ;
     dct:description "Based and inspired by DCAT-AP 2.1.1"@en ;
     owl:versionInfo "0.0.1" .
@@ -102,6 +102,12 @@ pst:organizationId a rdf:Property ;
                    rdfs:range xsd:string .
 
 # Dataset properties
+pst:marketplaceOfferId a rdf:Property ;
+                       rdfs:label "Marketplace Offer ID"@en ;
+                       rdfs:comment "The unique Offer ID assigned to this data asset in the Marketplace."@en ;
+                       rdfs:domain dcat:Dataset ;
+                       rdfs:range xsd:string .
+
 pst:keywords a rdf:Property ;
              rdfs:label "Encryption Keywords"@en ;
              rdfs:comment "Dataset keywords stored when encrypting datasets"@en ;
@@ -1345,6 +1351,7 @@ dcatap:Dataset_Shape
           sh:path pst:monetization ;
           sh:severity sh:Violation
       ], [
+          sh:maxCount 1 ;
           pv:mappingClass "Nested" ;
           pv:mappingLink pst:Offer_Shape ;
           pv:mappingName "offer" ;
@@ -1751,9 +1758,14 @@ pst:Offer_Shape
     a sh:NodeShape ;
     sh:property [
           pv:mappingClass "StandardText" ;
-          pv:mappingName "original_Id" ;
+          pv:mappingName "original_id" ;
           sh:maxCount 1 ;
           sh:path pst:originalId
+      ], [
+          pv:mappingClass "StandardText" ;
+          pv:mappingName "marketplace_offer_id" ;
+          sh:maxCount 1 ;
+          sh:path pst:marketplaceOfferId
       ] ;
     sh:targetClass pst:Offer .
 
