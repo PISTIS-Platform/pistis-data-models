@@ -26,7 +26,7 @@
 
 pv:PISTIS
     a pv:PiveauProfile ;
-    pv:profileVersion "1.1" ;
+    pv:profileVersion "1.2" ;
     dct:title "A DCAT-AP profile for PISTIS"@en ;
     dct:description "Based and inspired by DCAT-AP 2.1.1"@en ;
     owl:versionInfo "0.0.1" .
@@ -276,6 +276,12 @@ pst:isTransformed a rdf:Property ;
                   rdfs:domain dcat:Dataset ;
                   rdfs:range xsd:boolean .
 
+pst:isEncrypted a rdf:Property ;
+                rdfs:label "Is Encrypted"@en ;
+                rdfs:comment "Indicates if the dataset is encrypted"@en ;
+                rdfs:domain dcat:Dataset ;
+                rdfs:range xsd:boolean .
+
 pst:percentageOffer a rdf:Property ;
                     rdfs:label "Percentage Offer"@en ;
                     rdfs:comment "Percent ownership available for investment"@en ;
@@ -317,6 +323,24 @@ pst:nftId a rdf:Property ;
           rdfs:comment "The ID of an NFT" ;
           rdfs:domain dcat:Dataset ;
           rdfs:range xsd:string .
+
+pst:duration a rdf:Property ;
+             rdfs:label "Duration"@en ;
+             rdfs:comment "Duration of the term in days"@en ;
+             rdfs:domain dcat:Dataset ;
+             rdfs:range xsd:integer .
+
+pst:perpetual a rdf:Property ;
+              rdfs:label "Perpetual use (can be revocable)"@en ;
+              rdfs:comment "TBD"@en ;
+              rdfs:domain dcat:Dataset ;
+              rdfs:range xsd:string .
+
+pst:noUseWithBlacklistedDatasets a rdf:Property ;
+                                 rdfs:label "No Use With Blacklisted Datasets"@en ;
+                                 rdfs:comment "Use prohibited with certain datasets"@en ;
+                                 rdfs:domain dcat:Dataset ;
+                                 rdfs:range xsd:boolean .
 
 # Distribution property
 pst:distributionIds a rdf:Property ;
@@ -1569,6 +1593,11 @@ dcatap:Distribution_Shape
           pv:mappingClass "Boolean" ;
           pv:mappingName "is_transformed" ;
           sh:path pst:isTransformed
+      ], [
+          sh:maxCount 1 ;
+          pv:mappingClass "Boolean" ;
+          pv:mappingName "is_encrypted" ;
+          sh:path pst:isEncrypted
       ] ;
     sh:targetClass dcat:Distribution .
 
@@ -1818,11 +1847,6 @@ pst:PurchaseOffer_Shape
           sh:maxCount 1 ;
           sh:path pst:isExclusive
       ], [
-          pv:mappingClass "Nested" ;
-          pv:mappingLink pst:DownloadLimit_Shape ;
-          pv:mappingName "downloads" ;
-          sh:path pst:limit
-      ], [
           pv:mappingClass "Integer" ;
           pv:mappingName "non_renewal_days" ;
           sh:maxCount 1 ;
@@ -1843,10 +1867,22 @@ pst:PurchaseOffer_Shape
           sh:maxCount 1 ;
           sh:path pst:spatialAvailability
       ], [
-          pv:mappingClass "DateTime" ;
-          pv:mappingName "term_date" ;
+          pv:mappingClass "Integer" ;
+          pv:mappingName "duration" ;
           sh:maxCount 1 ;
-          sh:path pst:termDate
+          sh:path pst:duration
+      ], [
+          pv:mappingClass "StandardText" ;
+          pv:mappingName "perpetual" ;
+          sh:nodeKind sh:Literal ;
+          sh:datatype xsd:string ;
+          sh:maxCount 1 ;
+          sh:path pst:perpetual
+      ], [
+          pv:mappingClass "Boolean" ;
+          pv:mappingName "no_use_with_blacklisted_datasets" ;
+          sh:maxCount 1 ;
+          sh:path pst:noUseWithBlacklistedDatasets
       ], [
           pv:mappingClass "StandardText" ;
           pv:mappingName "type" ;
@@ -1887,6 +1923,15 @@ pst:PurchaseOffer_Shape
           pv:mappingName "nft_id" ;
           sh:maxCount 1 ;
           sh:path pst:nftId
+      ] ;
+    # Perpetual and duration are mutually exclusive. They cannot be both present.
+    # https://www.w3.org/TR/shacl/#NotConstraintComponent
+    sh:not [
+          # https://www.w3.org/TR/shacl/#AndConstraintComponent
+          sh:and (
+                     [ sh:property [ sh:path pst:duration ; sh:maxCount 1 ] ]
+                     [ sh:property [ sh:path pst:perpetual ; sh:maxCount 1 ] ]
+                 )
       ] ;
     sh:targetClass pst:PurchaseOffer .
 
