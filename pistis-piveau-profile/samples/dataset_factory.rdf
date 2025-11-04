@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="https://www.pistis-project.eu/ns/voc#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <dcat:Dataset rdf:about="https://develop.pistis-market.eu/catset/data/b89ff678-394b-44e2-b150-48e55b354608">
+    <dct:description xml:lang="en">FileUpload-CSV-withTransformations-3010</dct:description>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2025-10-31T13:25:08.619Z</dct:issued>
+    <j.0:offer>
+      <j.0:Offer rdf:about="http://pistis-market.eu/offer/1">
+        <j.0:marketplaceOfferId>b1625269-ad86-4857-95f7-8d0e3e3f52bd</j.0:marketplaceOfferId>
+        <j.0:originalId>3b56439a-2f54-4491-a956-19ba63fbfb7d</j.0:originalId>
+      </j.0:Offer>
+    </j.0:offer>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+    <dct:title xml:lang="en">FileUpload-CSV-withTransformations-3010</dct:title>
+    <dcat:keyword xml:lang="en">csv</dcat:keyword>
+    <dct:publisher>
+      <foaf:Organization>
+        <foaf:mbox rdf:resource="mailto:admin@pistis.eu"/>
+        <foaf:name>ACME Corporation</foaf:name>
+      </foaf:Organization>
+    </dct:publisher>
+    <dcat:keyword xml:lang="en">transformations</dcat:keyword>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://develop.pistis-market.eu/catset/distribution/e9b55357-24e6-477f-86ee-18a764e935fc">
+        <dct:identifier>https://piveau.io/set/distribution/1</dct:identifier>
+        <dct:title>Dataset-100-01-nulls..csv</dct:title>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >27161</dcat:byteSize>
+        <dcat:accessURL rdf:resource="https://develop.pistis-market.eu/srv/factory-data-storage/api/files/get_file?asset_uuid=d78cf51a-57d0-4b0a-8350-f0cab6a75c70"/>
+        <dct:license rdf:parseType="Resource">
+          <dct:title>PISTIS License</dct:title>
+          <skos:prefLabel>PISTIS License</skos:prefLabel>
+          <dct:identifier>PISTIS</dct:identifier>
+          <skos:exactMatch rdf:resource="https://pistis-market.eu/license/b1625269-ad86-4857-95f7-8d0e3e3f52bd"/>
+        </dct:license>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2025-10-31T13:25:08.619Z</dct:modified>
+  </dcat:Dataset>
+</rdf:RDF>

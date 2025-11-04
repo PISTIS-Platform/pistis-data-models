@@ -1,0 +1,371 @@
+PREFIX dct:    <http://purl.org/dc/terms/>
+PREFIX dqv:    <http://www.w3.org/ns/dqv#>
+PREFIX oa:     <http://www.w3.org/ns/oa#>
+PREFIX piveau: <https://piveau.eu/ns/voc#>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos:   <http://www.w3.org/2004/02/skos/core#>
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/00/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"0\", \"min_value\": 2, \"max_value\": 5, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/00> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/08>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/08/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/16>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/16/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/24>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/24/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/25/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"batch_id\": \"data_source-data_asset\", \"value\": 101}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/25> .
+
+<https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>
+        rdf:type         dqv:Metric;
+        skos:definition  "Expect the column entries to be strings with length between a minimum value and a maximum value (inclusive). This expectation only works for string-type values. Invoking it on ints or floats will raise a TypeError. ExpectColumnValueLengthsToBeBetween is a Column Map Expectation. Column Map Expectations are one of the most common types of Expectation. They are evaluated for a single column and ask a yes/no question for every row in that column. Based on the result, they then calculate the percentage of rows that gave a positive answer. If the percentage is high enough, the Expectation considers that data valid.";
+        dqv:inDimension  <https://www.pistis-project.eu/ns/voc#consistency> .
+
+<https://www.pistis-project.eu/ns/voc#consistency>
+        rdf:type         dqv:Dimension;
+        skos:definition  "The degree to which data has attributes that are free from contradiction and are coherent with other data in a specific context of use. It can be either or both among data regarding one entity and across similar data for comparable entities.";
+        skos:prefLabel   "Consistency" .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/03>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/03/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/11>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/11/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/18/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"18\", \"min_value\": 3, \"max_value\": 17, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/18> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/bias/measure/0/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"conditionDetails\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/bias/measure/0> .
+
+<https://www.pistis-project.eu/ns/voc#ExpectTableRowCountToEqual>
+        rdf:type         dqv:Metric;
+        skos:definition  "Expect the number of rows to equal a value. ExpectTableRowCountToEqual is a Batch Expectation. BatchExpectations are one of the most common types of Expectation. They are evaluated for an entire Batch, and answer a semantic question about the Batch itself.";
+        dqv:inDimension  <https://www.pistis-project.eu/ns/voc#validity> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/16/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"16\", \"min_value\": 3, \"max_value\": 10, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/16> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/24/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"24\", \"min_value\": 4, \"max_value\": 12, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/24> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/18>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/18/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/bias/measure/1/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"test Boolean\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/bias/measure/1> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/09/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"9\", \"min_value\": 4, \"max_value\": 7, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/09> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/13>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/13/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/21>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/21/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/22/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"22\", \"min_value\": 8, \"max_value\": 10, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/22> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/17/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"17\", \"min_value\": 3, \"max_value\": 11, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/17> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/05>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/05/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://develop.pistis-market.eu/catset/resource/data-quality/b89ff678-394b-44e2-b150-48e55b354608-b>
+        rdf:type      piveau:CustomResource , piveau:DataQuality , dqv:QualityMetadata;
+        dct:type      <https://europeandataportal.eu/voc#MetricsLatest>;
+        oa:hasTarget  <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/bias/measure/0>
+        rdf:type                  <http://theme-e.adaptcentre.ie/dave#ValueMeasurement>;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/bias/measure/0/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ClassRepresentation>;
+        dqv:value                 0.968499719582704 .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/00>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/00/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/07/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"7\", \"min_value\": 3, \"max_value\": 26, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/07> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/15/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"15\", \"min_value\": 3, \"max_value\": 18, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/15> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/23/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"23\", \"min_value\": 7, \"max_value\": 8, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/23> .
+
+<https://www.pistis-project.eu/ns/voc#validity>
+        rdf:type         dqv:Dimension;
+        skos:definition  "The degree to the subject data adheres to the expected formats and data structures. This includes, feature existence, data typing, and row population.";
+        skos:prefLabel   "Validity" .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/13/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"13\", \"min_value\": 3, \"max_value\": 11, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/13> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/08/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"8\", \"min_value\": 3, \"max_value\": 6, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/08> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/07>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/07/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/21/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"21\", \"min_value\": 12, \"max_value\": 18, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/21> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/23>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/23/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/15>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/15/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>
+        dqv:hasQualityMeasurement  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/25> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/16> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/bias/measure/1> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/22> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/05> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/07> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/23> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/13> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/17> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/08> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/10> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/02> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/14> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/09> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/18> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/11> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/20> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/03> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/00> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/15> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/19> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/bias/measure/0> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/24> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/12> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/21> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/04> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/06> , <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/01>;
+        dqv:hasQualityMetadata     <https://develop.pistis-market.eu/catset/resource/data-quality/b89ff678-394b-44e2-b150-48e55b354608-b> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/02>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/02/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/06/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"6\", \"min_value\": 4, \"max_value\": 15, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/06> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/10>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/10/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/14/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"14\", \"min_value\": 3, \"max_value\": 10, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/14> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/04/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"4\", \"min_value\": 11, \"max_value\": 19, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/04> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/12/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"12\", \"min_value\": 3, \"max_value\": 19, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/12> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/20/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"20\", \"min_value\": 17, \"max_value\": 20, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/20> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/09>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/09/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/17>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/17/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/25>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/25/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectTableRowCountToEqual>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/10/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"10\", \"min_value\": 6, \"max_value\": 8, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/10> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/05/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"5\", \"min_value\": 11, \"max_value\": 62, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/05> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/04>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/04/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/12>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/12/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/20>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/20/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/03/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"3\", \"min_value\": 15, \"max_value\": 17, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/03> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/11/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"11\", \"min_value\": 4, \"max_value\": 19, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/11> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/19>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/19/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/01/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"1\", \"min_value\": 4, \"max_value\": 26, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/01> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/06>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/06/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/14>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/14/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/22>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/22/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/02/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"2\", \"min_value\": 11, \"max_value\": 77, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/02> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/bias/measure/1>
+        rdf:type                  <http://theme-e.adaptcentre.ie/dave#ValueMeasurement>;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/bias/measure/1/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ClassRepresentation>;
+        dqv:value                 0.965921239886046 .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/01>
+        rdf:type                  dqv:QualityMeasurement;
+        dqv:computeOn             <https://develop.pistis-market.eu/catset/distribution/4e483757-3974-42a3-a7f0-78523428c07e>;
+        dqv:hasQualityAnnotation  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/01/annotation>;
+        dqv:isMeasurementOf       <https://www.pistis-project.eu/ns/voc#ExpectColumnValueLengthsToBeBetween>;
+        dqv:value                 "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/19/annotation>
+        rdf:type      dqv:QualityAnnotation;
+        oa:hasBody    "{\"column\": \"19\", \"min_value\": 3, \"max_value\": 19, \"batch_id\": \"data_source-data_asset\"}";
+        oa:hasTarget  <https://www.pistis-project.eu/ns/voc#4e483757-3974-42a3-a7f0-78523428c07e/measure/19> .

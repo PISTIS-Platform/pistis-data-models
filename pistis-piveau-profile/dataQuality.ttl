@@ -5,6 +5,12 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix pv: <https://piveau.eu/ns/voc#> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dave: <http://theme-e.adaptcentre.ie/dave#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 pv:DataQuality
     a pv:PiveauProfile ;
@@ -27,4 +33,125 @@ pv:DataQuality_Shape
         sh:minCount 1 ;
         pv:mappingClass "StandardText" ;
         pv:mappingName "id" ;
+    ],
+    [
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:path oa:hasTarget ;
+        sh:severity sh:Violation ;
+        pv:mappingClass "Nested" ;
+        pv:mappingLink dcatap:DistributionQuality_Shape ;
+        pv:mappingName "distribution"
+    ] .
+
+
+pv:DistributionQuality_Shape
+    a sh:NodeShape;
+    sh:name "Distribution"@en;
+    sh:property [ # Mandatory property
+        sh:maxCount 1 ;
+        sh:minCount 1 ;
+        pv:mappingClass "StandardText" ;
+        pv:mappingName "id" ;
+    ],[
+        pv:mappingClass "Nested" ;
+        pv:mappingLink pv:QualityMeasurement_Shape ;
+        pv:mappingName "measurement" ;
+        sh:minCount 1 ;
+        sh:path dqv:hasQualityMeasurement
     ].
+
+
+
+
+# Generic DQV Quality Measurement
+pv:QualityMeasurement_Shape
+    a sh:NodeShape ;
+    sh:name "Data Quality Measurement"@en ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:path dqv:computeOn ;
+        sh:severity sh:Violation ;
+        pv:mappingClass "StandardResourceKeyword" ;
+        pv:mappingName "compute_on"
+    ], [
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:path dqv:isMeasurementOf ;
+        sh:severity sh:Violation ;
+        pv:mappingClass "Nested" ;
+        pv:mappingLink pv:Metric_Shape ;
+        pv:mappingName "metric"
+    ], [
+        sh:nodeKind sh:BlankNodeOrIRI ;
+        sh:path dqv:hasQualityAnnotation ;
+        sh:severity sh:Violation ;
+        pv:mappingClass "Nested" ;
+        pv:mappingName "quality_annotation" ;
+        pv:mappingLink pv:QualityAnnotation_Shape
+    ], [
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:path dqv:value ;
+        sh:severity sh:Violation ;
+        pv:mappingClass "Integer" ;
+        pv:mappingName "value"
+    ] .
+
+
+
+pv:Metric_Shape
+    a sh:NodeShape;
+    sh:property [
+        sh:maxCount 1 ;
+        sh:minCount 1 ;
+        sh:path skos:definition ;
+        sh:severity sh:Violation ;
+        pv:mappingClass "StandardText" ;
+        pv:mappingName "definition"
+    ], [
+        sh:maxCount 1 ;
+        sh:minCount 1 ;
+        sh:path dqv:inDimension ;
+        sh:severity sh:Violation ;
+        pv:mappingClass "Nested" ;
+        pv:mappingName "dimension";
+        pv:mappingProperty [
+                        sh:minCount 1 ;
+                        sh:maxCount 1 ;
+                        sh:path skos:definition ;
+                        pv:mappingClass "StandardText" ;
+                        pv:mappingName "definition"
+                    ], [
+                        sh:minCount 1 ;
+                        sh:maxCount 1 ;
+                        sh:path skos:prefLabel ;
+                        pv:mappingClass "StandardText" ;
+                        pv:mappingName "label"                        
+                    ]
+    ].
+
+
+# Annotation attached to measurements
+pv:QualityAnnotation_Shape
+    a sh:NodeShape ;
+    sh:name "Data Quality Annotation"@en ;
+    sh:targetClass dqv:QualityAnnotation ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path oa:hasBody;
+        sh:severity sh:Violation ;
+        pv:mappingClass "StandardText" ;
+        pv:mappingName "body"
+    ], [
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:path oa:hasTarget ;
+        sh:severity sh:Violation ;
+        pv:mappingClass "StandardResourceKeyword" ;
+        pv:mappingName "target"
+    ] .
+
+
