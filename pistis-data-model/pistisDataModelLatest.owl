@@ -1,0 +1,3159 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/muh63680/ontologies/2024/6/untitled-ontology-4/"
+     xml:base="http://www.semanticweb.org/muh63680/ontologies/2024/6/untitled-ontology-4/"
+     xmlns:OM="http://ontology.eil.utoronto.ca/icity/OM/"
+     xmlns:WV="http://www.wurvoc.org/vocabularies/WV/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:sp="http://spinrdf.org/sp#"
+     xmlns:ATM="https://data.nasa.gov/ontologies/atmonto/ATM#"
+     xmlns:NAS="https://data.nasa.gov/ontologies/atmonto/NAS#"
+     xmlns:arg="http://spinrdf.org/arg#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:oeo="http://openenergy-platform.org/ontology/oeo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:core="https://saref.etsi.org/core/"
+     xmlns:data="https://data.nasa.gov/ontologies/atmonto/data#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:om-1="http://www.wurvoc.org/vocabularies/om-1.8/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:PISTIS="http://fokus.fraunhofer.de/PISTIS#"
+     xmlns:schema="http://www.disit.org/km4city/schema#"
+     xmlns:general="https://data.nasa.gov/ontologies/atmonto/general#"
+     xmlns:schema1="http://schema.org/"
+     xmlns:iot-lite="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:ontology="https://w3id.org/airm-o/ontology#"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:saref4ener="https://saref.etsi.org/saref4ener/"
+     xmlns:PublicTransit="http://ontology.eil.utoronto.ca/icity/PublicTransit/"
+     xmlns:RecurringEvent="http://ontology.eil.utoronto.ca/icity/RecurringEvent/#"
+     xmlns:eu-cm-ontology="http://w3id.org/um/cbcm/eu-cm-ontology#"
+     xmlns:RecurringEvent2="http://ontology.eil.utoronto.ca/icity/RecurringEvent/">
+    <owl:Ontology rdf:about="http://fokus.fraunhofer.de/PISTIS#">
+	<!--
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/icity/UrbanSystem/1.2/"/>
+        <owl:imports rdf:resource="http://openenergy-platform.org/ontology/oeo/releases/2.4.0/oeo.owl"/>
+        <owl:imports rdf:resource="http://w3id.org/um/cbcm/eu-cm-ontology/1.2.2"/>
+        <owl:imports rdf:resource="http://www.disit.org/km4city/schema"/>
+        <owl:imports rdf:resource="https://data.nasa.gov/ontologies/atmontoCore"/>
+        <owl:imports rdf:resource="https://saref.etsi.org/saref4ener/v1.1.2/"/>
+        <owl:imports rdf:resource="https://w3id.org/airm-o/ontology/1.0"/>
+		-->
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/ATM#actualArrivalDay -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#actualArrivalDay"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/ATM#actualDepartureTime -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#actualDepartureTime"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/ATM#arrivalAirport -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#arrivalAirport"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/ATM#departureAirport -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#departureAirport"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/ATM#operatingCarrier -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#operatingCarrier">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/ATM#plannedArrivalTime -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#plannedArrivalTime"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/ATM#plannedDepartureTime -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#plannedDepartureTime"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/ATM#publishedDepartureTime -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#publishedDepartureTime"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/NAS#airCarrierName -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#airCarrierName"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/NAS#dayOfMonth -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#dayOfMonth"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/NAS#iataAirportCode -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#iataAirportCode"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/NAS#iataCarrierCode -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#iataCarrierCode"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/NAS#icaoAirportCode -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#icaoAirportCode"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/NAS#icaoCarrierCode -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#icaoCarrierCode"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/NAS#terminalID -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#terminalID"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/general#altitude -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/general#altitude"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/general#endTime -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/general#endTime"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/general#startTime -->
+
+    <owl:AnnotationProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/general#startTime"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#AircraftType-iataIdentifier -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/airm-o/ontology#AircraftType-iataIdentifier"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#AircraftType-icaoIdentifier -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/airm-o/ontology#AircraftType-icaoIdentifier"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#Flight-type -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/airm-o/ontology#Flight-type"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#Route-integerernationalUse -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/airm-o/ontology#Route-internationalUse">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#State-iataCountryCode -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/airm-o/ontology#State-iataCountryCode"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#NextRegion -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#NextRegion">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://w3id.org/airm-o/ontology#Airspace"/>
+        <rdfs:label>Next Region</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#PreviousRegion -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#PreviousRegion">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://w3id.org/airm-o/ontology#Airspace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#SAD -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#SAD">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+        <rdfs:comment>Shared Airline Designator for a scheduled service - indicates the airline physically operating this service. The value is an object of the Air Carrier Class</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#SuppressionCountry -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#SuppressionCountry">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+        <rdfs:comment>Indicates the supression country code with IATA coded value.</rdfs:comment>
+        <rdfs:label>Suppression Country</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#SuppressionState -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#SuppressionState">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://w3id.org/airm-o/ontology#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#airCraft_Owner -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#airCraft_Owner">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#aircraft_Type -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#aircraft_Type">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType"/>
+        <rdfs:comment>Specific or General Aircraft Type in scheduled service</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#arrival_City -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#arrival_City">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://ontology.eil.utoronto.ca/ISO21972/iso21972#City"/>
+        <rdfs:comment>The city of arrival of a scheduled service. The value is an object/instance of the class City</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#arrival_Country -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#arrival_Country">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://w3id.org/airm-o/ontology#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#departure_City -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#departure_City">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://ontology.eil.utoronto.ca/ISO21972/iso21972#City"/>
+        <rdfs:comment>The city of departure of a scheduled service. The value is an object/instance of the class City</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#departure_Country -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#departure_Country">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://w3id.org/airm-o/ontology#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#diversion_Airport -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#diversion_Airport">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+        <rdfs:comment>Diversion Airport.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#diversion_Country -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#diversion_Country">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://w3id.org/airm-o/ontology#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#flight_Approval_Type -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#flight_Approval_Type">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://w3id.org/airm-o/ontology#CodeApprovalType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Aircraft -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Aircraft"/>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Delay_Event -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Delay_Event">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Operation"/>
+        <rdfs:range rdf:resource="http://fokus.fraunhofer.de/PISTIS#Delay_Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Destination_Airport -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Destination_Airport">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Operation"/>
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+        <rdfs:comment>Airport where the flight terminates.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Origin_Airport -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Origin_Airport">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Operation"/>
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#marketing_Carrier -->
+
+    <owl:ObjectProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#marketing_Carrier">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/ATM#mustHaveOrigin -->
+
+    <owl:ObjectProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#mustHaveOrigin">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#Aircraft-aircraftType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/airm-o/ontology#Aircraft-aircraftType"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#AircraftType-aircraftstand -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/airm-o/ontology#AircraftType-aircraftstand">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Operation"/>
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="https://w3id.org/airm-o/ontology#AircraftStand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#Flight-aircraft -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/airm-o/ontology#Flight-aircraft"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#AircraftType-iataIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#AircraftType-iataIdentifier">
+        <rdfs:domain rdf:resource="https://w3id.org/airm-o/ontology#AircraftType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>IATA Aircraft code of scheduled flight.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#AircraftType-icaoIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#AircraftType-icaoIdentifier">
+        <rdfs:domain rdf:resource="https://w3id.org/airm-o/ontology#AircraftType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>ICAO Aircraft code of scheduled flight</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#ArrivalFlightNumberRangeEnd -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#ArrivalFlightNumberRangeEnd">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>To specify a specific flight number or flight range for the arrival carrier. When an MCT is filed for one specific flight this will match the flight number specified in Arrival Flight Number Range Start. Flight numbers will be 4 digits and include leading zeros.</rdfs:comment>
+        <rdfs:label>Arrival Flight Number Range End</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#ArrivalFlightNumberRangeStart -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#ArrivalFlightNumberRangeStart">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>To specify a flight number or flight range for the arrival carrier.  Flight number will be 4 digits and include lead zeros.</rdfs:comment>
+        <rdfs:label>Arrival Flight Number Range Start</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#COMM10_50 -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#COMM10_50">
+        <rdfs:comment>under progress, no details are provided</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#DepartureFlightNumberRangeEnd -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#DepartureFlightNumberRangeEnd">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>End of range of outbound flight numbers where MCT applies</rdfs:comment>
+        <rdfs:label>Departure Flight Number Range End</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#DepartureFlightNumberRangeStart -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#DepartureFlightNumberRangeStart">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Start of range of outbound flight numbers where MCT applies</rdfs:comment>
+        <rdfs:label>Departure Flight Number Range Start</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#OAG_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#OAG_ID">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique OAG ID for schedule record.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Quantity -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#Quantity">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Bid"/>
+        <rdfs:domain rdf:resource="http://w3id.org/um/cbcm/eu-cm-ontology#CompanyTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#SAD_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#SAD_Name"/>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#SuppressionIndicator -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#SuppressionIndicator">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates whether connections should be suppressed or not.</rdfs:comment>
+        <rdfs:label>Suppression Indicator</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#TSA_Regulations -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#TSA_Regulations">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates whether TSA regulations apply. &apos;&apos;S&apos; for TSA regulations or null.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#actual_Business_Class_Seats -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#actual_Business_Class_Seats">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Business Class Seating Capacity on Flight Based On Actual Aircraft.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#actual_Economy_Class_Seats -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#actual_Economy_Class_Seats">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Economy Class Seating Capacity on Flight Based on Actual Aircraft.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#actual_Economy_Plus_Class_Seats -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#actual_Economy_Plus_Class_Seats">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Economy Pluss Class Seating Capacity on Flight Based on Actual Aircraft.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#actual_First_Class_Seats -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#actual_First_Class_Seats">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>First Class Seating Capacity on Flight Based on Actual Aircraft</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#actual_Flight_Instance_Key -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#actual_Flight_Instance_Key">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>OAG key to original operating schedule record populating status record.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#actual_Premium_Economy_Class_Seats -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#actual_Premium_Economy_Class_Seats">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Premium Economy Class Seating Capacity on Flight Based on Actual Aircraft.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#actual_Total_Seats -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#actual_Total_Seats">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Total Seating Capacity of Flight Based On Actual Aircraft.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#aircraft_Change -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#aircraft_Change">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#alert_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#alert_ID">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique OAG ID for Alert 64 characters (string).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#alert_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#alert_Type">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates type of alert - in this case Always &apos;Flight Status Alert&apos;</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Ingate_Datetime_Local -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Ingate_Datetime_Local">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Actual local scheduled ingate datetime.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Ingate_Datetime_UTC -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Ingate_Datetime_UTC">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Actual UTC scheduled ingate datetime.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Ingate_Timeliness -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Ingate_Timeliness">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Status of estimated ingatetime such as Early&apos;, &apos;Ontime&apos;, &apos;Delayed&apos;, Null.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Ingate_Variation -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Ingate_Variation">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+        <rdfs:comment>Variance between scheduled and actual arrival time in HH:NN:SS format.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Onground_Datetime_Local -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Onground_Datetime_Local">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Operation"/>
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Actual Local onground DateTime of Scheduled Flight.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Onground_Datetime_UTC -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Onground_Datetime_UTC">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Actual UTC onground DateTime of Scheduled Flight.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#arrival_Baggage_Carousel -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#arrival_Baggage_Carousel">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Baggage carousel for the luggage of arriving flight.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Ingate_Datetime_Local -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Ingate_Datetime_Local">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Estimated local scheduled ingate datetime</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Ingate_Datetime_UTC -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Ingate_Datetime_UTC">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Estimated UTC scheduled ingate datetime.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Ingate_Timeliness -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Ingate_Timeliness">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Status of estimated ingatetime.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Ingate_Variation -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Ingate_Variation">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+        <rdfs:comment>Estimated ingate Variation in time (HH:NN:SS) format.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Onground_Datetime_Local -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Onground_Datetime_Local">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Actual Local onground DateTime of Scheduled Flight</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Onground_Datetime_UTC -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Onground_Datetime_UTC">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Actual UTC onground Date Time of Scheduled Flight.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#business_Class_Seats -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#business_Class_Seats">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Total number of business class seats offered on scheduled service</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#checkin_Counter -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#checkin_Counter">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Terminal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#city_IATA_Code -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#city_IATA_Code">
+        <rdfs:domain rdf:resource="http://ontology.eil.utoronto.ca/ISO21972/iso21972#City"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Departure City for scheduled service identified by IATA Code. The value is valid IATA City Code.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#codeShare_operated_flights -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#codeShare_operated_flights">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates for an operated schedule what the corresponding marketed (codeshare) flights are or for a marketed (codeshare) flight what the corresponding operated flight is.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#codeshare_Operating_Fligh_Schedule_Flight_Instance_Key -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#codeshare_Operating_Fligh_Schedule_Flight_Instance_Key">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Key to OAG operating schedule record.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#data_Filing_Date -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#data_Filing_Date">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Date on which the row of data was uploaded to the database</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#departure_Actual_Offground_Datetime_Local -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#departure_Actual_Offground_Datetime_Local">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Actual Local OffGround DateTime Of Scheduled Flight in date Time format.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#departure_Actual_Offground_Datetime_UTC -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#departure_Actual_Offground_Datetime_UTC">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Actual UTC OffGround DateTime Of Scheduled Fligh in dateTime format.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#departure_Actual_Outgate_Datetime_Local -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#departure_Actual_Outgate_Datetime_Local">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Actual Local OutGate DateTime of Scheduled Flight in DateTime format.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#departure_Actual_Outgate_Timeliness -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#departure_Actual_Outgate_Timeliness">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Status of actual outgatetime such as Early&apos;, &apos;Ontime&apos;, &apos;Delayed&apos;, Null.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#departure_Actual_Outgate_Variation -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#departure_Actual_Outgate_Variation">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+        <rdfs:comment>Variance between scheduled and estimate departure time in HH:NN:SS format.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#departure_Actual_Outgate__Datetime_UTC -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#departure_Actual_Outgate__Datetime_UTC">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Actual UTC OutGate DateTime of Scheduled Flight.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Offground_Datetime_Local -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Offground_Datetime_Local">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Estimated Local OffGround DateTime Of Scheduled Flight</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Offground_Datetime_UTC -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Offground_Datetime_UTC">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Estimated UTC OffGround DateTime Of Scheduled Flight.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Outgate_Datetime_Local -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Outgate_Datetime_Local">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Estimated Local OutGate DateTime of Scheduled Flight</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Outgate_Datetime_UTC -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Outgate_Datetime_UTC">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Estimated UTC OutGate DateTime of Scheduled Flight.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Outgate_Timeliness -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Outgate_Timeliness">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Status of estimated outgatetime such as &apos;Early&apos;, &apos;Ontime&apos;, &apos;Delayed&apos;, Null</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Outgate_Variation -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Outgate_Variation">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+        <rdfs:comment>Variance between scheduled and estimate departure time, in the HH:NN:SS format.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#driverID -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#driverID">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#economy_Class_Seats -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#economy_Class_Seats">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Total number of economy class seats offered on scheduled service</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#economy_Plus_Class_Seats -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#economy_Plus_Class_Seats">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Total number of premium economy plus class seats offered on scheduled service</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#effective_From_Date -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#effective_From_Date">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Capacity_Record"/>
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Connection_Record"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Start date of record validity</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#effective_Till_Date -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#effective_Till_Date">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Capacity_Record"/>
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Connection_Record"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>End date of record validity</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#eventDetails -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#eventDetails">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/saref4city/Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#fare_Classes -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#fare_Classes">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#first_Class_Seats -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#first_Class_Seats">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Total number of first class seats offered on scheduled service. the value is integer.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#flight_Designator_Suffix -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#flight_Designator_Suffix">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Suffix that can be added to flight number to identify scheduled service. The value is character &apos;A&apos; to &apos;Z&apos;.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#flight_Operation_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#flight_Operation_Type">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates, when populated, whether flight is a diversion or recovery flight. Possible values are &quot;Diversion&quot;, &quot;Recovery&quot; Or Null.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#flight_Record_Serial_Number -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#flight_Record_Serial_Number">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Capacity_Record"/>
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Connection_Record"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique identifier for the record.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#flight_Record_Snapshot_Date -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#flight_Record_Snapshot_Date">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Capacity_Record"/>
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Connection_Record"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Date of record snapshot</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#flight_Restriction -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#flight_Restriction">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Restrictions applying to this scheduled service relating to traffic rights, stopovers, transfers. The values are IATA Restriction Code such as &apos;X&apos;.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#flight_State -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#flight_State">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Current state of the flight such as &apos;Scheduled&apos;, &apos;OutGate&apos;, &apos;InAir&apos;, &apos;Landed&apos;, &apos;InGate&apos;, &apos;Cancelled&apos;, &apos;Diverted&apos;.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#freight_Classes -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#freight_Classes">
+        <rdfs:comment>Freight classification of scheduled service. The value is Valid IATA Freight Classes.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#freight_Tonnage_Capacity -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#freight_Tonnage_Capacity">
+        <rdfs:subPropertyOf rdf:resource="http://fokus.fraunhofer.de/PISTIS#freight_Classes"/>
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Tonnage capacity for freight on scheduled service</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#hasCode -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#hasCode">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Bid"/>
+        <rdfs:domain rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00140109"/>
+        <rdfs:domain rdf:resource="http://w3id.org/um/cbcm/eu-cm-ontology#CompanyTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#hasPlannedRoute -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#hasPlannedRoute">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Complete routing of scheduled service. For stops = 0 simply concatenation of departure and arrival airport IATA codes, for stops &gt; 0 the complete itinerary that this service forms a part of</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#hasPower -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#hasPower"/>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#hasPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#hasPrice">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Bid"/>
+        <rdfs:domain rdf:resource="http://w3id.org/um/cbcm/eu-cm-ontology#CompanyTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Aircraft_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Aircraft_Type">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>General or Specific Aircraft Type in scheduled service</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Arrival_Flight_Number -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Arrival_Flight_Number">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique identifier for the arriving flight.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Children_Under_Five -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Children_Under_Five">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of children under five years old.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Chox_In_Time -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Chox_In_Time">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Time of parking at the stand.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Chox_Out_Time -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Chox_Out_Time">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Time of leaving the stand.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Departure_Flight_Number -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Departure_Flight_Number">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique identifier for the departing flight.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Exempted_Passengers -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Exempted_Passengers">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of passengers exempt from tax</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_First_Bag_Aircraft -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_First_Bag_Aircraft">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Timestamp of first bag loaded on aircraft.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_First_Bag_Apron -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_First_Bag_Apron">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Time when the first bag was delivered to the apron.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_First_Bag_Chute -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_First_Bag_Chute">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Timestamp of first bag on chute.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_First_Economy_Belt -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_First_Economy_Belt">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Time when the first economy bag was delivered to the belt.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_First_Prio_Belt -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_First_Prio_Belt">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Time when the first priority bag was delivered to the belt.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Flight_Record_Identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Flight_Record_Identifier">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Unique identifier for the flight record.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Landing_Time -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Landing_Time">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Actual time of touchdown</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Last_Bag_Aircraft -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Last_Bag_Aircraft">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Timestamp of last bag loaded on aircraft.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Last_Bag_Apron -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Last_Bag_Apron">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Time when the last bag was delivered to the apron.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Last_Bag_Checkin -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Last_Bag_Checkin">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Timestamp of last bag check-in</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Last_Bag_Chute -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Last_Bag_Chute">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Timestamp of last bag on chute.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Last_Economy_Belt -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Last_Economy_Belt">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Time when the last economy bag was delivered to the belt.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Last_Prio_Belt -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Last_Prio_Belt">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Time when the last priority bag was delivered to the belt.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Loaded_Bags -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Loaded_Bags">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of bags loaded.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_MTOW -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_MTOW">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Maximum Take-Off Weight of the aircraft.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_OOG_Bags -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_OOG_Bags">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of Out of Gauge bags.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Record_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Record_Type">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Connection_Record"/>
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Scanned_Local_Bags -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Scanned_Local_Bags">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of scanned local bags.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Scanned_Transfer_Bags -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Scanned_Transfer_Bags">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of scanned transfer bags.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Sorted_Bags -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Sorted_Bags">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of sorted bags.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Special_Tax_Passengers -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Special_Tax_Passengers">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of passengers with special tax status.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Suppression_Indicator -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Suppression_Indicator">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Capacity_Record"/>
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Connection_Record"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates if record is suppressed.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Take_Off_Time -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Take_Off_Time">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Actual time of aircraft leaving the ground.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Tax_Paying_Passengers -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Tax_Paying_Passengers">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of passengers paying standard tax.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Terminating_Local_Bags -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Terminating_Local_Bags">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of terminating local bags.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Total_Bags -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Total_Bags">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Total number of bags.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Total_Infant_Passengers -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Total_Infant_Passengers">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of infants on the flight.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Transfer_Bags -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Transfer_Bags">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of transfer bags.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Transfer_Passengers_Other -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Transfer_Passengers_Other">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of transfer passengers on different airlines</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Transfer_Passengers_Own -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Transfer_Passengers_Own">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of transfer passengers on the same airline.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#has_Transit_Passengers -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Transit_Passengers">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of transit passengers.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#in_Flight_Service -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#in_Flight_Service">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates the in-flight services available in the scheduled service</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#is_Operating_Carrier -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#is_Operating_Carrier">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Flag to indicate that carrier is operating this flight, as opposed to a codeshare (marketed) flight.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#load_Factor -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#load_Factor">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#markerPosition -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#markerPosition">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/saref4city/Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#meals_Offered -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#meals_Offered">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#minimum_Connection_Time -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#minimum_Connection_Time">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#multi_Stop_Routing -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#multi_Stop_Routing">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>For multi-stop routing, a list of the intermediate airports. Each airport in intermediate listing must be Carrier Class: IATA_Code (String)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#operating_Marketing -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#operating_Marketing">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Schedule service is operated or marketed (i.e. codeshare). Operated is indicated by &apos;010&apos; or blank, marketed by &apos;050&apos;</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#premium_Economy_Class_Seats -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#premium_Economy_Class_Seats">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integeregereger"/>
+        <rdfs:comment>Total number of premium economy class seats offered on scheduled service</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#route_Segment_Leg -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#route_Segment_Leg">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>On the complete routing, flag to indicate one leg/segment in the complete route. &apos;&apos;L&apos; indicates longest leg.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#schedule_Flight_Instance_Key -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#schedule_Flight_Instance_Key">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>OAG key to original schedule record populating status record.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#scheduledArrivalDate -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#scheduledArrivalDate">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Local Arrival Date of Scheduled Service. The value is recorded in DD/MM/YYYY format.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#scheduledArrivalDateTimeUTC -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#scheduledArrivalDateTimeUTC">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>UTC Arrival DateTime for scheduled service. The value is represented by YYYY-MM-DD HH:NN:SS.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#scheduledArrivalDateUTC -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#scheduledArrivalDateUTC">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Arrival Date of Scheduled Service in UTC. The value is in DD/MM/YYYY format.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#scheduledArrivalTimeUTC -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#scheduledArrivalTimeUTC">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+        <rdfs:comment>UTC Arrival Time for scheduled service. The value epresented by HHNN.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#scheduledDepartureDateTime_Local -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#scheduledDepartureDateTime_Local">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Local scheduled departure date time of scheduled flight.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#scheduledDepartureDateTime_UTC -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#scheduledDepartureDateTime_UTC">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>UTC Departure DateTime for scheduled service. The value Represented by YYYY-MM-DD HH:NN:SS.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#scheduledDepartureDateUTC -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#scheduledDepartureDateUTC">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Departure Date of Scheduled Service in UTC. The value is recorded as DD/MM/YYYY.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#scheduledDepartureTime_UTC -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#scheduledDepartureTime_UTC">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+        <rdfs:comment>UTC Departure Time for scheduled service. The value is represented by HHNN.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#scheduled_Service_Code -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#scheduled_Service_Code">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Service code for scheduled service indicating type of service</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#status_Key -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#status_Key">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>OAG Generated ID (64 characters) to Uniquely Identify Status Record</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#status_Key_Message_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#status_Key_Message_ID">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>ID that relates to status message received by OAG.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#status_Key_Message_Timestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#status_Key_Message_Timestamp">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Timestamp of status message.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#timePeriod -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#timePeriod">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Bid"/>
+        <rdfs:domain rdf:resource="http://w3id.org/um/cbcm/eu-cm-ontology#CompanyTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#total_Capacity -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#total_Capacity">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Total number of seats offered on service by carrier</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#total_Passenger_Out -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#total_Passenger_Out">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Operation"/>
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of passengers disembarking.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#total_Passengers -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#total_Passengers">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Operation"/>
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Total number of passengers booked on service.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#total_Seats -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#total_Seats">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Total seats offered on scheduled service</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#total_Stops -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#total_Stops">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of stops in scheduled service. The value is integer between 0 to 9.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/um/cbcm/eu-cm-ontology#transactionCompletionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/um/cbcm/eu-cm-ontology#transactionCompletionDate"/>
+    
+
+
+    <!-- http://www.disit.org/km4city/schema#distance -->
+
+    <rdf:Description rdf:about="http://www.disit.org/km4city/schema#distance">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Total distance in statute miles from departure to arrival airport</rdfs:comment>
+        <rdfs:comment>Total distance in statute miles from departure to arrival airport.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/ATM#actualArrivalTime -->
+
+    <owl:DatatypeProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#actualArrivalTime">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4ener/manufacturerNodeIdentification -->
+
+    <rdf:Description rdf:about="https://saref.etsi.org/saref4ener/manufacturerNodeIdentification">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#AircraftIdentification-flightNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/airm-o/ontology#AircraftIdentification-flightNumber">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#Flight-dateOfDeparture -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/airm-o/ontology#Flight-dateOfDeparture"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#GeoEnabledEntity-position -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/airm-o/ontology#GeoEnabledEntity-position"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#SSRCode-code -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/airm-o/ontology#SSRCode-code">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Bid"/>
+        <rdfs:domain rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00140109"/>
+        <rdfs:domain rdf:resource="http://w3id.org/um/cbcm/eu-cm-ontology#CompanyTransaction"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#SegmentLeg-duration -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/airm-o/ontology#SegmentLeg-duration"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#ServiceAtGate-type -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/airm-o/ontology#ServiceAtGate-type"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#TaxiRoute-startPosition -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/airm-o/ontology#TaxiRoute-startPosition"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#Timesheet-startTime -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/airm-o/ontology#Timesheet-startTime">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ener/LoadControlEventData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#Timesheet-startTimeRelativeEvent -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/airm-o/ontology#Timesheet-startTimeRelativeEvent"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#TrajectorySegment-estimatedElapsedTime -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/airm-o/ontology#TrajectorySegment-estimatedElapsedTime">
+        <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Bid -->
+
+    <owl:Class rdf:about="http://fokus.fraunhofer.de/PISTIS#Bid"/>
+    
+
+<owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#Flight">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#userCategory"/>
+<owl:allValuesFrom>
+<rdfs:Datatype>
+<owl:oneOf>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+<rdf:first>Air Taxi</rdf:first>
+<rdf:rest>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+<rdf:first>Cargo</rdf:first>
+<rdf:rest>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+<rdf:first>Commercial</rdf:first>
+<rdf:rest>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+<rdf:first>GA</rdf:first>
+<rdf:rest>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+<rdf:first>Military</rdf:first>
+<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+</rdf:rest>
+</rdf:Description>
+</rdf:rest>
+</rdf:Description>
+</rdf:rest>
+</rdf:Description>
+</rdf:rest>
+</rdf:Description>
+</owl:oneOf>
+</rdfs:Datatype>
+</owl:allValuesFrom>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:comment>0
+A single flight segment from origin to destination.
+</rdfs:comment>
+<rdfs:label>Flight</rdfs:label>
+</owl:Class>
+
+
+<owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#Airport">
+<rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASfacility"/>
+<rdfs:comment>
+A facility where regularly-scheduled aircraft arrive and depart.
+</rdfs:comment>
+<rdfs:label>Airport</rdfs:label>
+</owl:Class>
+
+
+<owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier">
+<rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AviationServiceProvider"/>
+<rdfs:comment>An entity that it licensed to operate aircraft.</rdfs:comment>
+<rdfs:label>Air carrier</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft">
+<rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#DecomposableSystem"/>
+<rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#manufacturedBy"/>
+<owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirframeManufacturer"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:comment>
+A physical realization of an aircraft, produced according to the specifications defined for a specific model type.
+</rdfs:comment>
+<rdfs:label>Aircraft</rdfs:label>
+</owl:Class>
+
+
+<owl:ObjectProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#operatingCarrier">
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+<rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+<rdfs:comment>
+Links a flight specification to one or more carrier airline(s). Each flight covered by the specification must be operated by one of these carriers.
+</rdfs:comment>
+<rdfs:label>operating carrier</rdfs:label>
+</owl:ObjectProperty>
+
+
+<!--
+ https://data.nasa.gov/ontologies/atmonto/NAS#iataCarrierCode 
+-->
+
+<owl:DatatypeProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#iataCarrierCode">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:comment>The two-letter IATA code assigned to the carrier.</rdfs:comment>
+<rdfs:label>IATA Carrier Code</rdfs:label>
+</owl:DatatypeProperty>
+<!--
+ https://data.nasa.gov/ontologies/atmonto/NAS#icaoCarrierCode 
+-->
+
+<owl:DatatypeProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#icaoCarrierCode">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:comment>
+The three-letter ICAO code assigned to the airline carrier.
+</rdfs:comment>
+<rdfs:label>ICAO Air Carrier Code</rdfs:label>
+</owl:DatatypeProperty>
+
+
+<!--
+ https://w3id.org/airm-o/ontology#AircraftIdentification-flightNumber 
+-->
+
+<owl:DatatypeProperty rdf:about="https://w3id.org/airm-o/ontology#AircraftIdentification-flightNumber">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://w3id.org/airm-o/ontology#AircraftIdentification"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:comment>The flight identification number.</rdfs:comment>
+<rdfs:label>flightNumber</rdfs:label>
+</owl:DatatypeProperty>
+<!-- https://w3id.org/airm-o/ontology#Flight-type -->
+
+<owl:ObjectProperty rdf:about="https://w3id.org/airm-o/ontology#Flight-type">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://w3id.org/airm-o/ontology#Flight"/>
+<rdfs:range rdf:resource="https://w3id.org/airm-o/ontology#CodeFlightType"/>
+<rdfs:comment>The type of the flight.</rdfs:comment>
+</owl:ObjectProperty>
+
+<!--
+ https://data.nasa.gov/ontologies/atmonto/ATM#departureAirport 
+-->
+
+<owl:ObjectProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#departureAirport">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+<rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+<rdfs:comment>
+Links to the actual departure airport for the flight.
+</rdfs:comment>
+<rdfs:label>departure airport</rdfs:label>
+</owl:ObjectProperty>
+
+<!--
+ https://data.nasa.gov/ontologies/atmonto/NAS#iataAirportCode 
+-->
+
+<owl:DatatypeProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#iataAirportCode">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:comment>
+The thre-letter IATA code assigned to the airport. Contrast with the ICAO and FAA airport codes.
+</rdfs:comment>
+<rdfs:label>IATA Airport Code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#icaoAirportCode">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:comment>
+The four-letter ICAO code assignied to the airport. Contrast with the IATA and FAA airport codes.
+</rdfs:comment>
+<rdfs:label>ICAO airport code</rdfs:label>
+</owl:DatatypeProperty>
+
+
+<!--
+ https://data.nasa.gov/ontologies/atmonto/NAS#faaAirportCode 
+-->
+
+<owl:DatatypeProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#faaAirportCode">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:comment>
+The alphanumeric FAA code of lenth 3 or 4 for the airport. Contrasted with the ICAO and IATA codes, which in general are different. Often the IATA and FAA codes are identical.
+</rdfs:comment>
+<rdfs:label>FAA airport code</rdfs:label>
+</owl:DatatypeProperty>
+
+
+<owl:ObjectProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasTerminal">
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+<rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Terminal"/>
+<rdfs:comment>Links an airport to a terminal for that airport.</rdfs:comment>
+<rdfs:label>has terminal</rdfs:label>
+</owl:ObjectProperty>
+
+
+<owl:DatatypeProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#terminalID">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Terminal"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:comment>
+The alphanumeric identifier of the airport terminal.
+</rdfs:comment>
+<rdfs:label>terminal ID</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:ObjectProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasGate">
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Terminal"/>
+<rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Gate"/>
+<rdfs:comment>
+Associates an airport terminal with a aircraft gate located at that terminal.
+</rdfs:comment>
+<rdfs:label>has gate</rdfs:label>
+</owl:ObjectProperty>
+
+<!--
+ https://data.nasa.gov/ontologies/atmonto/NAS#gateID 
+-->
+
+<owl:DatatypeProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#gateID">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Gate"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:comment>
+The gate identifier assigned by the airport authority.
+</rdfs:comment>
+<rdfs:label>gate ID</rdfs:label>
+</owl:DatatypeProperty>
+
+
+<!-- https://w3id.org/airm-o/ontology#State -->
+
+<owl:Class rdf:about="https://w3id.org/airm-o/ontology#State">
+<rdfs:subClassOf rdf:resource="https://w3id.org/airm-o/ontology#Organisation"/>
+<rdfs:comment>
+An internationally recognized geographic entity that provides air traffic service.
+</rdfs:comment>
+</owl:Class>
+
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType 
+-->
+
+<owl:Class rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType">
+<rdfs:comment>The list of IATA Country Codes.</rdfs:comment>
+</owl:Class>
+
+<!--
+ https://w3id.org/airm-o/ontology#State-iataCountryCode 
+-->
+
+<owl:ObjectProperty rdf:about="https://w3id.org/airm-o/ontology#State-iataCountryCode">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://w3id.org/airm-o/ontology#State"/>
+<rdfs:range rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Country codes as defined by IATA and ISO. </rdfs:comment>
+</owl:ObjectProperty>
+
+
+<!--
+ https://data.nasa.gov/ontologies/atmonto/ATM#plannedDepartureTime 
+-->
+
+<owl:DatatypeProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#plannedDepartureTime">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:comment>
+The time that the flight is planned to depart per the flight plan.
+</rdfs:comment>
+<rdfs:label>planned departure time</rdfs:label>
+</owl:DatatypeProperty>
+
+
+<!--
+ https://w3id.org/airm-o/ontology#Flight-dateOfDeparture 
+-->
+
+<owl:DatatypeProperty rdf:about="https://w3id.org/airm-o/ontology#Flight-dateOfDeparture">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://w3id.org/airm-o/ontology#Flight"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:comment>The date of flight departure.</rdfs:comment>
+<rdfs:label>dateOfDeparture</rdfs:label>
+</owl:DatatypeProperty>
+
+
+<!--
+ https://data.nasa.gov/ontologies/atmonto/ATM#arrivalAirport 
+-->
+
+<owl:ObjectProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#arrivalAirport">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+<rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+<rdfs:comment>
+Links to the actual arrival airport for the flight.
+</rdfs:comment>
+<rdfs:label>arrival airport</rdfs:label>
+</owl:ObjectProperty>
+
+<!--
+ https://data.nasa.gov/ontologies/atmonto/ATM#plannedArrivalTime 
+-->
+
+<owl:DatatypeProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#plannedArrivalTime">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:comment>
+The time that the flight is planned to arrive per the flight plan.
+</rdfs:comment>
+<rdfs:label>planned arrival time</rdfs:label>
+</owl:DatatypeProperty>
+
+
+<!-- https://w3id.org/airm-o/ontology#Flight -->
+<!--
+<owl:Class rdf:about="https://w3id.org/airm-o/ontology#Flight">
+<rdfs:subClassOf rdf:resource="https://w3id.org/airm-o/ontology#TemporalEnabledEntity"/>
+<rdfs:comment>
+The operation of an aircraft which, in the case of a manned aircraft, takes place between the time any person boards the aircraft with the intention of flight until such time as all such persons have disembarked, or in the case of an unmanned aircraft, takes place between the time the aircraft is ready to move with the purpose of flight until such time as it comes to rest at the end of the flight and the primary propulsion system is shut down.
+</rdfs:comment>
+</owl:Class>
+-->
+<!-- https://w3id.org/airm-o/ontology#Aircraft -->
+<!--
+<owl:Class rdf:about="https://w3id.org/airm-o/ontology#Aircraft">
+<rdfs:subClassOf rdf:resource="https://w3id.org/airm-o/ontology#Vehicle"/>
+<rdfs:comment>
+Any machine that can derive support in the atmosphere from the reactions of the air other than the reactions of the air against the earth's surface.
+</rdfs:comment>
+</owl:Class>
+-->
+<!--
+ https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft 
+-->
+<!--
+<owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft">
+<rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#DecomposableSystem"/>
+<rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#manufacturedBy"/>
+<owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirframeManufacturer"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:comment>
+A physical realization of an aircraft, produced according to the specifications defined for a specific model type.
+</rdfs:comment>
+<rdfs:label>Aircraft</rdfs:label>
+</owl:Class>
+
+
+<owl:ObjectProperty rdf:about="https://w3id.org/airm-o/ontology#Flight-aircraft">
+<rdfs:domain rdf:resource="https://w3id.org/airm-o/ontology#Flight"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+<rdfs:range rdf:resource="https://w3id.org/airm-o/ontology#Aircraft"/>
+<rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+<rdfs:comment>The aircraft enabling the flight.</rdfs:comment>
+</owl:ObjectProperty>
+-->
+
+<!--
+ https://w3id.org/airm-o/ontology#Aircraft-aircraftType 
+-->
+<!--
+<owl:ObjectProperty rdf:about="https://w3id.org/airm-o/ontology#Aircraft-aircraftType">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+<rdfs:domain rdf:resource="https://w3id.org/airm-o/ontology#Aircraft"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+<rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType"/>
+<rdfs:range rdf:resource="https://w3id.org/airm-o/ontology#AircraftType"/>
+<rdfs:comment>The aircraft type.</rdfs:comment>
+</owl:ObjectProperty>
+-->
+<!--
+ https://w3id.org/airm-o/ontology#AircraftType-icaoIdentifier 
+-->
+<!--
+<owl:DatatypeProperty rdf:about="https://w3id.org/airm-o/ontology#AircraftType-icaoIdentifier">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://w3id.org/airm-o/ontology#AircraftType"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:comment>
+The ICAO designator of an aircraft type as published in ICAO doc 8643.
+</rdfs:comment>
+<rdfs:label>icaoIdentifier</rdfs:label>
+</owl:DatatypeProperty>
+-->
+<!--
+ https://w3id.org/airm-o/ontology#AircraftType-iataIdentifier 
+-->
+
+<owl:DatatypeProperty rdf:about="https://w3id.org/airm-o/ontology#AircraftType-iataIdentifier">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://w3id.org/airm-o/ontology#AircraftType"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:comment>The IATA identification of an aircraft type.</rdfs:comment>
+<rdfs:label>iataIdentifier</rdfs:label>
+</owl:DatatypeProperty>
+
+<!--
+ https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType 
+-->
+<!--
+<owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment>
+An aircraft type represents a set of related aircraft models. Each type corresponds to one of the FAA's aircraft type designators (e.g., B777 covers all Boeing 777 models).
+</rdfs:comment>
+<rdfs:label>Aircraft Type</rdfs:label>
+</owl:Class>
+-->
+
+<!-- https://w3id.org/airm-o/ontology#AircraftType -->
+<!--
+<owl:Class rdf:about="https://w3id.org/airm-o/ontology#AircraftType">
+<rdfs:subClassOf rdf:resource="https://w3id.org/airm-o/ontology#Object"/>
+<rdfs:comment>The type of an aircraft.</rdfs:comment>
+</owl:Class>
+-->
+<!--
+ https://data.nasa.gov/ontologies/atmonto/equipment#registrationNumber 
+-->
+
+<owl:DatatypeProperty rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#registrationNumber">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:comment>
+The aircraft FAA registration number (the tail number, or the N-Number in the US).
+</rdfs:comment>
+<rdfs:label>registration number</rdfs:label>
+</owl:DatatypeProperty>
+
+
+<!--
+Defining Predefined Data Types such as String, Integer etc. as Datatype Properties.
+
+-->
+
+<owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#date">
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+	<rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is Date type.</rdfs:comment>
+	<rdfs:label>Date Data Type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#dateTime">
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+	<rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is dateTime type.</rdfs:comment>
+	<rdfs:label>DateTime Data Type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#time">
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+	<rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is time type.</rdfs:comment>
+	<rdfs:label>Time Data Type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#string">
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is String type.</rdfs:comment>
+	<rdfs:label>String Data Type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#integer">
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	<rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is Integer type.</rdfs:comment>
+	<rdfs:label>Integer Data Type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#boolean">
+   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+   <rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is boolean type.</rdfs:comment>
+   <rdfs:label>Boolean Data Type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#double">
+   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+   <rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is double type.</rdfs:comment>
+   <rdfs:label>Double Data Type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#float">
+   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+   <rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is float type.</rdfs:comment>
+   <rdfs:label>Float Data Type</rdfs:label>
+</owl:DatatypeProperty>
+
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Delay_Event -->
+
+    <owl:Class rdf:about="http://fokus.fraunhofer.de/PISTIS#Delay_Event">
+        <rdfs:comment>Represents specific delay incidents during flight operations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Flight_Capacity_Record -->
+
+    <owl:Class rdf:about="http://fokus.fraunhofer.de/PISTIS#Flight_Capacity_Record">
+        <rdfs:comment>Represents a single flight&apos;s capacity and passenger information</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Flight_Connection_Record -->
+
+    <owl:Class rdf:about="http://fokus.fraunhofer.de/PISTIS#Flight_Connection_Record"/>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Flight_Operation -->
+
+    <owl:Class rdf:about="http://fokus.fraunhofer.de/PISTIS#Flight_Operation">
+        <rdfs:comment>Comprehensive representation of a single flight event. This class is domain of all data and object properties related to flight.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00140109 -->
+
+    <owl:Class rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00140109"/>
+    
+
+
+    <!-- http://w3id.org/um/cbcm/eu-cm-ontology#CompanyTransaction -->
+
+    <owl:Class rdf:about="http://w3id.org/um/cbcm/eu-cm-ontology#CompanyTransaction"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/ATM#Flight -->
+
+    <owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec -->
+
+    <owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier -->
+
+    <owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/NAS#Airport -->
+
+    <owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/NAS#NASday -->
+
+    <owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/NAS#Terminal -->
+
+    <owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#Terminal"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft -->
+
+    <owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+    
+
+
+    <!-- https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType -->
+
+    <owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#AircraftStand -->
+
+    <owl:Class rdf:about="https://w3id.org/airm-o/ontology#AircraftStand"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#AircraftType -->
+
+    <owl:Class rdf:about="https://w3id.org/airm-o/ontology#AircraftType"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#Airspace -->
+
+    <owl:Class rdf:about="https://w3id.org/airm-o/ontology#Airspace"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#CodeApprovalType -->
+
+    <owl:Class rdf:about="https://w3id.org/airm-o/ontology#CodeApprovalType"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#CodeFlightType -->
+
+    <owl:Class rdf:about="https://w3id.org/airm-o/ontology#CodeFlightType"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#CodeIATACountryCodeType -->
+
+    <owl:Class rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#State -->
+
+    <owl:Class rdf:about="https://w3id.org/airm-o/ontology#State"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-AL 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-AL">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Albania </rdfs:comment>
+<rdfs:label>AL</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-AM 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-AM">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Armenia </rdfs:comment>
+<rdfs:label>AM</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-AT 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-AT">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Austria </rdfs:comment>
+<rdfs:label>AT</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-AZ 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-AZ">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Azerbaijan </rdfs:comment>
+<rdfs:label>AZ</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-BA 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-BA">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Bosnia and Herzegovina </rdfs:comment>
+<rdfs:label>BA</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-BE 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-BE">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Belgium </rdfs:comment>
+<rdfs:label>BE</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-BY 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-BY">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Belarus </rdfs:comment>
+<rdfs:label>BY</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-CH 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-CH">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Switzerland </rdfs:comment>
+<rdfs:label>CH</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-DE 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-DE">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Germany </rdfs:comment>
+<rdfs:label>DE</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-EE 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-EE">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Estonia </rdfs:comment>
+<rdfs:label>EE</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-ES 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-ES">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Spain </rdfs:comment>
+<rdfs:label>ES</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-FI 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-FI">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Finland </rdfs:comment>
+<rdfs:label>FI</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-FR 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-FR">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>France</rdfs:comment>
+<rdfs:label>FR</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-GB 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-GB">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>United Kingdom </rdfs:comment>
+<rdfs:label>GB</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-GE 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-GE">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Georgia </rdfs:comment>
+<rdfs:label>GE</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-GI 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-GI">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Gibraltar </rdfs:comment>
+<rdfs:label>GI</rdfs:label>
+</owl:NamedIndividual>
+<!--
+ https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-GL 
+-->
+<owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType-GL">
+<rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+<rdfs:comment>Greenland </rdfs:comment>
+<rdfs:label>GL</rdfs:label>
+</owl:NamedIndividual>
+    <!-- http://fokus.fraunhofer.de/PISTIS#AT7 -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#AT7">
+        <rdf:type rdf:resource="https://w3id.org/airm-o/ontology#AircraftType"/>
+        <ontology:AircraftType-aircraftstand rdf:resource="http://fokus.fraunhofer.de/PISTIS#B64"/>
+        <PISTIS:AircraftType-iataIdentifier>AT7_IATA_Code</PISTIS:AircraftType-iataIdentifier>
+        <PISTIS:AircraftType-icaoIdentifier>AT7_ICAO_Code</PISTIS:AircraftType-icaoIdentifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Aegean_Airlines -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Aegean_Airlines">
+        <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+        <NAS:airCarrierName>Aegean Airlines</NAS:airCarrierName>
+        <NAS:iataCarrierCode>A3</NAS:iataCarrierCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Agent_1_For_Zone_1 -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Agent_1_For_Zone_1">
+        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/icity/LBCSv2/AgentForManagementServices"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Airbus_Jumbo -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Airbus_Jumbo">
+        <rdf:type rdf:resource="https://w3id.org/airm-o/ontology#AircraftType"/>
+        <PISTIS:AircraftType-iataIdentifier>777</PISTIS:AircraftType-iataIdentifier>
+        <PISTIS:AircraftType-icaoIdentifier>A777</PISTIS:AircraftType-icaoIdentifier>
+        <ontology:AircraftType-iataIdentifier>32S</ontology:AircraftType-iataIdentifier>
+        <ontology:AircraftType-icaoIdentifier>A3221</ontology:AircraftType-icaoIdentifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Athens -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Athens">
+        <ontology:State-iataCountryCode rdf:resource="http://fokus.fraunhofer.de/PISTIS#GR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Athens_Airport -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Athens_Airport">
+        <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+        <PISTIS:city_IATA_Code>ATH</PISTIS:city_IATA_Code>
+        <NAS:iataAirportCode>ATH</NAS:iataAirportCode>
+        <NAS:icaoAirportCode>LGAV</NAS:icaoAirportCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Athens_City -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Athens_City">
+        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/ISO21972/iso21972#City"/>
+        <PISTIS:city_IATA_Code>ATH</PISTIS:city_IATA_Code>
+        <ontology:State-iataCountryCode rdf:resource="http://fokus.fraunhofer.de/PISTIS#GR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Athens_Int_Terminal -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Athens_Int_Terminal">
+        <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Terminal"/>
+        <NAS:terminalID>Athens_Int_Terminal112</NAS:terminalID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#B64 -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#B64">
+        <rdf:type rdf:resource="https://w3id.org/airm-o/ontology#AircraftStand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#B777 -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#B777">
+        <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+        <ontology:Aircraft-aircraftType rdf:resource="http://fokus.fraunhofer.de/PISTIS#AT7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#BER -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#BER">
+        <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Bid_1_For_Zone_1 -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Bid_1_For_Zone_1">
+        <rdf:type rdf:resource="http://fokus.fraunhofer.de/PISTIS#Bid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#British_Airways -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#British_Airways">
+        <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+        <NAS:iataCarrierCode>BA</NAS:iataCarrierCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#British_Airways_Flight_London_Athens -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#British_Airways_Flight_London_Athens">
+        <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <PISTIS:load_Factor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.73</PISTIS:load_Factor>
+        <PISTIS:total_Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30254</PISTIS:total_Capacity>
+        <PISTIS:total_Passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22166</PISTIS:total_Passengers>
+        <ATM:arrivalAirport rdf:resource="http://fokus.fraunhofer.de/PISTIS#Athens_Airport"/>
+        <ATM:departureAirport rdf:resource="http://fokus.fraunhofer.de/PISTIS#London"/>
+        <ATM:operatingCarrier rdf:resource="http://fokus.fraunhofer.de/PISTIS#British_Airways"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Contract_1_For_Zone_1 -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Contract_1_For_Zone_1">
+        <rdf:type rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00140109"/>
+        <PISTIS:Quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</PISTIS:Quantity>
+        <PISTIS:hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11111</PISTIS:hasCode>
+        <PISTIS:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</PISTIS:hasPrice>
+        <PISTIS:timePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-09T12:21:00</PISTIS:timePeriod>
+        <eu-cm-ontology:transactionCompletionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-12T09:10:00</eu-cm-ontology:transactionCompletionDate>
+        <schema:type>Buying_Contract</schema:type>
+        <core:hasTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-05-30T09:00:00</core:hasTimestamp>
+        <foaf:name>Job_Contract</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#DB -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#DB">
+        <rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Dubai -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Dubai">
+        <rdf:type rdf:resource="https://w3id.org/airm-o/ontology#State"/>
+        <ontology:State-iataCountryCode rdf:resource="http://fokus.fraunhofer.de/PISTIS#DB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Dubai_Athens_Flight -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Dubai_Athens_Flight">
+        <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <PISTIS:SAD rdf:resource="http://fokus.fraunhofer.de/PISTIS#Aegean_Airlines"/>
+        <PISTIS:airCraft_Owner rdf:resource="http://fokus.fraunhofer.de/PISTIS#Aegean_Airlines"/>
+        <PISTIS:aircraft_Type rdf:resource="http://fokus.fraunhofer.de/PISTIS#B777"/>
+        <PISTIS:arrival_City rdf:resource="http://fokus.fraunhofer.de/PISTIS#Athens_City"/>
+        <PISTIS:arrival_Country rdf:resource="http://fokus.fraunhofer.de/PISTIS#Greece"/>
+        <PISTIS:departure_City rdf:resource="http://fokus.fraunhofer.de/PISTIS#Athens_City"/>
+        <PISTIS:departure_Country rdf:resource="http://fokus.fraunhofer.de/PISTIS#Dubai"/>
+        <PISTIS:diversion_Airport rdf:resource="http://fokus.fraunhofer.de/PISTIS#Athens_Airport"/>
+        <PISTIS:flight_Approval_Type rdf:resource="https://w3id.org/airm-o/ontology#CodeApprovalType-APPROVED"/>
+        <ontology:Flight-aircraft rdf:resource="http://fokus.fraunhofer.de/PISTIS#Airbus_Jumbo"/>
+        <PISTIS:COMM10_50>dummy value</PISTIS:COMM10_50>
+        <PISTIS:OAG_ID>c1f0044ff36a9f1ff991a2e7af3fd0dd20084c4955de2493fd185427547496ea</PISTIS:OAG_ID>
+        <PISTIS:TSA_Regulations>S</PISTIS:TSA_Regulations>
+        <PISTIS:aircraft_Change rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</PISTIS:aircraft_Change>
+        <PISTIS:business_Class_Seats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</PISTIS:business_Class_Seats>
+        <PISTIS:codeShare_operated_flights>A3:214</PISTIS:codeShare_operated_flights>
+        <PISTIS:data_Filing_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-03-11</PISTIS:data_Filing_Date>
+        <PISTIS:economy_Class_Seats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</PISTIS:economy_Class_Seats>
+        <PISTIS:economy_Plus_Class_Seats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</PISTIS:economy_Plus_Class_Seats>
+        <PISTIS:fare_Classes>CDZAIRYBMHQVWOLKJESTUPGNXF</PISTIS:fare_Classes>
+        <PISTIS:first_Class_Seats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</PISTIS:first_Class_Seats>
+        <PISTIS:flight_Restriction>XX</PISTIS:flight_Restriction>
+        <PISTIS:freight_Classes>xxx_freight_class</PISTIS:freight_Classes>
+        <PISTIS:freight_Tonnage_Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.6E8</PISTIS:freight_Tonnage_Capacity>
+        <PISTIS:hasPlannedRoute>ATHRHO</PISTIS:hasPlannedRoute>
+        <PISTIS:has_Aircraft_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">321</PISTIS:has_Aircraft_Type>
+        <PISTIS:in_Flight_Service>Meals</PISTIS:in_Flight_Service>
+        <PISTIS:meals_Offered>M/M/M/M</PISTIS:meals_Offered>
+        <PISTIS:multi_Stop_Routing>DBCDGAT</PISTIS:multi_Stop_Routing>
+        <PISTIS:operating_Marketing>050</PISTIS:operating_Marketing>
+        <PISTIS:premium_Economy_Class_Seats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</PISTIS:premium_Economy_Class_Seats>
+        <PISTIS:route_Segment_Leg>L</PISTIS:route_Segment_Leg>
+        <PISTIS:scheduledArrivalDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">20012-03-22</PISTIS:scheduledArrivalDate>
+        <PISTIS:scheduledArrivalDateTimeUTC rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-07T02:46:15</PISTIS:scheduledArrivalDateTimeUTC>
+        <PISTIS:scheduledArrivalDateUTC rdf:datatype="http://www.w3.org/2001/XMLSchema#date">20012-03-23</PISTIS:scheduledArrivalDateUTC>
+        <PISTIS:scheduledArrivalDateUTC rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-03.-19</PISTIS:scheduledArrivalDateUTC>
+        <PISTIS:scheduledArrivalTimeUTC rdf:datatype="http://www.w3.org/2001/XMLSchema#time">09:12:00</PISTIS:scheduledArrivalTimeUTC>
+        <PISTIS:scheduledDepartureDateTime_UTC rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-02-28T10:00:00</PISTIS:scheduledDepartureDateTime_UTC>
+        <PISTIS:scheduledDepartureDateUTC rdf:datatype="http://www.w3.org/2001/XMLSchema#date">20012-03-03T11:30:00</PISTIS:scheduledDepartureDateUTC>
+        <PISTIS:scheduledDepartureTime_UTC rdf:datatype="http://www.w3.org/2001/XMLSchema#time">09:00:00</PISTIS:scheduledDepartureTime_UTC>
+        <PISTIS:scheduled_Service_Code>J</PISTIS:scheduled_Service_Code>
+        <PISTIS:status_Key>d5d11ca75fc41a3b7a3289eb2a08bf5c336b6cc57e4e6b370cd872fa66d272c4</PISTIS:status_Key>
+        <PISTIS:status_Key_Message_ID>9740126c-33fe-4513-86f0-85d4c0a7b5eb</PISTIS:status_Key_Message_ID>
+        <PISTIS:total_Seats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</PISTIS:total_Seats>
+        <PISTIS:total_Stops rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</PISTIS:total_Stops>
+        <schema:distance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">451</schema:distance>
+        <ATM:actualArrivalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#time">09:10:00</ATM:actualArrivalTime>
+        <ontology:AircraftIdentification-flightNumber>4903</ontology:AircraftIdentification-flightNumber>
+        <ontology:AircraftIdentification-flightNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4903</ontology:AircraftIdentification-flightNumber>
+        <ontology:Flight-dateOfDeparture rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-02-22</ontology:Flight-dateOfDeparture>
+        <ontology:TrajectorySegment-estimatedElapsedTime rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100</ontology:TrajectorySegment-estimatedElapsedTime>
+        <ATM:actualArrivalDay rdf:resource="http://ontology.eil.utoronto.ca/icontact.owl#Monday"/>
+        <ATM:actualDepartureTime rdf:datatype="http://www.w3.org/2001/XMLSchema#time">09:02:00</ATM:actualDepartureTime>
+        <ATM:arrivalAirport rdf:resource="http://fokus.fraunhofer.de/PISTIS#Rhodes_Airport"/>
+        <ATM:departureAirport rdf:resource="http://fokus.fraunhofer.de/PISTIS#Athens_Airport"/>
+        <ATM:operatingCarrier rdf:resource="http://fokus.fraunhofer.de/PISTIS#Emirates"/>
+        <ATM:plannedArrivalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-05-30T09:00:00</ATM:plannedArrivalTime>
+        <ATM:plannedDepartureTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-05-30T09:00:00</ATM:plannedDepartureTime>
+        <ontology:Flight-type rdf:resource="http://fokus.fraunhofer.de/PISTIS#Funnel_Flight"/>
+        <ontology:Route-internationalUse rdf:resource="https://w3id.org/airm-o/ontology#CodeRouteOriginType-INTERNATIONAL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Emirates -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Emirates">
+        <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+        <NAS:iataCarrierCode>EK</NAS:iataCarrierCode>
+        <NAS:icaoCarrierCode>UAE</NAS:icaoCarrierCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#FOKUS_Event_Data -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#FOKUS_Event_Data">
+        <rdf:type rdf:resource="https://saref.etsi.org/saref4ener/LoadControlEventData"/>
+        <saref4ener:hasDevice rdf:resource="http://fokus.fraunhofer.de/PISTIS#Lachar_Network"/>
+        <core:hasTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-30T06:16:00</core:hasTimestamp>
+        <saref4ener:manufacturerNodeIdentification>[7 13]</saref4ener:manufacturerNodeIdentification>
+        <saref4ener:xsdDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</saref4ener:xsdDuration>
+        <ontology:Timesheet-startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-28T06:16:20</ontology:Timesheet-startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#FRA -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#FRA">
+        <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Fra -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Fra"/>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Funnel_Flight -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Funnel_Flight">
+        <rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeFlightType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#GR -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#GR">
+        <rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeIATACountryCodeType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Greece -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Greece">
+        <rdf:type rdf:resource="https://w3id.org/airm-o/ontology#State"/>
+        <ontology:State-iataCountryCode rdf:resource="http://fokus.fraunhofer.de/PISTIS#GR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Lachar_Network -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Lachar_Network">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Device"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#London -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#London">
+        <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+        <NAS:iataAirportCode>LHR</NAS:iataAirportCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Lufthansa-FRA-NY -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Lufthansa-FRA-NY">
+        <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <ontology:Flight-aircraft rdf:resource="http://fokus.fraunhofer.de/PISTIS#B777"/>
+        <ontology:AircraftIdentification-flightNumber>A3140</ontology:AircraftIdentification-flightNumber>
+        <ontology:Flight-dateOfDeparture>30/11/2023</ontology:Flight-dateOfDeparture>
+        <ATM:actualDepartureTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-30T06:16:00</ATM:actualDepartureTime>
+        <ATM:arrivalAirport rdf:resource="http://fokus.fraunhofer.de/PISTIS#BER"/>
+        <ATM:publishedDepartureTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-30T06:10:00</ATM:publishedDepartureTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Non_Operating_Ghost_Flight -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Non_Operating_Ghost_Flight">
+        <rdf:type rdf:resource="https://w3id.org/airm-o/ontology#CodeFlightType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Rhodes_Airport -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Rhodes_Airport">
+        <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+        <NAS:iataAirportCode>RHO</NAS:iataAirportCode>
+        <NAS:icaoAirportCode>LGRP</NAS:icaoAirportCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Sangeetha_Sample_Flight -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Sangeetha_Sample_Flight">
+        <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+        <PISTIS:arrival_Country rdf:resource="http://fokus.fraunhofer.de/PISTIS#Greece"/>
+        <PISTIS:flight_State>InGate</PISTIS:flight_State>
+        <PISTIS:scheduledDepartureDateTime_Local rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2004-07-07T04:45:00</PISTIS:scheduledDepartureDateTime_Local>
+        <PISTIS:status_Key>d5d11ca75fc41a3b7a3289eb2a08bf5c336b6cc57e4e6b370cd872fa66d272c4</PISTIS:status_Key>
+        <ontology:AircraftIdentification-flightNumber>6370</ontology:AircraftIdentification-flightNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Transaction_1_For_Zone_1 -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Transaction_1_For_Zone_1">
+        <rdf:type rdf:resource="http://w3id.org/um/cbcm/eu-cm-ontology#CompanyTransaction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Unit_1_For_Zone_1 -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Unit_1_For_Zone_1">
+        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/ISO21972/iso21972#Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#Zone_1 -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#Zone_1">
+        <rdf:type rdf:resource="http://www.disit.org/saref4bldg-ext/Area"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#event_t_vif -->
+
+    <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#event_t_vif">
+        <rdf:type rdf:resource="https://saref.etsi.org/saref4city/Event"/>
+        <PISTIS:driverID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</PISTIS:driverID>
+        <PISTIS:eventDetails>length: 45.1058, max_acc: 0.0191,end_speed: 25.36, start_speed: 11.8,altitude_diff: -1,mean_speed_change: 6.1636</PISTIS:eventDetails>
+        <PISTIS:markerPosition>POINT (15.4623 47.059101)</PISTIS:markerPosition>
+        <PublicTransit:hasTransitVehicleId rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</PublicTransit:hasTransitVehicleId>
+        <terms:identifier>77391fa7-f0a8-4164-84e3-2f49673bca04</terms:identifier>
+        <saref4ener:eventID rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">74925</saref4ener:eventID>
+        <ontology:GeoEnabledEntity-position>POINT (15.4624 47.058998)</ontology:GeoEnabledEntity-position>
+        <ontology:SegmentLeg-duration>220000000000005</ontology:SegmentLeg-duration>
+        <ontology:ServiceAtGate-type>ACCELERATION</ontology:ServiceAtGate-type>
+        <ontology:TaxiRoute-startPosition>POINT (15.4623 47.059101)</ontology:TaxiRoute-startPosition>
+        <ontology:Timesheet-startTimeRelativeEvent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1109.2</ontology:Timesheet-startTimeRelativeEvent>
+        <general:altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">356.0</general:altitude>
+        <general:altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">357.0</general:altitude>
+        <general:endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-08T03:32:01.200Z</general:endTime>
+        <general:startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-08T03:31:59.000Z</general:startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/icontact.owl#Monday -->
+
+    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/icontact.owl#Monday">
+        <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+        <NAS:dayOfMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</NAS:dayOfMonth>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/airm-o/ontology#CodeApprovalType-APPROVED -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/airm-o/ontology#CodeApprovalType-APPROVED"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

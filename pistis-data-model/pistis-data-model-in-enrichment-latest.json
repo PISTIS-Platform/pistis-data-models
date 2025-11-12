@@ -1,0 +1,964 @@
+{
+  "properties": [
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "AircraftType-iataIdentifier",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#AircraftType-iataIdentifier"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "AircraftType-icaoIdentifier",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#AircraftType-icaoIdentifier"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "ArrivalFlightNumberRangeEnd",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#ArrivalFlightNumberRangeEnd"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "ArrivalFlightNumberRangeStart",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#ArrivalFlightNumberRangeStart"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "DepartureFlightNumberRangeEnd",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#DepartureFlightNumberRangeEnd"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "DepartureFlightNumberRangeStart",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#DepartureFlightNumberRangeStart"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "OAG_ID",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#OAG_ID"
+    },
+    {
+      "dataType": "float",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#float",
+      "name": "Quantity",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#Quantity"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "SuppressionIndicator",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#SuppressionIndicator"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "TSA_Regulations",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#TSA_Regulations"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "actual_Business_Class_Seats",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#actual_Business_Class_Seats"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "actual_Economy_Class_Seats",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#actual_Economy_Class_Seats"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "actual_Economy_Plus_Class_Seats",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#actual_Economy_Plus_Class_Seats"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "actual_First_Class_Seats",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#actual_First_Class_Seats"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "actual_Flight_Instance_Key",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#actual_Flight_Instance_Key"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "actual_Premium_Economy_Class_Seats",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#actual_Premium_Economy_Class_Seats"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "actual_Total_Seats",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#actual_Total_Seats"
+    },
+    {
+      "dataType": "boolean",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#boolean",
+      "name": "aircraft_Change",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#aircraft_Change"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "alert_ID",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#alert_ID"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "alert_Type",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#alert_Type"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "arrival_Actual_Ingate_Datetime_Local",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Ingate_Datetime_Local"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "arrival_Actual_Ingate_Datetime_UTC",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Ingate_Datetime_UTC"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "arrival_Actual_Ingate_Timeliness",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Ingate_Timeliness"
+    },
+    {
+      "dataType": "time",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#time",
+      "name": "arrival_Actual_Ingate_Variation",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Ingate_Variation"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "arrival_Actual_Onground_Datetime_Local",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Onground_Datetime_Local"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "arrival_Actual_Onground_Datetime_UTC",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#arrival_Actual_Onground_Datetime_UTC"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "arrival_Baggage_Carousel",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#arrival_Baggage_Carousel"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "arrival_Estimated_Ingate_Datetime_Local",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Ingate_Datetime_Local"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "arrival_Estimated_Ingate_Datetime_UTC",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Ingate_Datetime_UTC"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "arrival_Estimated_Ingate_Timeliness",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Ingate_Timeliness"
+    },
+    {
+      "dataType": "time",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#time",
+      "name": "arrival_Estimated_Ingate_Variation",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Ingate_Variation"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "arrival_Estimated_Onground_Datetime_Local",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Onground_Datetime_Local"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "arrival_Estimated_Onground_Datetime_UTC",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#arrival_Estimated_Onground_Datetime_UTC"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "business_Class_Seats",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#business_Class_Seats"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "checkin_Counter",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#checkin_Counter"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "city_IATA_Code",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#city_IATA_Code"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "codeShare_operated_flights",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#codeShare_operated_flights"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "codeshare_Operating_Fligh_Schedule_Flight_Instance_Key",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#codeshare_Operating_Fligh_Schedule_Flight_Instance_Key"
+    },
+    {
+      "dataType": "date",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#date",
+      "name": "data_Filing_Date",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#data_Filing_Date"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "departure_Actual_Offground_Datetime_Local",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#departure_Actual_Offground_Datetime_Local"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "departure_Actual_Offground_Datetime_UTC",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#departure_Actual_Offground_Datetime_UTC"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "departure_Actual_Outgate_Datetime_Local",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#departure_Actual_Outgate_Datetime_Local"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "departure_Actual_Outgate_Timeliness",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#departure_Actual_Outgate_Timeliness"
+    },
+    {
+      "dataType": "time",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#time",
+      "name": "departure_Actual_Outgate_Variation",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#departure_Actual_Outgate_Variation"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "departure_Actual_Outgate__Datetime_UTC",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#departure_Actual_Outgate__Datetime_UTC"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "departure_Estimated_Offground_Datetime_Local",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Offground_Datetime_Local"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "departure_Estimated_Offground_Datetime_UTC",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Offground_Datetime_UTC"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "departure_Estimated_Outgate_Datetime_Local",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Outgate_Datetime_Local"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "departure_Estimated_Outgate_Datetime_UTC",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Outgate_Datetime_UTC"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "departure_Estimated_Outgate_Timeliness",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Outgate_Timeliness"
+    },
+    {
+      "dataType": "time",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#time",
+      "name": "departure_Estimated_Outgate_Variation",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Outgate_Variation"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "driverID",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#driverID"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "economy_Class_Seats",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#economy_Class_Seats"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "economy_Plus_Class_Seats",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#economy_Plus_Class_Seats"
+    },
+    {
+      "dataType": "date",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#date",
+      "name": "effective_From_Date",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#effective_From_Date"
+    },
+    {
+      "dataType": "date",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#date",
+      "name": "effective_Till_Date",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#effective_Till_Date"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "eventDetails",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#eventDetails"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "fare_Classes",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#fare_Classes"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "first_Class_Seats",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#first_Class_Seats"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "flight_Designator_Suffix",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#flight_Designator_Suffix"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "flight_Operation_Type",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#flight_Operation_Type"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "flight_Record_Serial_Number",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#flight_Record_Serial_Number"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "flight_Record_Snapshot_Date",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#flight_Record_Snapshot_Date"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "flight_Restriction",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#flight_Restriction"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "flight_State",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#flight_State"
+    },
+    {
+      "dataType": "float",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#float",
+      "name": "freight_Tonnage_Capacity",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#freight_Tonnage_Capacity"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "hasCode",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#hasCode"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "hasPlannedRoute",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#hasPlannedRoute"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "hasPrice",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#hasPrice"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "has_Aircraft_Type",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Aircraft_Type"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "has_Arrival_Flight_Number",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Arrival_Flight_Number"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Children_Under_Five",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Children_Under_Five"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "has_Chox_In_Time",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Chox_In_Time"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "has_Chox_Out_Time",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Chox_Out_Time"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "has_Departure_Flight_Number",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Departure_Flight_Number"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Exempted_Passengers",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Exempted_Passengers"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "has_First_Bag_Aircraft",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_First_Bag_Aircraft"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "has_First_Bag_Apron",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_First_Bag_Apron"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "has_First_Bag_Chute",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_First_Bag_Chute"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "has_First_Economy_Belt",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_First_Economy_Belt"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "has_First_Prio_Belt",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_First_Prio_Belt"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Flight_Record_Identifier",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Flight_Record_Identifier"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "has_Landing_Time",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Landing_Time"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "has_Last_Bag_Aircraft",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Last_Bag_Aircraft"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "has_Last_Bag_Apron",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Last_Bag_Apron"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "has_Last_Bag_Checkin",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Last_Bag_Checkin"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "has_Last_Bag_Chute",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Last_Bag_Chute"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "has_Last_Economy_Belt",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Last_Economy_Belt"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "has_Last_Prio_Belt",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Last_Prio_Belt"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Loaded_Bags",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Loaded_Bags"
+    },
+    {
+      "dataType": "float",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#float",
+      "name": "has_MTOW",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_MTOW"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_OOG_Bags",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_OOG_Bags"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "has_Record_Type",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Record_Type"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Scanned_Local_Bags",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Scanned_Local_Bags"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Scanned_Transfer_Bags",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Scanned_Transfer_Bags"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Sorted_Bags",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Sorted_Bags"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Special_Tax_Passengers",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Special_Tax_Passengers"
+    },
+    {
+      "dataType": "boolean",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#boolean",
+      "name": "has_Suppression_Indicator",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Suppression_Indicator"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "has_Take_Off_Time",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Take_Off_Time"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Tax_Paying_Passengers",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Tax_Paying_Passengers"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Terminating_Local_Bags",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Terminating_Local_Bags"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Total_Bags",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Total_Bags"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Total_Infant_Passengers",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Total_Infant_Passengers"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Transfer_Bags",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Transfer_Bags"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Transfer_Passengers_Other",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Transfer_Passengers_Other"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Transfer_Passengers_Own",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Transfer_Passengers_Own"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "has_Transit_Passengers",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#has_Transit_Passengers"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "in_Flight_Service",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#in_Flight_Service"
+    },
+    {
+      "dataType": "boolean",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#boolean",
+      "name": "is_Operating_Carrier",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#is_Operating_Carrier"
+    },
+    {
+      "dataType": "float",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#float",
+      "name": "load_Factor",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#load_Factor"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "markerPosition",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#markerPosition"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "meals_Offered",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#meals_Offered"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "minimum_Connection_Time",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#minimum_Connection_Time"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "multi_Stop_Routing",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#multi_Stop_Routing"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "operating_Marketing",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#operating_Marketing"
+    },
+    {
+      "dataType": "integeregereger",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integeregereger",
+      "name": "premium_Economy_Class_Seats",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#premium_Economy_Class_Seats"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "route_Segment_Leg",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#route_Segment_Leg"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "schedule_Flight_Instance_Key",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#schedule_Flight_Instance_Key"
+    },
+    {
+      "dataType": "date",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#date",
+      "name": "scheduledArrivalDate",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#scheduledArrivalDate"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "scheduledArrivalDateTimeUTC",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#scheduledArrivalDateTimeUTC"
+    },
+    {
+      "dataType": "date",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#date",
+      "name": "scheduledArrivalDateUTC",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#scheduledArrivalDateUTC"
+    },
+    {
+      "dataType": "time",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#time",
+      "name": "scheduledArrivalTimeUTC",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#scheduledArrivalTimeUTC"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "scheduledDepartureDateTime_Local",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#scheduledDepartureDateTime_Local"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "scheduledDepartureDateTime_UTC",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#scheduledDepartureDateTime_UTC"
+    },
+    {
+      "dataType": "date",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#date",
+      "name": "scheduledDepartureDateUTC",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#scheduledDepartureDateUTC"
+    },
+    {
+      "dataType": "time",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#time",
+      "name": "scheduledDepartureTime_UTC",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#scheduledDepartureTime_UTC"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "scheduled_Service_Code",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#scheduled_Service_Code"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "status_Key",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#status_Key"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "status_Key_Message_ID",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#status_Key_Message_ID"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "status_Key_Message_Timestamp",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#status_Key_Message_Timestamp"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "timePeriod",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#timePeriod"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "total_Capacity",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#total_Capacity"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "total_Passenger_Out",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#total_Passenger_Out"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "total_Passengers",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#total_Passengers"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "total_Seats",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#total_Seats"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "total_Stops",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#total_Stops"
+    },
+    {
+      "dataType": "time",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#time",
+      "name": "actualArrivalTime",
+      "nameURI": "https://data.nasa.gov/ontologies/atmonto/ATM#actualArrivalTime"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "AircraftIdentification-flightNumber",
+      "nameURI": "https://w3id.org/airm-o/ontology#AircraftIdentification-flightNumber"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "Flight-dateOfDeparture",
+      "nameURI": "https://w3id.org/airm-o/ontology#Flight-dateOfDeparture"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "Timesheet-startTime",
+      "nameURI": "https://w3id.org/airm-o/ontology#Timesheet-startTime"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "TrajectorySegment-estimatedElapsedTime",
+      "nameURI": "https://w3id.org/airm-o/ontology#TrajectorySegment-estimatedElapsedTime"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "iataCarrierCode",
+      "nameURI": "https://data.nasa.gov/ontologies/atmonto/NAS#iataCarrierCode"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "icaoCarrierCode",
+      "nameURI": "https://data.nasa.gov/ontologies/atmonto/NAS#icaoCarrierCode"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "iataAirportCode",
+      "nameURI": "https://data.nasa.gov/ontologies/atmonto/NAS#iataAirportCode"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "icaoAirportCode",
+      "nameURI": "https://data.nasa.gov/ontologies/atmonto/NAS#icaoAirportCode"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "faaAirportCode",
+      "nameURI": "https://data.nasa.gov/ontologies/atmonto/NAS#faaAirportCode"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "terminalID",
+      "nameURI": "https://data.nasa.gov/ontologies/atmonto/NAS#terminalID"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "gateID",
+      "nameURI": "https://data.nasa.gov/ontologies/atmonto/NAS#gateID"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "plannedDepartureTime",
+      "nameURI": "https://data.nasa.gov/ontologies/atmonto/ATM#plannedDepartureTime"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "plannedArrivalTime",
+      "nameURI": "https://data.nasa.gov/ontologies/atmonto/ATM#plannedArrivalTime"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "AircraftType-iataIdentifier",
+      "nameURI": "https://w3id.org/airm-o/ontology#AircraftType-iataIdentifier"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "registrationNumber",
+      "nameURI": "https://data.nasa.gov/ontologies/atmonto/equipment#registrationNumber"
+    },
+    {
+      "dataType": "date",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#date",
+      "name": "date",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#date"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "dateTime",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#dateTime"
+    },
+    {
+      "dataType": "time",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#time",
+      "name": "time",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#time"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "string",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#string"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "integer",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#integer"
+    },
+    {
+      "dataType": "boolean",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#boolean",
+      "name": "boolean",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#boolean"
+    },
+    {
+      "dataType": "double",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#double",
+      "name": "double",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#double"
+    },
+    {
+      "dataType": "float",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#float",
+      "name": "float",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#float"
+    }
+  ]
+}
