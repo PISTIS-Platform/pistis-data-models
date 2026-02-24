@@ -26,7 +26,7 @@
 
     pv:PISTIS
         a pv:PiveauProfile ;
-        pv:profileVersion "2.2" ;
+        pv:profileVersion "2.3" ;
         dct:title "A DCAT-AP profile for PISTIS"@en ;
         dct:description "Based and inspired by DCAT-AP 2.1.1"@en ;
         owl:versionInfo "0.0.1" .
@@ -1386,6 +1386,12 @@
             pv:mappingName "insights_result" ;
             sh:maxCount 1 ;
             sh:path pst:insightsResult
+        ], [
+            sh:maxCount 1 ;
+            pv:mappingClass "Nested" ;
+            pv:mappingLink odrl:Policy_Shape ;
+            pv:mappingName "has_policy" ;
+            sh:path odrl:hasPolicy
         ] ;
         sh:targetClass dcat:Dataset .
 
@@ -1975,3 +1981,49 @@
             sh:path pst:isActive
         ] ;
         sh:targetClass pst:InvestmentOffer .
+
+    odrl:Policy_Shape
+        a sh:NodeShape ;
+        sh:name "ODRL Policy"@en ;
+        sh:property [
+            sh:path odrl:permission ;
+            pv:mappingClass "Nested" ;
+            pv:mappingLink odrl:Permission_Shape ;
+            pv:mappingName "permissions"
+        ] ;
+        sh:targetClass odrl:Policy .
+
+    odrl:Permission_Shape
+        a sh:NodeShape ;
+        sh:name "ODRL Permission"@en ;
+        sh:property [
+            sh:path odrl:action ;
+            pv:mappingClass "StandardText" ;
+            pv:mappingName "action"
+        ], [
+            sh:path odrl:constraint ;
+            pv:mappingClass "Nested" ;
+            pv:mappingLink odrl:Constraint_Shape ;
+            pv:mappingName "constraints"
+        ];
+        sh:targetClass odrl:Permission .
+
+    odrl:Constraint_Shape
+        a sh:NodeShape ;
+        sh:name "ODRL Constraint"@en ;
+        sh:property [
+            sh:maxCount 1 ;
+            sh:path odrl:leftOperand ;
+            pv:mappingClass "StandardText" ;
+            pv:mappingName "leftOperand"
+        ], [
+            sh:maxCount 1 ;
+            sh:path odrl:operator  ; #isAnyOf or isNoneOf
+            pv:mappingClass "StandardText" ;
+            pv:mappingName "operator"
+        ], [
+            sh:path odrl:rightOperand ;
+            pv:mappingClass "StandardText" ;
+            pv:mappingName "rightOperand"
+        ];
+        sh:targetClass odrl:Constraint .
