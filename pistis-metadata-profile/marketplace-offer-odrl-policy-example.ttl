@@ -1,0 +1,105 @@
+@prefix dcat:                <http://www.w3.org/ns/dcat#> .
+@prefix dct:                 <http://purl.org/dc/terms/> .
+@prefix rdf:                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:                 <http://www.w3.org/2001/XMLSchema#> .
+@prefix odrl:                <http://www.w3.org/ns/odrl/2/> .
+@prefix vcard:               <http://www.w3.org/2006/vcard/ns#> .
+@prefix foaf:                <http://xmlns.com/foaf/0.1/> .
+@prefix skos:                <http://www.w3.org/2004/02/skos/core#> .
+@prefix pst:                 <https://www.pistis-project.eu/ns/voc#> .
+@prefix odrl:                <http://www.w3.org/ns/odrl/2/> .
+
+<https://pistis-market.eu/catset/distribution/30d60ad3-f767-4d31-be13-f04035432ac4>
+        rdf:type        dcat:Distribution;
+        dct:format      <http://publications.europa.eu/resource/authority/file-type/XLSX>;
+        dct:identifier  "https://piveau.io/set/distribution/1";
+        dct:issued      "2026-02-18T09:10:17.965992"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        dct:title       "MOCK_DATA.xlsx";
+        dcat:accessURL  <https://develop.pistis-market.eu/srv/factory-data-storage/api/files/get_file?asset_uuid=96e99ee7-ce12-402f-866e-fb2d0597d7a5>;
+        dcat:byteSize   "62601"^^<http://www.w3.org/2001/XMLSchema#decimal>;
+        pst:isEncrypted     false;
+        pst:isTransformed   false .
+
+<http://pistis-market.eu/offer/facfdcb9-c3c5-4570-8b31-389a26688c58>
+        rdf:type        pst:Offer ;
+        pst:originalId  "0d0c566c-5bd7-41e3-b110-279244f1922d" .
+
+_:b0    rdf:type   foaf:Organization;
+        foaf:mbox  <mailto:admin@pistis.eu>;
+        foaf:name  "PISTIS Develop Team";
+        pst:organizationId      "c0604304-a46e-42f9-bec9-7894f5ba73a6";
+        pst:organizationName    "PDT" .
+
+<http://pistis-market.eu/monetization/facfdcb9-c3c5-4570-8b31-389a26688c58>
+        rdf:type  pst:MonetizationMethod;
+        pst:purchaseOffer   <http://pistis-market.eu/purchaseOffer/facfdcb9-c3c5-4570-8b31-389a26688c58>;
+        pst:sellerId        "15e2c4d2-bbea-4119-b3ef-65494f16fa9a" .
+
+<http://pistis-market.eu/purchaseOffer/facfdcb9-c3c5-4570-8b31-389a26688c58>
+        rdf:type       <https://www.pistis-project.eu/ns/voc#PurchaseOffer>;
+        dct:license    [ dct:identifier   "PISTIS";
+                         dct:title        "PISTIS License";
+                         skos:exactMatch  "https://pistis-market.eu/license/facfdcb9-c3c5-4570-8b31-389a26688c58";
+                         skos:prefLabel   "PISTIS License"
+                       ];
+        dct:publisher  _:b0;
+        pst:additionalRenewalTerms      "";
+        pst:canEdit                     false;
+        pst:contractBreachDays          "3"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>;
+        pst:contractTerms               "JTyUyMGFnfdsfdsfcmVlZUzRQ==";
+        pst:duration                    "30"^^<http://www.w3.org/2001/XMLSchema#positiveInteger>;
+        pst:extraTerms                  "";
+        pst:isExclusive                 false;
+        pst:isFree                      false;
+        pst:noUseWithBlacklistedDatasets    false;
+        pst:nonRenewalDays              "3"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>;
+        pst:numResell                   "3"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>;
+        pst:numReshare                  "999"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>;
+        pst:perpetual                   "None";
+        pst:personalData
+                [ a  pst:PersonalDataTerms;
+                  pst:containsPersonalData  false;
+                  pst:PersonalDataTerms     ""
+                ];
+        pst:price                       15;
+        pst:spatialAvailability         "";
+        pst:transferable                "non-transferable";
+        pst:type                        "one-off" .
+
+<https://pistis-market.eu/catset/data/facfdcb9-c3c5-4570-8b31-389a26688c58>
+        rdf:type           dcat:Dataset;
+        dct:description    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
+        dct:issued         "2026-02-18T09:10:17.965992"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        dct:language       <http://publications.europa.eu/resource/authority/language/ENG>;
+        dct:modified       "2026-02-18T15:19:12.403988Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        dct:publisher      _:b0;
+        dct:title          "Test dataset S5 18/02 11:10";
+        dcat:distribution  <https://pistis-market.eu/catset/distribution/30d60ad3-f767-4d31-be13-f04035432ac4>;
+        dcat:keyword       "test";
+        dcat:theme         <http://publications.europa.eu/resource/authority/data-theme/INTR>;
+        pst:insightsResult  "none";
+        pst:monetization    <http://pistis-market.eu/monetization/facfdcb9-c3c5-4570-8b31-389a26688c58>;
+        pst:offer           <http://pistis-market.eu/offer/facfdcb9-c3c5-4570-8b31-389a26688c58>;
+        odrl:hasPolicy      <https://piveau.io/set/policy/1> .
+
+# https://www.w3.org/TR/odrl-model/#policy
+<https://piveau.io/set/policy/1>
+    a              odrl:Policy ;
+    odrl:permission    [
+        a odrl:Permission ;
+        odrl:action "read" ;
+        # PISTIS constraints:
+        # 1. Exclude organisations by name (or id?)
+        # >> both pst:organizationName and pst:organizationId are available in pst:Offer
+        # 2. Exclude organisations by domain, country, size, type
+        odrl:constraint [
+            odrl:leftOperand "organisation_name" ;
+            odrl:operator "isNoneOf" ;
+            odrl:rightOperand   "AIA", "CARUSO" ;
+        ] ;
+        odrl:constraint [
+            odrl:leftOperand "organisation_domain" ;
+            odrl:operator "isNoneOf" ;
+            odrl:rightOperand "Education", "Healthcare" ;
+        ] ;
+    ] .
