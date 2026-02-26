@@ -1997,6 +1997,11 @@
         a sh:NodeShape ;
         sh:name "ODRL Permission"@en ;
         sh:property [
+            sh:path dct:identifier ;
+            sh:maxCount 1 ;
+            pv:mappingClass "StandardText" ;
+            pv:mappingName "id"
+        ], [
             sh:path odrl:action ;
             pv:mappingClass "StandardText" ;
             pv:mappingName "action"
