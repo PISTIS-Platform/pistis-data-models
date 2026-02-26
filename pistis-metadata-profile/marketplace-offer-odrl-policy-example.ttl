@@ -80,26 +80,55 @@ _:b0    rdf:type   foaf:Organization;
         pst:insightsResult  "none";
         pst:monetization    <http://pistis-market.eu/monetization/facfdcb9-c3c5-4570-8b31-389a26688c58>;
         pst:offer           <http://pistis-market.eu/offer/facfdcb9-c3c5-4570-8b31-389a26688c58>;
-        odrl:hasPolicy      <https://piveau.io/set/policy/1> .
+        odrl:hasPolicy      <https://piveau.io/set/policy/policy-id> .
 
 # https://www.w3.org/TR/odrl-model/#policy
-<https://piveau.io/set/policy/1>
+<https://piveau.io/set/policy/policy-id>
     a              odrl:Policy ;
-    odrl:permission    [
-        a odrl:Permission ;
-        odrl:action "read" ;
-        # PISTIS constraints:
-        # 1. Exclude organisations by name (or id?)
-        # >> both pst:organizationName and pst:organizationId are available in pst:Offer
-        # 2. Exclude organisations by domain, country, size, type
+    odrl:permission    <https://piveau.io/set/policy/permission/2>, <https://piveau.io/set/policy/permission/3> .
+
+# A constraint should not be defined if its rightOperand is empty/null
+<https://piveau.io/set/policy/permission/2>
+    a odrl:Permission ;
+        dct:identifier  "2";
+        odrl:action "READ" ;
         odrl:constraint [
-            odrl:leftOperand "organisation_name" ;
+            odrl:leftOperand "groups" ;
             odrl:operator "isNoneOf" ;
-            odrl:rightOperand   "AIA", "CARUSO" ;
+            odrl:rightOperand   "PDT", "CARUSO" ;
         ] ;
         odrl:constraint [
-            odrl:leftOperand "organisation_domain" ;
+            odrl:leftOperand "domains" ;
             odrl:operator "isNoneOf" ;
-            odrl:rightOperand "Education", "Healthcare" ;
+            odrl:rightOperand "OIL_AND_GAS" ;
         ] ;
-    ] .
+        odrl:constraint [
+            odrl:leftOperand "countries" ;
+            odrl:operator "isNoneOf" ;
+            odrl:rightOperand "UK" ;
+        ] ;
+        odrl:constraint [
+            odrl:leftOperand "sizes" ;
+            odrl:operator "isNoneOf" ;
+            odrl:rightOperand "LARGE" ;
+        ] ;
+        odrl:constraint [
+            odrl:leftOperand "types" ;
+            odrl:operator "isNoneOf" ;
+            odrl:rightOperand "PSFP", "IGO" ;
+        ].
+
+<https://piveau.io/set/policy/permission/3>
+    a odrl:Permission ;
+        dct:identifier  "3";
+        odrl:action "READ", "TRADE" ;
+        odrl:constraint [
+            odrl:leftOperand "groups" ;
+            odrl:operator "isNoneOf" ;
+            odrl:rightOperand   "PDT", "CARUSO" ;
+        ] ;
+        odrl:constraint [
+            odrl:leftOperand "countries" ;
+            odrl:operator "isNoneOf" ;
+            odrl:rightOperand "GR" ;
+        ] .
