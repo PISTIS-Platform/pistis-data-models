@@ -2014,6 +2014,10 @@ A facility where regularly-scheduled aircraft arrive and depart.
 <rdfs:label>Airport</rdfs:label>
 </owl:Class>
 
+    <owl:Class rdf:about="http://fokus.fraunhofer.de/PISTIS#Event">
+        <rdfs:comment>Event Class related to event_t_vif dataset</rdfs:comment>
+<rdfs:label>Event Class</rdfs:label>
+    </owl:Class>
 
 <owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier">
 <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AviationServiceProvider"/>
@@ -2401,74 +2405,68 @@ The aircraft FAA registration number (the tail number, or the N-Number in the US
 
 
 <!--
-Defining Predefined Data Types such as String, Int etc. as Datatype Properties.
+Defining Predefined Data Types such as String, Int etc. as Basic Datatype Properties.
 
 -->
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#date">
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
 	<rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is Date type.</rdfs:comment>
-	<rdfs:label>Date Data Type</rdfs:label>
+	<rdfs:label>Basic Data type</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#dateTime">
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
 	<rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is dateTime type.</rdfs:comment>
-	<rdfs:label>DateTime Data Type</rdfs:label>
+	<rdfs:label>Basic Data type</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#time">
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
 	<rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is time type.</rdfs:comment>
-	<rdfs:label>Time Data Type</rdfs:label>
+	<rdfs:label>Basic Data type</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#string">
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is String type.</rdfs:comment>
-	<rdfs:label>String Data Type</rdfs:label>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#Integer">
-	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Integer"/>
-	<rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is Integer type.</rdfs:comment>
-	<rdfs:label>Integer Data Type</rdfs:label>
+	<rdfs:label>Basic Data type</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#boolean">
    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
    <rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is boolean type.</rdfs:comment>
-   <rdfs:label>Boolean Data Type</rdfs:label>
+   <rdfs:label>Basic Data type</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#decimal">
    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
    <rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is decimal type.</rdfs:comment>
-   <rdfs:label>Decimal Data Type</rdfs:label>
+   <rdfs:label>Basic Data type</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#double">
    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
    <rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is double type.</rdfs:comment>
-   <rdfs:label>Double Data Type</rdfs:label>
+   <rdfs:label>Basic Data type</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#float">
    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
    <rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is float type.</rdfs:comment>
-   <rdfs:label>Float Data Type</rdfs:label>
+   <rdfs:label>Basic Data type</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#int">
    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
    <rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is int type.</rdfs:comment>
-   <rdfs:label>Int Data Type</rdfs:label>
+   <rdfs:label>Basic Data type</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#long">
    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
    <rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is long type.</rdfs:comment>
-   <rdfs:label>Long Data Type</rdfs:label>
+   <rdfs:label>Basic Data type</rdfs:label>
 </owl:DatatypeProperty>
 
     <!-- http://fokus.fraunhofer.de/PISTIS#Delay_Event -->
