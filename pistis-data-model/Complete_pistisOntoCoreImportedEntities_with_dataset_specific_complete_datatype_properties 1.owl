@@ -57,7 +57,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
-    //
+    //This DM  file is updated with Data type Properties and One Class (i.e., Event) for event_t_vif dataset
+	// Also rules (from Peter) are copied as comments with each property
+	// "Integer" Basic data type is removed
+	// Labels of Basic data types are changed to "<rdfs:label>Basic Data type</rdfs:label>"
+	// There are some duplicate Properties e.g., (driverID and driver_Id) the reason is that in some datasets they are "int" and in some its value is "String"
+	// We may agree to remove one of them and use the Basic Data type instead for the removed one
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
