@@ -435,6 +435,407 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+        <!-- http://fokus.fraunhofer.de/PISTIS#event_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#event_ID">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
+rule: "expect_column_values_to_not_be_null",
+kwargs: {
+  column: "<placeholder>"
+  }
+},
+{
+rule: "expect_column_values_to_be_of_type",
+kwargs: {
+  column: "<placeholder>",
+  _type: "int"
+  }
+},
+{
+rule: "expect_column_values_to_be_between",
+kwargs: {
+  column: "<placeholder>",
+  min_value: 0,
+  strict_min: true
+  }
+}</rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#driver_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#driver_ID">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
+rule: "expect_column_values_to_not_be_null",
+kwargs: {
+  column: "<placeholder>"
+  }
+},
+{
+rule: "expect_column_values_to_be_of_type",
+kwargs: {
+  column: "<placeholder>",
+  _type: "int"
+  }
+},
+{
+rule: "expect_column_values_to_be_between",
+kwargs: {
+  column: "<placeholder>",
+  min_value: 0,
+  strict_min: true
+  }
+}</rdfs:comment>
+    </owl:DatatypeProperty>
+
+   <!-- http://fokus.fraunhofer.de/PISTIS#vehicle_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#vehicle_ID">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
+rule: "expect_column_values_to_not_be_null",
+kwargs: {
+  column: "<placeholder>"
+  }
+},
+{
+rule: "expect_column_values_to_be_of_type",
+kwargs: {
+  column: "<placeholder>",
+  _type: "int"
+  }
+},
+{
+rule: "expect_column_values_to_be_between",
+kwargs: {
+  column: "<placeholder>",
+  min_value: 0,
+  strict_min: true
+  }
+}</rdfs:comment>
+    </owl:DatatypeProperty>
+
+
+  <!-- http://fokus.fraunhofer.de/PISTIS#event_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#event_Type">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
+rule: "expect_column_values_to_not_be_null",
+kwargs: {
+  column: "<placeholder>"
+  }
+},
+{
+rule: "expect_column_values_to_be_of_type",
+kwargs: {
+  column: "<placeholder>",
+  _type: "str"
+  }
+},
+{
+rule: "expect_column_values_to_be_in_set",
+kwargs: {
+  column: "<placeholder>",
+  value_set: ["ACCELERATION", "POTHOLE", "STADNSTILL", "BRAKING"]
+  }
+}</rdfs:comment>
+    </owl:DatatypeProperty>
+
+   <!-- http://fokus.fraunhofer.de/PISTIS#trip_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#trip_ID">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
+rule: "expect_column_values_to_not_be_null",
+kwargs: {
+  column: "<placeholder>"
+  }
+},
+{
+rule: "expect_column_values_to_be_of_type",
+kwargs: {
+  column: "<placeholder>",
+  _type: "str"
+  }
+},
+{
+rule: "expect_column_values_to_match_regex",
+kwargs: {
+  column: "<placeholder>",
+  regex: "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+  }
+},
+{
+rule: "expect_column_value_lengths_to_equal,
+kwargs: {
+  column: "<placeholder>",
+  value: 36
+  }
+}</rdfs:comment>
+    </owl:DatatypeProperty>
+
+   <!-- http://fokus.fraunhofer.de/PISTIS#start_At -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#start_At">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
+rule: "expect_column_values_to_not_be_null",
+kwargs: {
+  column: "<placeholder>"
+  }
+},
+{
+rule: "expect_column_values_to_be_of_type",
+kwargs: {
+  column: "<placeholder>",
+  _type: "str"
+  }
+},
+{
+rule: "expect_column_values_to_match_regex",
+kwargs: {
+  column: "<placeholder>",
+  regex: "^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):[0-5]\d:[0-5]\d(\.\d{1,9})?Z$"
+  }
+}</rdfs:comment>
+    </owl:DatatypeProperty>
+
+  <!-- http://fokus.fraunhofer.de/PISTIS#start_After -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#start_After">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
+rule: "expect_column_values_to_not_be_null",
+kwargs: {
+  column: "<placeholder>"
+  }
+},
+{
+rule: "expect_column_values_to_be_of_type",
+kwargs: {
+  column: "<placeholder>",
+  _type: "float"
+  }
+},
+{
+rule: "expect_column_values_to_be_between",
+kwargs: {
+  column: "<placeholder>",
+  min_value: 0,
+  strict_min: true
+  }
+}</rdfs:comment>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#start_Position -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#start_Position">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
+rule: "expect_column_values_to_not_be_null",
+kwargs: {
+  column: "<placeholder>"
+  }
+},
+{
+rule: "expect_column_values_to_be_of_type",
+kwargs: {
+  column: "<placeholder>",
+  _type: "str"
+  }
+},
+{
+rule: "expect_column_values_to_match_regex",
+kwargs: {
+  column: "<placeholder>",
+  regex: "^POINT \((-?\d+\.\d+) (-?\d+\.\d+)\)$"
+  }
+}</rdfs:comment>
+    </owl:DatatypeProperty>
+
+
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#start_Altitude -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#start_Altitude">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
+rule: "expect_column_values_to_not_be_null",
+kwargs: {
+  column: "<placeholder>"
+  }
+},
+{
+rule: "expect_column_values_to_be_of_type",
+kwargs: {
+  column: "<placeholder>",
+  _type: "float"
+  }
+}</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#end_At -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#end_At">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#end_After -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#end_After">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
+rule: "expect_column_values_to_not_be_null",
+kwargs: {
+  column: "<placeholder>"
+  }
+},
+{
+rule: "expect_column_values_to_be_of_type",
+kwargs: {
+  column: "<placeholder>",
+  _type: "float"
+  }
+},
+{
+rule: "expect_column_values_to_be_between",
+kwargs: {
+  column: "<placeholder>",
+  min_value: 0,
+  strict_min: true
+  }
+}</rdfs:comment>
+    </owl:DatatypeProperty>
+
+
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#end_Position -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#end_Position">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
+rule: "expect_column_values_to_not_be_null",
+kwargs: {
+  column: "<placeholder>"
+  }
+},
+{
+rule: "expect_column_values_to_be_of_type",
+kwargs: {
+  column: "<placeholder>",
+  _type: "str"
+  }
+},
+{
+rule: "expect_column_values_to_match_regex",
+kwargs: {
+  column: "<placeholder>",
+  regex: "^POINT \((-?\d+\.\d+) (-?\d+\.\d+)\)$"
+  }
+}</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#end_Altitude -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#end_Altitude">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
+rule: "expect_column_values_to_not_be_null",
+kwargs: {
+  column: "<placeholder>"
+  }
+},
+{
+rule: "expect_column_values_to_be_of_type",
+kwargs: {
+  column: "<placeholder>",
+  _type: "float"
+  }
+}</rdfs:comment>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#marker_Position -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#marker_Position">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
+rule: "expect_column_values_to_not_be_null",
+kwargs: {
+  column: "<placeholder>"
+  }
+},
+{
+rule: "expect_column_values_to_be_of_type",
+kwargs: {
+  column: "<placeholder>",
+  _type: "str"
+  }
+},
+{
+rule: "expect_column_values_to_match_regex",
+kwargs: {
+  column: "<placeholder>",
+  regex: "^POINT \((-?\d+\.\d+) (-?\d+\.\d+)\)$"
+  }
+}</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fokus.fraunhofer.de/PISTIS#duration -->
+
+    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#duration">
+        <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
+rule: "expect_column_values_to_not_be_null",
+kwargs: {
+  column: "<placeholder>"
+  }
+},
+{
+rule: "expect_column_values_to_be_of_type",
+kwargs: {
+  column: "<placeholder>",
+  _type: "int"
+  }
+},
+{
+rule: "expect_column_values_to_be_between",
+kwargs: {
+  column: "<placeholder>",
+  min_value: 0,
+  strict_min: true
+  }
+}</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
