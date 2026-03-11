@@ -1,6 +1,96 @@
 {
   "properties": [
     {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "event_ID",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#event_ID"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "driver_ID",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#driver_ID"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "vehicle_ID",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#vehicle_ID"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "event_Type",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#event_Type"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "trip_ID",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#trip_ID"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "start_At",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#start_At"
+    },
+    {
+      "dataType": "float",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#float",
+      "name": "start_After",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#start_After"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "start_Position",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#start_Position"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "start_Altitude",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#start_Altitude"
+    },
+    {
+      "dataType": "dateTime",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "end_At",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#end_At"
+    },
+    {
+      "dataType": "float",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#float",
+      "name": "end_After",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#end_After"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "end_Position",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#end_Position"
+    },
+    {
+      "dataType": "float",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#float",
+      "name": "end_Altitude",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#end_Altitude"
+    },
+    {
+      "dataType": "string",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
+      "name": "marker_Position",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#marker_Position"
+    },
+    {
+      "dataType": "integer",
+      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
+      "name": "duration",
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#duration"
+    },
+    {
       "dataType": "string",
       "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
       "name": "AircraftType-iataIdentifier",
@@ -305,12 +395,6 @@
       "dataTypeURI": "http://www.w3.org/2001/XMLSchema#time",
       "name": "departure_Estimated_Outgate_Variation",
       "nameURI": "http://fokus.fraunhofer.de/PISTIS#departure_Estimated_Outgate_Variation"
-    },
-    {
-      "dataType": "integer",
-      "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
-      "name": "driverID",
-      "nameURI": "http://fokus.fraunhofer.de/PISTIS#driverID"
     },
     {
       "dataType": "integer",
@@ -916,49 +1000,57 @@
       "dataType": "date",
       "dataTypeURI": "http://www.w3.org/2001/XMLSchema#date",
       "name": "date",
-      "nameURI": "http://fokus.fraunhofer.de/PISTIS#date"
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#date",
+      "label": "Basic Data Type"
     },
     {
       "dataType": "dateTime",
       "dataTypeURI": "http://www.w3.org/2001/XMLSchema#dateTime",
       "name": "dateTime",
-      "nameURI": "http://fokus.fraunhofer.de/PISTIS#dateTime"
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#dateTime",
+      "label": "Basic Data Type"
     },
     {
       "dataType": "time",
       "dataTypeURI": "http://www.w3.org/2001/XMLSchema#time",
       "name": "time",
-      "nameURI": "http://fokus.fraunhofer.de/PISTIS#time"
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#time",
+      "label": "Basic Data Type"
     },
     {
       "dataType": "string",
       "dataTypeURI": "http://www.w3.org/2001/XMLSchema#string",
       "name": "string",
-      "nameURI": "http://fokus.fraunhofer.de/PISTIS#string"
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#string",
+      "label": "Basic Data Type"
     },
     {
       "dataType": "integer",
       "dataTypeURI": "http://www.w3.org/2001/XMLSchema#integer",
       "name": "integer",
-      "nameURI": "http://fokus.fraunhofer.de/PISTIS#integer"
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#integer",
+      "label": "Basic Data Type"
     },
     {
       "dataType": "boolean",
       "dataTypeURI": "http://www.w3.org/2001/XMLSchema#boolean",
       "name": "boolean",
-      "nameURI": "http://fokus.fraunhofer.de/PISTIS#boolean"
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#boolean",
+      "label": "Basic Data Type"
     },
     {
       "dataType": "double",
       "dataTypeURI": "http://www.w3.org/2001/XMLSchema#double",
       "name": "double",
-      "nameURI": "http://fokus.fraunhofer.de/PISTIS#double"
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#double",
+      "label": "Basic Data Type"
     },
     {
       "dataType": "float",
       "dataTypeURI": "http://www.w3.org/2001/XMLSchema#float",
       "name": "float",
-      "nameURI": "http://fokus.fraunhofer.de/PISTIS#float"
+      "nameURI": "http://fokus.fraunhofer.de/PISTIS#float",
+      "label": "Basic Data Type"
     }
   ]
 }

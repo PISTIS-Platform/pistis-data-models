@@ -57,16 +57,17 @@
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
-    //This DM  file is updated with Data type Properties and One Class (i.e., Event) for event_t_vif dataset
-	// Also rules (from Peter) are copied as comments with each property
-	// "Integer" Basic data type is removed
-	// Labels of Basic data types are changed to "<rdfs:label>Basic Data type</rdfs:label>"
-	// There are some duplicate Properties e.g., (driverID and driver_Id) the reason is that in some datasets they are "int" and in some its value is "String"
-	// We may agree to remove one of them and use the Basic Data type instead for the removed one
+    // Change Notes: In this update, data type properties are defined for VIF_events dataset with 
+	// Rules (given by Peter) incorporated in each Property. 
+    // Note: Most of the properties of this dataset are already exist in some ontologies 
+    // (see Individuals at the end of this file) that we can re-use but I created Properties 
+	// that are easy to use/experiment by Peter.
+
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+    <!--
+-->
 
 
     <!-- https://data.nasa.gov/ontologies/atmonto/ATM#actualArrivalDay -->
@@ -197,7 +198,7 @@
     
 
 
-    <!-- https://w3id.org/airm-o/ontology#Route-internationalUse -->
+    <!-- https://w3id.org/airm-o/ontology#Route-integerernationalUse -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/airm-o/ontology#Route-internationalUse">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
@@ -440,7 +441,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-        <!-- http://fokus.fraunhofer.de/PISTIS#event_ID -->
+               <!-- http://fokus.fraunhofer.de/PISTIS#event_ID -->
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#event_ID">
         <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
@@ -448,20 +449,20 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
 rule: "expect_column_values_to_not_be_null",
 kwargs: {
-  column: "<placeholder>"
+  column: "placeholder"
   }
 },
 {
 rule: "expect_column_values_to_be_of_type",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   _type: "int"
   }
 },
 {
 rule: "expect_column_values_to_be_between",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   min_value: 0,
   strict_min: true
   }
@@ -476,20 +477,20 @@ kwargs: {
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
 rule: "expect_column_values_to_not_be_null",
 kwargs: {
-  column: "<placeholder>"
+  column: "placeholder"
   }
 },
 {
 rule: "expect_column_values_to_be_of_type",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   _type: "int"
   }
 },
 {
 rule: "expect_column_values_to_be_between",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   min_value: 0,
   strict_min: true
   }
@@ -504,20 +505,20 @@ kwargs: {
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
 rule: "expect_column_values_to_not_be_null",
 kwargs: {
-  column: "<placeholder>"
+  column: "placeholder"
   }
 },
 {
 rule: "expect_column_values_to_be_of_type",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   _type: "int"
   }
 },
 {
 rule: "expect_column_values_to_be_between",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   min_value: 0,
   strict_min: true
   }
@@ -533,20 +534,20 @@ kwargs: {
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
 rule: "expect_column_values_to_not_be_null",
 kwargs: {
-  column: "<placeholder>"
+  column: "placeholder"
   }
 },
 {
 rule: "expect_column_values_to_be_of_type",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   _type: "str"
   }
 },
 {
 rule: "expect_column_values_to_be_in_set",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   value_set: ["ACCELERATION", "POTHOLE", "STADNSTILL", "BRAKING"]
   }
 }</rdfs:comment>
@@ -560,27 +561,27 @@ kwargs: {
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
 rule: "expect_column_values_to_not_be_null",
 kwargs: {
-  column: "<placeholder>"
+  column: "placeholder"
   }
 },
 {
 rule: "expect_column_values_to_be_of_type",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   _type: "str"
   }
 },
 {
 rule: "expect_column_values_to_match_regex",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   regex: "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
   }
 },
 {
 rule: "expect_column_value_lengths_to_equal,
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   value: 36
   }
 }</rdfs:comment>
@@ -594,20 +595,20 @@ kwargs: {
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
 rule: "expect_column_values_to_not_be_null",
 kwargs: {
-  column: "<placeholder>"
+  column: "placeholder"
   }
 },
 {
 rule: "expect_column_values_to_be_of_type",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   _type: "str"
   }
 },
 {
 rule: "expect_column_values_to_match_regex",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   regex: "^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):[0-5]\d:[0-5]\d(\.\d{1,9})?Z$"
   }
 }</rdfs:comment>
@@ -621,20 +622,20 @@ kwargs: {
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
 rule: "expect_column_values_to_not_be_null",
 kwargs: {
-  column: "<placeholder>"
+  column: "placeholder"
   }
 },
 {
 rule: "expect_column_values_to_be_of_type",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   _type: "float"
   }
 },
 {
 rule: "expect_column_values_to_be_between",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   min_value: 0,
   strict_min: true
   }
@@ -651,20 +652,20 @@ kwargs: {
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
 rule: "expect_column_values_to_not_be_null",
 kwargs: {
-  column: "<placeholder>"
+  column: "placeholder"
   }
 },
 {
 rule: "expect_column_values_to_be_of_type",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   _type: "str"
   }
 },
 {
 rule: "expect_column_values_to_match_regex",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   regex: "^POINT \((-?\d+\.\d+) (-?\d+\.\d+)\)$"
   }
 }</rdfs:comment>
@@ -681,13 +682,13 @@ kwargs: {
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
 rule: "expect_column_values_to_not_be_null",
 kwargs: {
-  column: "<placeholder>"
+  column: "placeholder"
   }
 },
 {
 rule: "expect_column_values_to_be_of_type",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   _type: "float"
   }
 }</rdfs:comment>
@@ -699,6 +700,26 @@ kwargs: {
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#end_At">
         <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
+rule: "expect_column_values_to_not_be_null",
+kwargs: {
+  column: "placeholder"
+  }
+},
+{
+rule: "expect_column_values_to_be_of_type",
+kwargs: {
+  column: "placeholder",
+  _type: "str"
+  }
+},
+{
+rule: "expect_column_values_to_match_regex",
+kwargs: {
+  column: "placeholder",
+  regex: "^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):[0-5]\d:[0-5]\d(\.\d{1,9})?Z$"
+  }
+}</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -710,20 +731,20 @@ kwargs: {
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
 rule: "expect_column_values_to_not_be_null",
 kwargs: {
-  column: "<placeholder>"
+  column: "placeholder"
   }
 },
 {
 rule: "expect_column_values_to_be_of_type",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   _type: "float"
   }
 },
 {
 rule: "expect_column_values_to_be_between",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   min_value: 0,
   strict_min: true
   }
@@ -741,20 +762,20 @@ kwargs: {
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
 rule: "expect_column_values_to_not_be_null",
 kwargs: {
-  column: "<placeholder>"
+  column: "placeholder"
   }
 },
 {
 rule: "expect_column_values_to_be_of_type",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   _type: "str"
   }
 },
 {
 rule: "expect_column_values_to_match_regex",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   regex: "^POINT \((-?\d+\.\d+) (-?\d+\.\d+)\)$"
   }
 }</rdfs:comment>
@@ -771,13 +792,13 @@ kwargs: {
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
 rule: "expect_column_values_to_not_be_null",
 kwargs: {
-  column: "<placeholder>"
+  column: "placeholder"
   }
 },
 {
 rule: "expect_column_values_to_be_of_type",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   _type: "float"
   }
 }</rdfs:comment>
@@ -793,55 +814,52 @@ kwargs: {
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
 rule: "expect_column_values_to_not_be_null",
 kwargs: {
-  column: "<placeholder>"
+  column: "placeholder"
   }
 },
 {
 rule: "expect_column_values_to_be_of_type",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   _type: "str"
   }
 },
 {
 rule: "expect_column_values_to_match_regex",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   regex: "^POINT \((-?\d+\.\d+) (-?\d+\.\d+)\)$"
   }
 }</rdfs:comment>
     </owl:DatatypeProperty>
     
-
-
-    <!-- http://fokus.fraunhofer.de/PISTIS#duration -->
+   <!-- http://fokus.fraunhofer.de/PISTIS#duration -->
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#duration">
         <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Event"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{
 rule: "expect_column_values_to_not_be_null",
 kwargs: {
-  column: "<placeholder>"
+  column: "placeholder"
   }
 },
 {
 rule: "expect_column_values_to_be_of_type",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   _type: "int"
   }
 },
 {
 rule: "expect_column_values_to_be_between",
 kwargs: {
-  column: "<placeholder>",
+  column: "placeholder",
   min_value: 0,
   strict_min: true
   }
 }</rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
     <!-- http://fokus.fraunhofer.de/PISTIS#AircraftType-iataIdentifier -->
@@ -931,7 +949,7 @@ kwargs: {
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#Quantity">
         <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Bid"/>
         <rdfs:domain rdf:resource="http://w3id.org/um/cbcm/eu-cm-ontology#CompanyTransaction"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
@@ -967,7 +985,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#actual_Business_Class_Seats">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Business Class Seating Capacity on Flight Based On Actual Aircraft.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -977,7 +995,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#actual_Economy_Class_Seats">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Economy Class Seating Capacity on Flight Based on Actual Aircraft.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -987,7 +1005,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#actual_Economy_Plus_Class_Seats">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Economy Pluss Class Seating Capacity on Flight Based on Actual Aircraft.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -997,7 +1015,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#actual_First_Class_Seats">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>First Class Seating Capacity on Flight Based on Actual Aircraft</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1017,7 +1035,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#actual_Premium_Economy_Class_Seats">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Premium Economy Class Seating Capacity on Flight Based on Actual Aircraft.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1027,7 +1045,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#actual_Total_Seats">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Total Seating Capacity of Flight Based On Actual Aircraft.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1197,7 +1215,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#business_Class_Seats">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Total number of business class seats offered on scheduled service</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1369,22 +1387,13 @@ kwargs: {
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
         <rdfs:comment>Variance between scheduled and estimate departure time, in the HH:NN:SS format.</rdfs:comment>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- http://fokus.fraunhofer.de/PISTIS#driverID -->
-
-    <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#driverID">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
 
 
     <!-- http://fokus.fraunhofer.de/PISTIS#economy_Class_Seats -->
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#economy_Class_Seats">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Total number of economy class seats offered on scheduled service</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1394,7 +1403,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#economy_Plus_Class_Seats">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Total number of premium economy plus class seats offered on scheduled service</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1444,7 +1453,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#first_Class_Seats">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Total number of first class seats offered on scheduled service. the value is integer.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1538,7 +1547,7 @@ kwargs: {
         <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Bid"/>
         <rdfs:domain rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00140109"/>
         <rdfs:domain rdf:resource="http://w3id.org/um/cbcm/eu-cm-ontology#CompanyTransaction"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -1564,7 +1573,7 @@ kwargs: {
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#hasPrice">
         <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Bid"/>
         <rdfs:domain rdf:resource="http://w3id.org/um/cbcm/eu-cm-ontology#CompanyTransaction"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -1593,7 +1602,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Children_Under_Five">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Number of children under five years old.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1633,7 +1642,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Exempted_Passengers">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Number of passengers exempt from tax</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1693,7 +1702,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Flight_Record_Identifier">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Unique identifier for the flight record.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1843,7 +1852,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Special_Tax_Passengers">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Number of passengers with special tax status.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1874,7 +1883,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Tax_Paying_Passengers">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Number of passengers paying standard tax.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1904,7 +1913,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Total_Infant_Passengers">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Number of infants on the flight.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1924,7 +1933,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Transfer_Passengers_Other">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Number of transfer passengers on different airlines</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1934,7 +1943,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Transfer_Passengers_Own">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Number of transfer passengers on the same airline.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1944,7 +1953,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#has_Transit_Passengers">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Number of transit passengers.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -2031,7 +2040,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#premium_Economy_Class_Seats">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integeregereger"/>
         <rdfs:comment>Total number of premium economy class seats offered on scheduled service</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -2192,7 +2201,7 @@ kwargs: {
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#total_Capacity">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Total number of seats offered on service by carrier</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -2203,7 +2212,7 @@ kwargs: {
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#total_Passenger_Out">
         <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Operation"/>
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Number of passengers disembarking.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -2215,7 +2224,7 @@ kwargs: {
         <rdfs:domain rdf:resource="http://fokus.fraunhofer.de/PISTIS#Flight_Operation"/>
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Total number of passengers booked on service.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -2225,7 +2234,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#total_Seats">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Total seats offered on scheduled service</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -2235,7 +2244,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#total_Stops">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Number of stops in scheduled service. The value is integer between 0 to 9.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -2251,7 +2260,7 @@ kwargs: {
 
     <rdf:Description rdf:about="http://www.disit.org/km4city/schema#distance">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Total distance in statute miles from departure to arrival airport</rdfs:comment>
         <rdfs:comment>Total distance in statute miles from departure to arrival airport.</rdfs:comment>
     </rdf:Description>
@@ -2342,7 +2351,7 @@ kwargs: {
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/airm-o/ontology#TrajectorySegment-estimatedElapsedTime">
         <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -2420,10 +2429,6 @@ A facility where regularly-scheduled aircraft arrive and depart.
 <rdfs:label>Airport</rdfs:label>
 </owl:Class>
 
-    <owl:Class rdf:about="http://fokus.fraunhofer.de/PISTIS#Event">
-        <rdfs:comment>Event Class related to event_t_vif dataset</rdfs:comment>
-<rdfs:label>Event Class</rdfs:label>
-    </owl:Class>
 
 <owl:Class rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier">
 <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AviationServiceProvider"/>
@@ -2811,69 +2816,59 @@ The aircraft FAA registration number (the tail number, or the N-Number in the US
 
 
 <!--
-Defining Predefined Data Types such as String, Int etc. as Basic Datatype Properties.
+Defining Predefined Data Types such as String, Integer etc. as Datatype Properties.
 
 -->
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#date">
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
 	<rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is Date type.</rdfs:comment>
-	<rdfs:label>Basic Data type</rdfs:label>
+	<rdfs:label>Basic Data Type</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#dateTime">
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
 	<rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is dateTime type.</rdfs:comment>
-	<rdfs:label>Basic Data type</rdfs:label>
+	<rdfs:label>Basic Data Type</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#time">
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
 	<rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is time type.</rdfs:comment>
-	<rdfs:label>Basic Data type</rdfs:label>
+	<rdfs:label>Basic Data Type</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#string">
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is String type.</rdfs:comment>
-	<rdfs:label>Basic Data type</rdfs:label>
+	<rdfs:label>Basic Data Type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#integer">
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	<rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is Integer type.</rdfs:comment>
+	<rdfs:label>Basic Data Type</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#boolean">
    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
    <rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is boolean type.</rdfs:comment>
-   <rdfs:label>Basic Data type</rdfs:label>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#decimal">
-   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-   <rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is decimal type.</rdfs:comment>
-   <rdfs:label>Basic Data type</rdfs:label>
+   <rdfs:label>Basic Data Type</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#double">
    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
    <rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is double type.</rdfs:comment>
-   <rdfs:label>Basic Data type</rdfs:label>
+   <rdfs:label>Basic Data Type</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#float">
    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
    <rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is float type.</rdfs:comment>
-   <rdfs:label>Basic Data type</rdfs:label>
+   <rdfs:label>Basic Data Type</rdfs:label>
 </owl:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#int">
-   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-   <rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is int type.</rdfs:comment>
-   <rdfs:label>Basic Data type</rdfs:label>
-</owl:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="http://fokus.fraunhofer.de/PISTIS#long">
-   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
-   <rdfs:comment> If you don't find a specific property to map with, you can map a column to this property, in case value of property is long type.</rdfs:comment>
-   <rdfs:label>Basic Data type</rdfs:label>
-</owl:DatatypeProperty>
 
     <!-- http://fokus.fraunhofer.de/PISTIS#Delay_Event -->
 
@@ -3278,8 +3273,8 @@ Defining Predefined Data Types such as String, Int etc. as Basic Datatype Proper
     <owl:NamedIndividual rdf:about="http://fokus.fraunhofer.de/PISTIS#British_Airways_Flight_London_Athens">
         <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
         <PISTIS:load_Factor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.73</PISTIS:load_Factor>
-        <PISTIS:total_Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30254</PISTIS:total_Capacity>
-        <PISTIS:total_Passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#int">22166</PISTIS:total_Passengers>
+        <PISTIS:total_Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30254</PISTIS:total_Capacity>
+        <PISTIS:total_Passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22166</PISTIS:total_Passengers>
         <ATM:arrivalAirport rdf:resource="http://fokus.fraunhofer.de/PISTIS#Athens_Airport"/>
         <ATM:departureAirport rdf:resource="http://fokus.fraunhofer.de/PISTIS#London"/>
         <ATM:operatingCarrier rdf:resource="http://fokus.fraunhofer.de/PISTIS#British_Airways"/>
