@@ -1388,7 +1388,7 @@
             sh:path pst:insightsResult
         ], [
             sh:maxCount 1 ;
-            pv:mappingClass "Nested" ;
+            pv:mappingClass "NestedType" ;
             pv:mappingLink odrl:Policy_Shape ;
             pv:mappingName "has_policy" ;
             sh:path odrl:hasPolicy
@@ -1987,7 +1987,7 @@
         sh:name "ODRL Policy"@en ;
         sh:property [
             sh:path odrl:permission ;
-            pv:mappingClass "Nested" ;
+            pv:mappingClass "NestedType" ;
             pv:mappingLink odrl:Permission_Shape ;
             pv:mappingName "permissions"
         ] ;
@@ -2007,7 +2007,7 @@
             pv:mappingName "action"
         ], [
             sh:path odrl:constraint ;
-            pv:mappingClass "Nested" ;
+            pv:mappingClass "NestedType" ;
             pv:mappingLink odrl:Constraint_Shape ;
             pv:mappingName "constraints"
         ];
